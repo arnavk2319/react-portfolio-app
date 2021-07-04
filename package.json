@@ -18,6 +18,9 @@
     "reactstrap": "8.4.1"
   },
   "scripts": {
+    "homepage": "https://arnavk2319.github.io/react-portfolio-app/",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build && gulp licenses",
     "test": "react-scripts test",
@@ -44,5 +47,8 @@
   },
   "optionalDependencies": {
     "typescript": "3.9.5"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.2.3"
   }
 }

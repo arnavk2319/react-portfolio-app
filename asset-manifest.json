@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9c5d4387.chunk.css",
+    "main.js": "/static/js/main.44269f13.chunk.js",
+    "main.js.map": "/static/js/main.44269f13.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.4180024d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.4180024d.js.map",
+    "static/js/2.404d3a32.chunk.js": "/static/js/2.404d3a32.chunk.js",
+    "static/js/2.404d3a32.chunk.js.map": "/static/js/2.404d3a32.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.193045e30e27e1539cb92d0cc07be261.js": "/precache-manifest.193045e30e27e1539cb92d0cc07be261.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.9c5d4387.chunk.css.map": "/static/css/main.9c5d4387.chunk.css.map",
+    "static/js/2.404d3a32.chunk.js.LICENSE.txt": "/static/js/2.404d3a32.chunk.js.LICENSE.txt",
+    "static/media/Arnav_Kaushal_2020.pdf": "/static/media/Arnav_Kaushal_2020.72da434e.pdf",
+    "static/media/coviupdate-all.png": "/static/media/coviupdate-all.638436ff.png",
+    "static/media/dab.png": "/static/media/dab.68bad2ff.png",
+    "static/media/equo-all.png": "/static/media/equo-all.031bbf49.png",
+    "static/media/forkify-all.png": "/static/media/forkify-all.0f24fff9.png",
+    "static/media/kova-all.png": "/static/media/kova-all.5c4d2fd9.png",
+    "static/media/lbm-all.png": "/static/media/lbm-all.d63522c5.png",
+    "static/media/mapfinder-all.png": "/static/media/mapfinder-all.8b150234.png",
+    "static/media/meal-planner.png": "/static/media/meal-planner.1eb96f54.png",
+    "static/media/ppeprotect.png": "/static/media/ppeprotect.20e34feb.png",
+    "static/media/shop.png": "/static/media/shop.d50b836c.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4180024d.js",
+    "static/js/2.404d3a32.chunk.js",
+    "static/css/main.9c5d4387.chunk.css",
+    "static/js/main.44269f13.chunk.js"
+  ]
+}

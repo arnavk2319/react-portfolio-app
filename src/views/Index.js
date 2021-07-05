@@ -2,7 +2,7 @@ import React from 'react';
 import Resume from "assets/img/Arnav_Kaushal_2020.pdf";
 
 
-function PortfolioPage(){
+function Index(){
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
     const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
 
@@ -655,4 +655,4 @@ function PortfolioPage(){
     );
 }
 
-export default PortfolioPage;
+export default Index;

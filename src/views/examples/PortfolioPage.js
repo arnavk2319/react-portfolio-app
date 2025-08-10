@@ -1,10 +1,77 @@
 import React from 'react';
-import Resume from "assets/img/Arnav_Kaushal_2020.pdf";
+import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
+import { ContactGrid } from "views/examples/ContactGrid";
+import { RotatingText } from "views/examples/RotatingText";
+import { BadgeCarousel } from 'views/examples/BadgeCarousel';
 
 
 function PortfolioPage(){
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
     const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
+
+    const credlyBadges = [
+        {
+        title: 'Vue.js Essentials',
+        image: 'https://images.credly.com/images/f03ae314-65bc-44f3-8fcd-3dda6fd9ddd4/c783df0b-00ad-4d44-b30a-7f8dab695565.png',
+        link: 'https://www.credly.com/badges/962c8074-f478-4be3-992a-7fab0c4e6f2a'
+      }, {
+        title: 'Angular 18+',
+        image: 'https://images.credly.com/size/680x680/images/89bde5df-b0e3-40dc-825e-f350f25ce7d2/9264989c-a675-4991-914a-d4d61a7b782f.png',
+        link: 'https://www.credly.com/badges/e7edf591-2e45-4c73-919a-17f9848b8b95'
+      },
+        {
+        title: 'TypeScript Essentials',
+        image: 'https://images.credly.com/size/680x680/images/91982e17-e239-4e95-888a-7e1f473b1ca2/59e735e3-1556-4e93-82da-e8dda5f0a57f.png',
+        link: 'https://www.credly.com/badges/12fb6411-f471-4770-a74e-be6f149e09ec'
+      },
+      {
+        title: 'FastAPI REST Mastery',
+        image: 'https://images.credly.com/images/0da575c8-001b-475f-b9f7-157f6e942ae0/7ed24965-1223-49fd-86b1-8d8cb6bab5a0.png',
+        link: 'https://www.credly.com/badges/9af29f22-c8bf-468e-85c1-238b1a616e2b'
+      },
+       {
+        title: 'Reactive Spring',
+        image: 'https://images.credly.com/size/680x680/images/88706d14-6dea-403f-a927-a95d043cfae8/1206a736-3eb4-429a-943d-2e491c64c0be.png',
+        link: 'https://www.credly.com/badges/be50a73d-94a0-4bd0-b0c8-412a529688ed'
+      },  {
+        title: 'NodeJS - The Complete Guide',
+        image: 'https://udemy-certificate.s3.amazonaws.com/image/UC-ab5835fa-3591-4ef7-83e8-73688e5bb928.jpg?v=1642507259000',
+        link: 'https://www.udemy.com/certificate/UC-ab5835fa-3591-4ef7-83e8-73688e5bb928/'
+      },
+      {
+        title: 'Spring & Spring Boot Fund.',
+        image: 'https://images.credly.com/size/680x680/images/d0644db7-b33a-4338-9b0c-e397feb666e1/0dd025bd-a8d0-4b46-a6ff-01b752881dbb.png',
+        link: 'https://www.credly.com/badges/a846d16f-6b85-4446-9d02-e40507cd6737'
+      },
+      {
+        title: 'IBM Introduction to Machine Learning - Specialization',
+        image: 'https://images.credly.com/size/680x680/images/0d184873-3dd0-49fc-bb84-8734f9061a07/IBM_Intro_to_Machine_Learning_-_Coursera_Specialization.png',
+        link: 'https://www.credly.com/badges/18366399-4003-414d-a647-3b5e4ccd3f23'
+      }, {
+        title: 'Unsupervised Machine Learning',
+        image: 'https://images.credly.com/size/680x680/images/3c8bc106-3635-45d0-ab5a-736adb87595e/image.png',
+        link: 'https://www.credly.com/badges/05cfb12c-8251-46ac-9c0f-bedf7428b20c'
+      },
+     {
+        title: 'Supervised Machine Learning: Classification',
+        image: 'https://images.credly.com/size/680x680/images/19878499-c3d3-4e67-8b97-8ec273187ccd/image.png',
+        link: 'https://www.credly.com/badges/2e6ed830-46c4-419a-a2f6-1b5a64095a63'
+      },
+      {
+        title: 'Supervised Machine Learning: Regression',
+        image: 'https://images.credly.com/size/680x680/images/5ce4d440-596a-4598-a106-358e64c05e5e/image.png',
+        link: 'https://www.credly.com/badges/c5af26e2-864f-4bd1-bb6a-332b0d62b2d5'
+      }, {
+        title: 'Databases and SQL for Data Science',
+        image: 'https://images.credly.com/size/680x680/images/f2573aac-d21c-483d-acda-afaa366b4f51/image.png',
+        link: 'https://www.credly.com/badges/8d43351f-9e1a-406b-9e9f-f37530b4aff9'
+      },
+      {
+        title: 'Machine Learning Foundations',
+        image: 'https://images.credly.com/size/680x680/images/a636f6a1-bacf-4819-9239-5d9907e85708/f5d7b910-6d3b-40f6-a879-1d3a945a2045.png',
+        link: 'https://www.credly.com/badges/5ce779de-10e9-47c4-bfc5-3b0f6b7b9cc3'
+      }
+    ];
 
     return(
         <>
@@ -38,9 +105,8 @@ function PortfolioPage(){
                                     </h5>
 
                                     <div className="art-sm-text">
-                                        Front-End Developer
+                                        Full Stack Software Engineer, DS/ML Engineer
                                         <br></br>
-                                        Mobile and Web
                                     </div>
                                 </div>
                                 
@@ -57,7 +123,7 @@ function PortfolioPage(){
                                             </li>
                                             
                                             <li>
-                                                <h6>Age:</h6><span>25</span>
+                                                <h6>Age:</h6><span>29</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -70,9 +136,9 @@ function PortfolioPage(){
                                         <div className="art-lang-skills-item">
                                             <div id="circleprog1" className="art-cirkle-progress">
                                             <svg viewBox="0 0 100 100" style={{display: 'block', width: '100%'}}>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" strokeWidth="7" fillOpacity="0">
                                                 </path>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" strokeWidth="7" fillOpacity="0">
                                                 </path>
                                             </svg>
 
@@ -85,9 +151,9 @@ function PortfolioPage(){
                                         <div className="art-lang-skills-item">
                                             <div id="circleprog2" className="art-cirkle-progress">
                                             <svg viewBox="0 0 100 100" style={{display: 'block', width: '100%'}}>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" strokeWidth="7" fillOpacity="0">
                                                 </path>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" strokeWidth="7" fillOpacity="0">
                                                 </path>
                                             </svg>
 
@@ -106,7 +172,7 @@ function PortfolioPage(){
                     
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">  
-                                                <h6>Java</h6>
+                                                <h6>Python, FastAPI, pytest</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -127,7 +193,7 @@ function PortfolioPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Javascript (ES5, ES6)</h6>
+                                                <h6>TypeScript, Javascript (ES6)</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -148,7 +214,7 @@ function PortfolioPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Data Structures</h6>
+                                                <h6>Machine Learning, Data Science/Engg</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -169,7 +235,7 @@ function PortfolioPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Algorithms</h6>
+                                                <h6>Data Structures and Algorithms</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -190,7 +256,7 @@ function PortfolioPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Mobile - Android, Flutter</h6>
+                                                <h6>Java, Spring Boot, Spring MVC</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -209,7 +275,7 @@ function PortfolioPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Web - ReactJS, AngularJS</h6>
+                                                <h6>Vue 2+, Angular 20+, React.js, Node.js</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -224,20 +290,43 @@ function PortfolioPage(){
                                             </div>
                                         
                                         </div>
+
+                                        <div className="art-hard-skills-item">
+                                            <div className="art-skill-heading">
+                                                
+                                                <h6>SQL, NoSQL, ORM, ODM</h6>
+                                            </div>
+                                            
+                                            <div className="art-line-progress">
+                                                
+                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
+                                                    </svg>
+                                                    
+                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>90 %
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
                                     </div>    
                                                                         
                                     
                                     <div className="art-ls-divider3"></div>
                                 
                                     <ul className="art-knowledge-list p-15-0">
-                 
-                                        <li>Bootstrap, Materialize</li>
+
+                                        <li>Bootstrap, Materialize, Sass, Less</li>
                                         
-                                        <li>Stylus, Sass, Less</li>
+                                        <li>Jest, Jasmine Testing</li>
                                         
                                         <li>Gulp, Webpack, Grunt</li>
                                         
-                                        <li>GIT knowledge</li>
+                                        <li>Git, GitLab CI/CD</li>
+
+                                        <li>Data Engineering, Analysis & Modeling</li>
+
+                                        <li>Machine Learning, MLOps & AI Engineering</li>
                                     </ul>
 
                                     <div className="art-ls-divider4"></div>
@@ -253,7 +342,7 @@ function PortfolioPage(){
 
                                 <div className="art-ls-social">
                 
-                                    <a href="https://www.linkedin.com/in/arnav-kaushal-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                         
                                     <a href="#." target="_blank"><i className="fa fa-globe"></i></a>
                                         
@@ -303,27 +392,24 @@ function PortfolioPage(){
                                                   
                                                     <div  className="art-a art-banner" style={{backgroundImage: 'url(https://elanta.app/nazar/arter-demo/img/bg.jpg)'}}>
                                                     
-                                                    <div  className="art-banner-back"></div>
-                                                    
-                                                    <div  className="art-banner-dec"></div>
-                                                    
-                                                    <div  className="art-banner-overlay">
+                                                        <div  className="art-banner-back"></div>
                                                         
-                                                        <div  className="art-banner-title">
+                                                        <div  className="art-banner-dec"></div>
                                                         
-                                                            <h1  className="mb-15">Discover my Amazing<br></br>Art Space!</h1>
-                                                        
-                                                        <div  className="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; I build <span  className="txt-rotate" data-period="2000"
-                                                            data-rotate='[ "web interfaces.", "ios and android applications.", "design mocups.", "automation tools." ]'></span>&lt;/<i>code</i>&gt;</div>
-                                                            <div  className="art-buttons-frame">
-                                                                
-                                                                <a href="/projects-page"  className="art-btn art-btn-md"><span>Explore now</span></a>
+                                                        <div  className="art-banner-overlay">
+                                                            
+                                                            <div  className="art-banner-title">
+                                                            
+                                                                <h1  className="mb-15">From Concept to Deployment</h1>
+                                                                <h3  className="mb-5">I Make It Happen!</h3>
+                                                            
+                                                                <RotatingText />
+                                                                <div  className="art-buttons-frame">
+                                                                    
+                                                                    <a href="/projects"  className="art-btn art-btn-md"><span>Explore now</span></a>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        
-                                                        
-                                                        {/* <img src="https://elanta.app/nazar/arter-demo/img/face-2.png"  className="art-banner-photo" alt="Your Name"></img> */}
-                                                    </div>
                                                     
                                                     </div>
                                                     
@@ -349,7 +435,7 @@ function PortfolioPage(){
                                                         
                                                         <div className="art-counter-box">
                                                         
-                                                            <span className="art-counter">2</span><span className="art-counter-plus">+</span>
+                                                            <span className="art-counter">5</span><span className="art-counter-plus">+</span>
                                                         
                                                         </div>
                                                                                                       
@@ -368,7 +454,7 @@ function PortfolioPage(){
                                                         
                                                         <div className="art-counter-box">
                                                         
-                                                            <span className="art-counter">22</span>
+                                                            <span className="art-counter">20</span><span className="art-counter-plus">+</span>
                                                         
                                                         </div>
                                                                                                               
@@ -387,11 +473,11 @@ function PortfolioPage(){
                                                         
                                                         <div className="art-counter-box">
                                                         
-                                                            <span className="art-counter">114</span>
+                                                            <span className="art-counter">30</span><span className="art-counter-plus">+</span>
                                                         
                                                         </div>                                                       
                                                         
-                                                        <h6>Happy Customers</h6>
+                                                        <h6>Languages, Tools & Frameworks</h6>
                                                     </div>
                                                 
 
@@ -406,11 +492,11 @@ function PortfolioPage(){
                                                         
                                                         <div className="art-counter-box">
                                                         
-                                                            <span className="art-counter">20</span><span className="art-counter-plus">+</span>
+                                                            <span className="art-counter">50</span><span className="art-counter-plus">+</span>
                                                         
                                                         </div>                                                        
                                                         
-                                                        <h6>Honors and Awards</h6>
+                                                        <h6>Widgets Built</h6>
                                                     </div>
                                                 
 
@@ -425,18 +511,29 @@ function PortfolioPage(){
 
 
                                         {/*Container fluid section -- 3*/}
-                                        <div class="container-fluid">
+                                        <div className="container-fluid">
 
-                 
-                                            <div class="row">
+                                            <div className="row justify-content-center">
+                                                <ContactGrid />
+                                            </div>
+
+                                        </div>
+
+
+
+
+                                        {/*Container fluid section -- 4*/}
+                                        <div className="container-fluid mt-1">
+
+                                            <div className="row">
 
                                             
-                                                <div class="col-lg-12">
+                                                <div className="col-lg-12">
 
                                                     
-                                                    <div class="art-section-title">
+                                                    <div className="art-section-title mt-1">
                                                     
-                                                        <div class="art-title-frame">
+                                                        <div className="art-title-frame">
                                                             
                                                             <h4>My Services</h4>
                                                         </div>
@@ -448,18 +545,18 @@ function PortfolioPage(){
                                                 
 
                                                 
-                                                <div class="col-lg-4 col-md-6">
+                                                <div className="col-lg-4 col-md-6">
 
                                                     
-                                                    <div class="art-a art-service-icon-box">
+                                                    <div className="art-a art-service-icon-box">
                                                     
-                                                        <div class="art-service-ib-content">
+                                                        <div className="art-service-ib-content">
                                                             
-                                                            <h5 class="mb-15">Web Development</h5>
+                                                            <h5 className="mb-15">Responsive Web Development</h5>
                                                             
-                                                            <div class="mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.</div>
+                                                            <div className="mb-15">Building flexible, user-friendly websites that adapt seamlessly across all devices and screen sizes</div>
                                                             
-                                                            <div class="art-buttons-frame"><a href="/nazar/arter-demo/contact.html" class="art-link art-color-link art-w-chevron">Order now</a></div>
+                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
                                                         </div>
                                                     
                                                     </div>
@@ -469,18 +566,18 @@ function PortfolioPage(){
                                                 
 
                                                 
-                                                <div class="col-lg-4 col-md-6">
+                                                <div className="col-lg-4 col-md-6">
 
                                                     
-                                                    <div class="art-a art-service-icon-box">
+                                                    <div className="art-a art-service-icon-box">
                                                     
-                                                        <div class="art-service-ib-content">
+                                                        <div className="art-service-ib-content">
                                                             
-                                                            <h5 class="mb-15">UI/UX Design</h5>
+                                                            <h5 className="mb-15">ML & Data Science Models</h5>
                                                             
-                                                            <div class="mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.</div>
+                                                            <div className="mb-15">Designing intelligent models to extract insights and automate decisions from complex data</div>
                                                             
-                                                            <div class="art-buttons-frame"><a href="/nazar/arter-demo/contact.html" class="art-link art-color-link art-w-chevron">Order now</a></div>
+                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
                                                         </div>
                                                     
                                                     </div>
@@ -490,18 +587,18 @@ function PortfolioPage(){
                                                 
 
                                                 
-                                                <div class="col-lg-4 col-md-6">
+                                                <div className="col-lg-4 col-md-6">
 
                                                     
-                                                    <div class="art-a art-service-icon-box">
+                                                    <div className="art-a art-service-icon-box">
                                                     
-                                                        <div class="art-service-ib-content">
+                                                        <div className="art-service-ib-content">
                                                             
-                                                            <h5 class="mb-15">Sound Design</h5>
+                                                            <h5 className="mb-15">APIs & SDKs</h5>
                                                             
-                                                            <div class="mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.</div>
+                                                            <div className="mb-15">Creating robust interfaces and tools to enable seamless integration and expand functionality</div>
                                                             
-                                                            <div class="art-buttons-frame"><a href="/nazar/arter-demo/contact.html" class="art-link art-color-link art-w-chevron">Order now</a></div>
+                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
                                                         </div>
                                                     
                                                     </div>
@@ -511,18 +608,18 @@ function PortfolioPage(){
                                                 
 
                                                 
-                                                <div class="col-lg-4 col-md-6">
+                                                <div className="col-lg-4 col-md-6">
 
                                                     
-                                                    <div class="art-a art-service-icon-box">
+                                                    <div className="art-a art-service-icon-box">
                                                     
-                                                        <div class="art-service-ib-content">
+                                                        <div className="art-service-ib-content">
                                                             
-                                                            <h5 class="mb-15">Game Design</h5>
+                                                            <h5 className="mb-15">Cloud Computing & Databases</h5>
                                                             
-                                                            <div class="mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.</div>
+                                                            <div className="mb-15">Leveraging cloud platforms and scalable databases for reliable, high-performance applications</div>
                                                             
-                                                            <div class="art-buttons-frame"><a href="/nazar/arter-demo/contact.html" class="art-link art-color-link art-w-chevron">Order now</a></div>
+                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
                                                         </div>
                                                     
                                                     </div>
@@ -532,18 +629,18 @@ function PortfolioPage(){
                                                 
 
                                                 
-                                                <div class="col-lg-4 col-md-6">
+                                                <div className="col-lg-4 col-md-6">
 
                                                     
-                                                    <div class="art-a art-service-icon-box">
+                                                    <div className="art-a art-service-icon-box">
                                                     
-                                                        <div class="art-service-ib-content">
+                                                        <div className="art-service-ib-content">
                                                             
-                                                            <h5 class="mb-15">Advertising</h5>
+                                                            <h5 className="mb-15">Automation Tools</h5>
                                                             
-                                                            <div class="mb-15">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus esse commodi deserunt vitae, vero quasi! Veniam quaerat tenetur pariatur doloribus.</div>
+                                                            <div className="mb-15">Developing scripts and workflows to streamline tasks and boost productivity efficiently</div>
                                                             
-                                                            <div class="art-buttons-frame"><a href="/nazar/arter-demo/contact.html" class="art-link art-color-link art-w-chevron">Order now</a></div>
+                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
                                                         </div>
                                                     
                                                     </div>
@@ -553,31 +650,42 @@ function PortfolioPage(){
                                             
 
                                             </div>
-                 
 
                                         </div>
 
 
 
 
+                                        <div className="container-fluid mt-5">
+                                            <div className="col-lg-12">
+                                                    
+                                                <div className="art-section-title mb-n4">
+                                                
+                                                    <div className="art-title-frame">
+                                                        
+                                                        <h4>My Credentials</h4>
+                                                    </div>
+                                                
+                                                </div>
+                                                
+
+                                            </div>
+                                            <BadgeCarousel items={credlyBadges} className="mt-3"/>
+
+                                        </div>
 
 
 
-
-                                        {/*Container fluid section -- 4*/}
+                                        {/*Container fluid section -- 5*/}
                                         <div className="container-fluid">
 
                                             <footer>
-                                                <div>© 2020 Arnav Kaushal</div>
+                                                <div>© 2025 Arnav Kaushal</div>
                                             </footer>
 
                                         </div>
 
 
-
-
-
-               
                                     </div>
                                     
                                 </div>   
@@ -611,22 +719,24 @@ function PortfolioPage(){
                                 <div className="art-current-page">
                                     <a href="/portfolio-page">Home</a>
                                     <a href="/projects-page">Portfolio</a>
+                                    <a href="/certifications-page">Certifications</a>
                                     <a href="/history-page">History</a>
                                     <a href="/contact-page">Contact</a>
                                 </div>
 
                                 <div className="art-scroll-frame-menu-sidebar">
 
-                                    <nav id="swupMenu">                  
+                                    <nav id="swupMenu">        
                                         <ul className="main-menu">
-                                            <li className="menu-item current-menu-item"><a href="/portfolio-page">Home</a></li>
+                                            <li className="menu-item"><a href="/portfolio">Home</a></li>
                                             
-                                            <li className="menu-item"><a href="/projects-page">Portfolio</a></li>
+                                            <li className="menu-item"><a href="/projects">Portfolio</a></li>
+
+                                            <li className="menu-item"><a href="/certifications">Certifications</a></li>
+                                                                                        
+                                            <li className="menu-item"><a href="/history">History</a></li>
                                             
-                                            <li className="menu-item"><a href="/history-page">History</a></li>
-                                            
-                                            <li className="menu-item"><a href="/contact-page">Contact</a></li>
-                                            
+                                            <li className="menu-item"><a href="/contact-me">Contact</a></li>
                                         </ul>                                           
                                     </nav>  
 

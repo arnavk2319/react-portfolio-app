@@ -243,9 +243,9 @@ app marcup
       scrollbar-width: none;
     }
   
-    ::-webkit-scrollbar {
-      display: none;
-    }
+    // ::-webkit-scrollbar {
+    //   display: none;
+    // }
     /* ----- mobile top bar ----- */
     & .art-mobile-top-bar {
       position: fixed;
@@ -279,7 +279,7 @@ app marcup
         /* ----- info bar ----- */
         & .art-info-bar {
           background: #24242F;
-          width: 290px;
+          width: 450px;
           min-width: 290px;
           height: calc(100vh - 30px);
           position: relative;

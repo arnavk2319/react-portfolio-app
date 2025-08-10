@@ -30,6 +30,7 @@ import PortfolioPage from "views/examples/PortfolioPage.js"
 import ProjectsPage from "views/examples/ProjectsPage.js";
 import HistoryPage from "views/examples/HistoryPage.js";
 import ContactPage from "views/examples/ContactPage.js";
+import CertificationsPage from "views/examples/CertificationsPage.js";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -37,19 +38,23 @@ ReactDOM.render(
       <Switch>
         <Route path="/index" render={(props) => <Index {...props} />} />
         <Route
-          path="/portfolio-page"
+          path="/portfolio"
           render={(props) => <PortfolioPage {...props} />}
         />
         <Route
-          path="/projects-page"
+          path="/projects"
           render={(props) => <ProjectsPage {...props} />}
         />
         <Route
-          path="/history-page"
+          path="/certifications"
+          render={(props) => <CertificationsPage {...props} />}
+        />
+        <Route
+          path="/history"
           render={(props) => <HistoryPage {...props} />}
         />
         <Route
-          path="/contact-page"
+          path="/contact-me"
           render={(props) => <ContactPage {...props} />}
         />
         <Redirect to="/index" />

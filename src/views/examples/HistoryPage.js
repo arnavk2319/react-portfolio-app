@@ -1,5 +1,5 @@
 import React from 'react';
-import Resume from "assets/img/Arnav_Kaushal_2020.pdf";
+import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 
 function HistoryPage(){
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
@@ -188,9 +188,9 @@ function HistoryPage(){
                                     </h5>
 
                                     <div className="art-sm-text">
-                                        Front-End Developer
+                                        Full Stack Software Engineer
                                         <br></br>
-                                        Mobile and Web
+                                        MERN / MEAN / VJSS
                                     </div>
                                 </div>
                                 
@@ -207,7 +207,7 @@ function HistoryPage(){
                                             </li>
                                             
                                             <li>
-                                                <h6>Age:</h6><span>25</span>
+                                                <h6>Age:</h6><span>29</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -220,9 +220,9 @@ function HistoryPage(){
                                         <div className="art-lang-skills-item">
                                             <div id="circleprog1" className="art-cirkle-progress">
                                             <svg viewBox="0 0 100 100" style={{display: 'block', width: '100%'}}>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" strokeWidth="7" fillOpacity="0">
                                                 </path>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" strokeWidth="7" fillOpacity="0">
                                                 </path>
                                             </svg>
 
@@ -235,9 +235,9 @@ function HistoryPage(){
                                         <div className="art-lang-skills-item">
                                             <div id="circleprog2" className="art-cirkle-progress">
                                             <svg viewBox="0 0 100 100" style={{display: 'block', width: '100%'}}>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" strokeWidth="7" fillOpacity="0">
                                                 </path>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" strokeWidth="7" fillOpacity="0">
                                                 </path>
                                             </svg>
 
@@ -255,7 +255,7 @@ function HistoryPage(){
                  
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">  
-                                                <h6>Java</h6>
+                                                <h6>Python, FastAPI, pytest</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -276,7 +276,7 @@ function HistoryPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Javascript (ES5, ES6)</h6>
+                                                <h6>TypeScript, Javascript (ES6)</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -297,7 +297,7 @@ function HistoryPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Data Structures</h6>
+                                                <h6>Machine Learning, Data Science</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -318,7 +318,7 @@ function HistoryPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Algorithms</h6>
+                                                <h6>Data Structures and Algorithms</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -339,7 +339,7 @@ function HistoryPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Mobile - Android, Flutter</h6>
+                                                <h6>Java, Spring Boot, Spring MVC</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -358,7 +358,7 @@ function HistoryPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Web - ReactJS, AngularJS</h6>
+                                                <h6>Vue 2+, Angular 20+, React.js, Node.js</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -373,20 +373,43 @@ function HistoryPage(){
                                             </div>
                                         
                                         </div>
-                                    </div>    
+
+                                        <div className="art-hard-skills-item">
+                                            <div className="art-skill-heading">
+                                                
+                                                <h6>SQL, NoSQL, ORM, ODM</h6>
+                                            </div>
+                                            
+                                            <div className="art-line-progress">
+                                                
+                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
+                                                    </svg>
+                                                    
+                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>90 %
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
                                                                         
                                     
                                     <div className="art-ls-divider3"></div>
                                 
                                     <ul className="art-knowledge-list p-15-0">
-                 
-                                        <li>Bootstrap, Materialize</li>
+
+                                        <li>Bootstrap, Materialize, Sass, Less</li>
                                         
-                                        <li>Stylus, Sass, Less</li>
+                                        <li>Jest, Jasmine Testing</li>
                                         
                                         <li>Gulp, Webpack, Grunt</li>
                                         
-                                        <li>GIT knowledge</li>
+                                        <li>Git, GitLab CI/CD</li>
+
+                                        <li>Data Engineering, Analysis & Modeling</li>
+
+                                        <li>Machine Learning, MLOps & AI Engineering</li>
                                     </ul>
 
                                     <div className="art-ls-divider4"></div>
@@ -402,7 +425,7 @@ function HistoryPage(){
 
                                 <div className="art-ls-social">
                 
-                                    <a href="https://www.linkedin.com/in/arnav-kaushal-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                         
                                     <a href="#." target="_blank"><i className="fa fa-globe"></i></a>
                                         
@@ -450,9 +473,9 @@ function HistoryPage(){
 
                                                 <div className="col-lg-6">
 
-                                                    <div class="art-section-title">
+                                                    <div className="art-section-title">
                                                         
-                                                        <div class="art-title-frame">
+                                                        <div className="art-title-frame">
                                                            
                                                             <h4>Education</h4>
 
@@ -462,19 +485,19 @@ function HistoryPage(){
 
                                                     <div className="art-timeline art-gallery">
 
-                                                        <div class="art-timeline-item">
-                                                            <div class="art-timeline-mark-light"></div>
-                                                            <div class="art-timeline-mark"></div>
+                                                        <div className="art-timeline-item">
+                                                            <div className="art-timeline-mark-light"></div>
+                                                            <div className="art-timeline-mark"></div>
 
-                                                            <div class="art-a art-timeline-content">
-                                                                <div class="art-card-header">
-                                                                    <div class="art-left-side">
+                                                            <div className="art-a art-timeline-content">
+                                                                <div className="art-card-header">
+                                                                    <div className="art-left-side">
                                                                         <h5>Carleton University</h5>
-                                                                        <div class="art-el-suptitle mb-15">Master of Engineering (M. Eng)</div>
+                                                                        <div className="art-el-suptitle mb-15">Master of Engineering (M. Eng)</div>
                                                                     </div>
-                                                                    <div class="art-right-side">
-                                                                        <span class="art-date">Sept 2018 - Jan 2020</span>
-                                                                        {/* <span class="art-date">Sept 2018 - Jan 2020</span> */}
+                                                                    <div className="art-right-side">
+                                                                        <span className="art-date">Sept 2018 - Jan 2020</span>
+                                                                        {/* <span className="art-date">Sept 2018 - Jan 2020</span> */}
                                                                     </div>
                                                                 </div>
 
@@ -486,18 +509,18 @@ function HistoryPage(){
 
 
 
-                                                        <div class="art-timeline-item">
-                                                            <div class="art-timeline-mark-light"></div>
-                                                            <div class="art-timeline-mark"></div>
+                                                        <div className="art-timeline-item">
+                                                            <div className="art-timeline-mark-light"></div>
+                                                            <div className="art-timeline-mark"></div>
 
-                                                            <div class="art-a art-timeline-content">
-                                                                <div class="art-card-header">
-                                                                    <div class="art-left-side">
+                                                            <div className="art-a art-timeline-content">
+                                                                <div className="art-card-header">
+                                                                    <div className="art-left-side">
                                                                         <h5>SRM IST</h5>
-                                                                        <div class="art-el-suptitle mb-15">Bachelor of Technology (B. Tech)</div>
+                                                                        <div className="art-el-suptitle mb-15">Bachelor of Technology (B. Tech)</div>
                                                                     </div>
-                                                                    <div class="art-right-side">
-                                                                        <span class="art-date">Sept 2014 - May 2018</span>
+                                                                    <div className="art-right-side">
+                                                                        <span className="art-date">Sept 2014 - May 2018</span>
                                                                     </div>
                                                                 </div>
 
@@ -513,11 +536,11 @@ function HistoryPage(){
 
 
 
-                                                <div class="col-lg-6">
+                                                <div className="col-lg-6">
 
-                                                    <div class="art-section-title">
+                                                    <div className="art-section-title">
 
-                                                        <div class="art-title-frame">
+                                                        <div className="art-title-frame">
 
                                                             <h4>Work History</h4>
 
@@ -527,19 +550,47 @@ function HistoryPage(){
 
                                                     <div className="art-timeline">
 
-                                                        <div class="art-timeline-item">
+                                                        <div className="art-timeline-item">
 
-                                                            <div class="art-timeline-mark-light"></div>
-                                                            <div class="art-timeline-mark"></div>
+                                                            <div className="art-timeline-mark-light"></div>
+                                                            <div className="art-timeline-mark"></div>
 
-                                                            <div class="art-a art-timeline-content">
-                                                                <div class="art-card-header">
-                                                                    <div class="art-left-side">
-                                                                        <h5>The AppLabb</h5>
-                                                                        <div class="art-el-suptitle mb-15">Front-end Developer (Mobile and Web)</div>
+                                                            <div className="art-a art-timeline-content">
+                                                                <div className="art-card-header">
+                                                                    <div className="art-left-side">
+                                                                        <h5>SS&C Technologies</h5>
+                                                                        <div className="art-el-suptitle mb-15">Software Engineer</div>
                                                                     </div>
-                                                                    <div class="art-right-side">
-                                                                        <span class="art-date">Jan 2020 - Present</span>
+                                                                    <div className="art-right-side">
+                                                                        <span className="art-date">May 2022 - Present</span>
+                                                                    </div>
+                                                                </div>
+
+                                                                <p style={{color: '#ffffff', fontSize: '12px'}}>Toronto, Canada</p>
+
+                                                                <p>Developed and maintained responsive, enterprise-grade web applicaPons using Angular 18+, TypeScript, HTML5, SCSS, and Vue 2/Nuxt, Python enhancing user interacLon and reducing page load Pme by ~35%. </p>
+
+                                                                <p>Engineered 5+ criLcal business modules (e.g., Payroll, Loans and Withdrawals, Statements and Transactions, Client Reporting, Tenant
+                                                                Management) within a mulP-tenant SaaS fintech pla[orm, contribuLng to its adopLon by major clients and over $100M+ in processed transacLons.</p>
+
+                                                                <p>Implemented and consumed RESTful APIs using Spring MVC, Spring Boot (ReacPve), Java, Postman, CURL, and handled complex SQL operaPons to opLmize data flow and backend performance</p>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <div className="art-timeline-item">
+
+                                                            <div className="art-timeline-mark-light"></div>
+                                                            <div className="art-timeline-mark"></div>
+
+                                                            <div className="art-a art-timeline-content">
+                                                                <div className="art-card-header">
+                                                                    <div className="art-left-side">
+                                                                        <h5>The AppLabb</h5>
+                                                                        <div className="art-el-suptitle mb-15">Front-end Developer (Mobile and Web)</div>
+                                                                    </div>
+                                                                    <div className="art-right-side">
+                                                                        <span className="art-date">Jan 2020 - May 2022</span>
                                                                     </div>
                                                                 </div>
 
@@ -553,19 +604,19 @@ function HistoryPage(){
                                                         </div>
 
 
-                                                        <div class="art-timeline-item">
+                                                        <div className="art-timeline-item">
 
-                                                            <div class="art-timeline-mark-light"></div>
-                                                            <div class="art-timeline-mark"></div>
+                                                            <div className="art-timeline-mark-light"></div>
+                                                            <div className="art-timeline-mark"></div>
 
-                                                            <div class="art-a art-timeline-content">
-                                                                <div class="art-card-header">
-                                                                    <div class="art-left-side">
+                                                            <div className="art-a art-timeline-content">
+                                                                <div className="art-card-header">
+                                                                    <div className="art-left-side">
                                                                         <h5>The AppLabb</h5>
-                                                                        <div class="art-el-suptitle mb-15">Developer Intern (Mobile & Web)</div>
+                                                                        <div className="art-el-suptitle mb-15">Developer Intern (Mobile & Web)</div>
                                                                     </div>
-                                                                    <div class="art-right-side">
-                                                                        <span class="art-date">May 2019 - August 2019</span>
+                                                                    <div className="art-right-side">
+                                                                        <span className="art-date">May 2019 - August 2019</span>
                                                                     </div>
                                                                 </div>
 
@@ -578,19 +629,19 @@ function HistoryPage(){
                                                         </div>
 
 
-                                                        <div class="art-timeline-item">
+                                                        <div className="art-timeline-item">
 
-                                                            <div class="art-timeline-mark-light"></div>
-                                                            <div class="art-timeline-mark"></div>
+                                                            <div className="art-timeline-mark-light"></div>
+                                                            <div className="art-timeline-mark"></div>
 
-                                                            <div class="art-a art-timeline-content">
-                                                                <div class="art-card-header">
-                                                                    <div class="art-left-side">
+                                                            <div className="art-a art-timeline-content">
+                                                                <div className="art-card-header">
+                                                                    <div className="art-left-side">
                                                                         <h5>Velmenni</h5>
-                                                                        <div class="art-el-suptitle mb-15">Mobile Developer Intern</div>
+                                                                        <div className="art-el-suptitle mb-15">Mobile Developer Intern</div>
                                                                     </div>
-                                                                    <div class="art-right-side">
-                                                                        <span class="art-date">June 2017 - July 2017</span>
+                                                                    <div className="art-right-side">
+                                                                        <span className="art-date">June 2017 - July 2017</span>
                                                                     </div>
                                                                 </div>
 
@@ -604,19 +655,19 @@ function HistoryPage(){
                                                         </div>
 
 
-                                                        <div class="art-timeline-item">
+                                                        <div className="art-timeline-item">
 
-                                                            <div class="art-timeline-mark-light"></div>
-                                                            <div class="art-timeline-mark"></div>
+                                                            <div className="art-timeline-mark-light"></div>
+                                                            <div className="art-timeline-mark"></div>
 
-                                                            <div class="art-a art-timeline-content">
-                                                                <div class="art-card-header">
-                                                                    <div class="art-left-side">
+                                                            <div className="art-a art-timeline-content">
+                                                                <div className="art-card-header">
+                                                                    <div className="art-left-side">
                                                                         <h5>Flex</h5>
-                                                                        <div class="art-el-suptitle mb-15">Intern</div>
+                                                                        <div className="art-el-suptitle mb-15">Intern</div>
                                                                     </div>
-                                                                    <div class="art-right-side">
-                                                                        <span class="art-date">Dec 2016 - Jan 2017</span>
+                                                                    <div className="art-right-side">
+                                                                        <span className="art-date">Dec 2016 - Jan 2017</span>
                                                                     </div>
                                                                 </div>
 
@@ -642,7 +693,7 @@ function HistoryPage(){
                                         <div className="container-fluid">
 
                                             <footer>
-                                                <div>© 2020 Arnav Kaushal</div>
+                                                <div>© 2025 Arnav Kaushal</div>
                                             </footer>
 
                                         </div>
@@ -679,8 +730,9 @@ function HistoryPage(){
                                 </div>
 
                                 <div className="art-current-page">
-                                <a href="/history-page">History</a>
+                                    <a href="/history-page">History</a>
                                     <a href="/portfolio-page">Home</a>
+                                    <a href="/certifications-page">Certifications</a>
                                     <a href="/projects-page">Portfolio</a>                                  
                                     <a href="/contact-page">Contact</a>
                                 </div>
@@ -689,14 +741,15 @@ function HistoryPage(){
 
                                     <nav id="swupMenu">                  
                                         <ul className="main-menu">
-                                            <li className="menu-item"><a href="/portfolio-page">Home</a></li>
+                                            <li className="menu-item"><a href="/portfolio">Home</a></li>
                                             
-                                            <li className="menu-item"><a href="/projects-page">Portfolio</a></li>
+                                            <li className="menu-item"><a href="/projects">Portfolio</a></li>
+
+                                            <li className="menu-item"><a href="/certifications">Certifications</a></li>
+                                                                                        
+                                            <li className="menu-item"><a href="/history">History</a></li>
                                             
-                                            <li className="menu-item current-menu-item"><a href="/history-page">History</a></li>
-                                            
-                                            <li className="menu-item"><a href="/contact-page">Contact</a></li>
-                                            
+                                            <li className="menu-item"><a href="/contact-me">Contact</a></li>
                                         </ul>                                           
                                     </nav> 
 

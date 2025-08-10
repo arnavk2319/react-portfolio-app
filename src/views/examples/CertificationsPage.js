@@ -4,10 +4,6 @@ import CredlyBadges from './CredlyBadges';
 function ProjectsPage(){
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
     const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
-    const [artLinkAllCurrent, setArtLinkAllCurrent] = React.useState(true);
-    const [artLinkMobileCurrent, setArtLinkMobileCurrent] = React.useState(false);
-    const [artLinkWebCurrent, setArtLinkWebCurrent] = React.useState(false);
-    const [artLinkMLCurrent, setArtLinkMLCurrent] = React.useState(false)
 
     const credlyBadges = [
         {

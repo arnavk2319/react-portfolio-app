@@ -526,7 +526,7 @@ function ContactPage(){
                                                      
                                                     <div className="art-a art-card">
                                                      
-                                                        <form id="form" className="art-contact-form"   action="https://formspree.io/f/mwpqaojj" method="POST">
+                                                        <form id="form" className="art-contact-form" action="https://formspree.io/f/mwpqaojj" method="POST">
                                                             
                                                             <div className="art-form-field">
                                                             

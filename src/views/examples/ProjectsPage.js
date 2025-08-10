@@ -1,5 +1,5 @@
 import React from 'react';
-import Resume from "assets/img/Arnav_Kaushal_2020.pdf";
+import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 
 function ProjectsPage(){
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
@@ -7,16 +7,52 @@ function ProjectsPage(){
     const [artLinkAllCurrent, setArtLinkAllCurrent] = React.useState(true);
     const [artLinkMobileCurrent, setArtLinkMobileCurrent] = React.useState(false);
     const [artLinkWebCurrent, setArtLinkWebCurrent] = React.useState(false);
+    const [artLinkMLCurrent, setArtLinkMLCurrent] = React.useState(false);
 
 
-    function changeDOMElementForMobile(){
+    function changeDOMElementForML(){
 
+        hideWebItems();
+        hideMobileItems();
+        if(window.innerWidth < 1280){
+            document.getElementById("loanDefPred").style.top = '0px';
+            document.getElementById("loanDefPred").style.left = '0px';
+            document.getElementById("loanDefPred").style.display = 'block';                     
+        }
+
+        else{
+            document.getElementById("loanDefPred").style.position = 'absolute';
+            document.getElementById("loanDefPred").style.top = '0px';
+            document.getElementById("loanDefPred").style.left = '0px';
+            document.getElementById("loanDefPred").transition = '0.55s ease-in-out';
+            document.getElementById("loanDefPred").style.display = 'block';
+        }
+    };
+
+    function hideMobileItems() {
+        document.getElementById("lbmMobile").style.display = 'none';
+        document.getElementById("mapFinderMobile").style.display = 'none';
+        document.getElementById("covidMobile").style.display = 'none';
+        document.getElementById("shopsMobile").style.display = 'none';
+        document.getElementById("mealsMobile").style.display = 'none';
+    }
+
+    function hideWebItems() {
         document.getElementById("forkifyWeb").style.display = 'none';
         document.getElementById("dabShopWeb").style.display = 'none';
         document.getElementById("ppeProtectWeb").style.display = 'none';
         document.getElementById("equoWeb").style.display = 'none';
         document.getElementById("kovaWeb").style.display = 'none';
+    }
 
+    function hideMLItems() {
+        document.getElementById("loanDefPred").style.display = 'none';
+    }
+
+    function changeDOMElementForMobile(){
+
+        hideWebItems();
+        hideMLItems();
         if(window.innerWidth < 1280){
             document.getElementById("lbmMobile").style.top = '0px';
             document.getElementById("lbmMobile").style.left = '0px';
@@ -70,17 +106,13 @@ function ProjectsPage(){
             document.getElementById("mealsMobile").style.transition = '0.55s ease-in-out';
             document.getElementById("mealsMobile").style.display = 'block';
         }
-    };  
+    };
 
 
     function changeDOMElementForWeb(){
 
-        document.getElementById("lbmMobile").style.display = 'none';
-        document.getElementById("mapFinderMobile").style.display = 'none';
-        document.getElementById("covidMobile").style.display = 'none';
-        document.getElementById("shopsMobile").style.display = 'none';
-        document.getElementById("mealsMobile").style.display = 'none';
-
+        hideMobileItems();
+        hideMLItems();
         if(window.innerWidth < 1280){
             document.getElementById("forkifyWeb").style.top = '0px';
             document.getElementById("forkifyWeb").style.left = '0px';
@@ -181,6 +213,10 @@ function ProjectsPage(){
             document.getElementById("kovaWeb").style.top = '3211.448px';
             document.getElementById("kovaWeb").style.left = '0px';
             document.getElementById("kovaWeb").style.display = 'block';
+
+            document.getElementById("loanDefPred").style.top = '3568.28px';
+            document.getElementById("loanDefPred").style.left = '0px';
+            document.getElementById("loanDefPred").style.display = 'block';
         }
 
         else{
@@ -243,6 +279,12 @@ function ProjectsPage(){
             document.getElementById("kovaWeb").style.left = '520px';
             document.getElementById("kovaWeb").style.transition = '0.55s ease-in-out';
             document.getElementById("kovaWeb").style.display = 'block';
+
+            document.getElementById("loanDefPred").style.position = 'absolute';
+            document.getElementById("loanDefPred").style.top = '1427.308px';
+            document.getElementById("loanDefPred").style.left = '0px';
+            document.getElementById("loanDefPred").style.transition = '0.55s ease-in-out';
+            document.getElementById("loanDefPred").style.display = 'block';
         }
 
     };  
@@ -319,9 +361,9 @@ function ProjectsPage(){
                                     </h5>
 
                                     <div className="art-sm-text">
-                                        Front-End Developer
+                                        Full Stack Software Engineer
                                         <br></br>
-                                        Mobile and Web
+                                        MERN / MEAN / VJSS
                                     </div>
                                 </div>
                                 
@@ -338,7 +380,7 @@ function ProjectsPage(){
                                             </li>
                                             
                                             <li>
-                                                <h6>Age:</h6><span>25</span>
+                                                <h6>Age:</h6><span>29</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -351,9 +393,9 @@ function ProjectsPage(){
                                         <div className="art-lang-skills-item">
                                             <div id="circleprog1" className="art-cirkle-progress">
                                             <svg viewBox="0 0 100 100" style={{display: 'block', width: '100%'}}>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" strokeWidth="7" fillOpacity="0">
                                                 </path>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" strokeWidth="7" fillOpacity="0">
                                                 </path>
                                             </svg>
 
@@ -366,9 +408,9 @@ function ProjectsPage(){
                                         <div className="art-lang-skills-item">
                                             <div id="circleprog2" className="art-cirkle-progress">
                                             <svg viewBox="0 0 100 100" style={{display: 'block', width: '100%'}}>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" strokeWidth="7" fillOpacity="0">
                                                 </path>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" stroke-width="7" fill-opacity="0">
+                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" strokeWidth="7" fillOpacity="0">
                                                 </path>
                                             </svg>
 
@@ -386,7 +428,7 @@ function ProjectsPage(){
                  
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">  
-                                                <h6>Java</h6>
+                                                <h6>Python, FastAPI, pytest</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -407,7 +449,7 @@ function ProjectsPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Javascript (ES5, ES6)</h6>
+                                                <h6>TypeScript, Javascript (ES6)</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -428,7 +470,7 @@ function ProjectsPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Data Structures</h6>
+                                                <h6>Machine Learning, Data Science</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -449,7 +491,7 @@ function ProjectsPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Algorithms</h6>
+                                                <h6>Data Structures and Algorithms</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -470,7 +512,7 @@ function ProjectsPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Mobile - Android, Flutter</h6>
+                                                <h6>Java, Spring Boot, Spring MVC</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -489,7 +531,7 @@ function ProjectsPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Web - ReactJS, AngularJS</h6>
+                                                <h6>Vue 2+, Angular 20+, React.js, Node.js</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -504,20 +546,43 @@ function ProjectsPage(){
                                             </div>
                                         
                                         </div>
+
+                                        <div className="art-hard-skills-item">
+                                            <div className="art-skill-heading">
+                                                
+                                                <h6>SQL, NoSQL, ORM, ODM</h6>
+                                            </div>
+                                            
+                                            <div className="art-line-progress">
+                                                
+                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
+                                                    </svg>
+                                                    
+                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>90 %
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
                                     </div>    
                                                                         
                                     
                                     <div className="art-ls-divider3"></div>
                                 
                                     <ul className="art-knowledge-list p-15-0">
-                 
-                                        <li>Bootstrap, Materialize</li>
+
+                                        <li>Bootstrap, Materialize, Sass, Less</li>
                                         
-                                        <li>Stylus, Sass, Less</li>
+                                        <li>Jest, Jasmine Testing</li>
                                         
                                         <li>Gulp, Webpack, Grunt</li>
                                         
-                                        <li>GIT knowledge</li>
+                                        <li>Git, GitLab CI/CD</li>
+
+                                        <li>Data Engineering, Analysis & Modeling</li>
+
+                                        <li>Machine Learning, MLOps & AI Engineering</li>
                                     </ul>
 
                                     <div className="art-ls-divider4"></div>
@@ -533,7 +598,7 @@ function ProjectsPage(){
 
                                 <div className="art-ls-social">
                 
-                                    <a href="https://www.linkedin.com/in/arnav-kaushal-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
+                                    <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                         
                                     <a href="#." target="_blank"><i className="fa fa-globe"></i></a>
                                         
@@ -584,13 +649,16 @@ function ProjectsPage(){
                                                     <div className="art-filter mb-30" style={{padding: '20px'}}>
                                                          
                                                          <a id={'linkAll'} href="#" data-filter="*" className={artLinkAllCurrent ? "art-link art-current" : "art-link"}  onClick={() => {setArtLinkWebCurrent(false);
-                                                        setArtLinkAllCurrent(true); setArtLinkMobileCurrent(false); changeDOMElementForAll();}}>All Categories</a>
+                                                        setArtLinkAllCurrent(true); setArtLinkMobileCurrent(false); setArtLinkMLCurrent(false); changeDOMElementForAll();}}>All Categories</a>
                                                          
                                                          <a id="linkWeb" href="#" data-filter=".webTemplates" className={artLinkWebCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(true);
-                                                        setArtLinkAllCurrent(false); setArtLinkMobileCurrent(false);  changeDOMElementForWeb();}}>Web</a>
+                                                        setArtLinkAllCurrent(false); setArtLinkMobileCurrent(false); setArtLinkMLCurrent(false);  changeDOMElementForWeb();}}>Web</a>
                                                           
                                                          <a id="linkMobile" href="#" data-filter=".logos" className={artLinkMobileCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
-                                                        setArtLinkAllCurrent(false); setArtLinkMobileCurrent(true);  changeDOMElementForMobile();}}>Mobile</a>
+                                                        setArtLinkAllCurrent(false); setArtLinkMobileCurrent(true); setArtLinkMLCurrent(false);  changeDOMElementForMobile();}}>Mobile</a>
+
+                                                        <a id="linkWeb" href="#" data-filter=".webTemplates" className={artLinkMLCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
+                                                        setArtLinkAllCurrent(false); setArtLinkMobileCurrent(false); setArtLinkMLCurrent(true); changeDOMElementForML();}}>ML & Data Science</a>
                                                           
                                                     </div>
                                                     
@@ -809,7 +877,27 @@ function ProjectsPage(){
                                                              <a href="https://kovasocialbeauty.com/" className="art-link art-color-link art-w-chevron">Read more</a>
                                                          </div>
                                                           
-                                                    </div>             
+                                                    </div>
+
+                                                    <div id="loanDefPred" className={`art-grid-item ${artLinkWebCurrent ? "loan-pred-ml" : "loan-pred-all"}`} style={{position: 'absolute', top: '1427.308px', left: '520px'}}>
+                                                         
+                                                         <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/loan-default-prediction-logisticr-and-randomf/" className="art-a art-portfolio-item-frame art-horizontal">
+                                                              
+                                                             <img src={require('assets/img/loan-default-pred.png')} alt="item"></img>
+                                                              
+                                                             <span className="art-item-hover"><i className="fas fa-expand"></i></span>
+                                                         </a>
+                                                       
+                                                          
+                                                         <div className="art-item-description">
+                                                              
+                                                             <h5 className="mb-15">Loan Default Prediction - LogisticR and RandomF</h5>
+                                                             <div className="mb-15">A data model that is trained on binary classification using Random Forests and Logistic Regression to predict a loan default</div>
+                                                              
+                                                             <a href="https://www.kaggle.com/code/arnavkaushal/loan-default-prediction-logisticr-and-randomf/" className="art-link art-color-link art-w-chevron">Read more</a>
+                                                         </div>
+                                                          
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -822,7 +910,7 @@ function ProjectsPage(){
                                         <div className="container-fluid">
 
                                             <footer>
-                                                <div>© 2020 Arnav Kaushal</div>
+                                                <div>© 2025 Arnav Kaushal</div>
                                             </footer>
 
                                         </div>
@@ -861,23 +949,25 @@ function ProjectsPage(){
                                 <div className="art-current-page">
                                     <a href="/projects-page">Portfolio</a>
                                     <a href="/portfolio-page">Home</a>
+                                    <a href="/certifications-page">Certifications</a>
                                     <a href="/history-page">History</a>
                                     <a href="/contact-page">Contact</a>
                                 </div>
 
                                 <div className="art-scroll-frame">
 
-                                    <nav id="swupMenu">                  
+                                    <nav id="swupMenu">            
                                         <ul className="main-menu">
-                                            <li className="menu-item"><a href="/portfolio-page">Home</a></li>
+                                            <li className="menu-item"><a href="/portfolio">Home</a></li>
                                             
-                                            <li className="menu-item current-menu-item"><a href="/projects-page">Portfolio</a></li>
+                                            <li className="menu-item"><a href="/projects">Portfolio</a></li>
+
+                                            <li className="menu-item"><a href="/certifications">Certifications</a></li>
+                                                                                        
+                                            <li className="menu-item"><a href="/history">History</a></li>
                                             
-                                            <li className="menu-item"><a href="/history-page">History</a></li>
-                                            
-                                            <li className="menu-item"><a href="/contact-page">Contact</a></li>
-                                            
-                                        </ul>                                           
+                                            <li className="menu-item"><a href="/contact-me">Contact</a></li>
+                                        </ul>                                         
                                     </nav> 
 
                                     <ul className="art-language-change">

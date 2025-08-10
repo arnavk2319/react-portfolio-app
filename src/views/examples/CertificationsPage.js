@@ -1,172 +1,77 @@
 import React from 'react';
 import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
-import DetailsCard from './DetailsCard';
-
-function ContactPage(){
+import CredlyBadges from './CredlyBadges';
+function ProjectsPage(){
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
     const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
     const [artLinkAllCurrent, setArtLinkAllCurrent] = React.useState(true);
     const [artLinkMobileCurrent, setArtLinkMobileCurrent] = React.useState(false);
     const [artLinkWebCurrent, setArtLinkWebCurrent] = React.useState(false);
+    const [artLinkMLCurrent, setArtLinkMLCurrent] = React.useState(false)
 
-    const contactDetails = [
-      { label: "Email", value: "arnav.kaushal800@gmail.com", link: "mailto:arnav.kaushal800@gmail.com" },
-      { label: "Personal", value: "+1 8732883330", link: "tel:+18732883330" },
-      { label: "Skype", value: "live:arnavkaushal", link: "skype:live:arnavkaushal?chat" }
+    const credlyBadges = [
+        {
+        title: 'Vue.js Essentials',
+        image: 'https://images.credly.com/images/f03ae314-65bc-44f3-8fcd-3dda6fd9ddd4/c783df0b-00ad-4d44-b30a-7f8dab695565.png',
+        link: 'https://www.credly.com/badges/962c8074-f478-4be3-992a-7fab0c4e6f2a'
+      }, {
+        title: 'Angular 18+',
+        image: 'https://images.credly.com/size/680x680/images/89bde5df-b0e3-40dc-825e-f350f25ce7d2/9264989c-a675-4991-914a-d4d61a7b782f.png',
+        link: 'https://www.credly.com/badges/e7edf591-2e45-4c73-919a-17f9848b8b95'
+      },
+        {
+        title: 'TypeScript Essentials',
+        image: 'https://images.credly.com/size/680x680/images/91982e17-e239-4e95-888a-7e1f473b1ca2/59e735e3-1556-4e93-82da-e8dda5f0a57f.png',
+        link: 'https://www.credly.com/badges/12fb6411-f471-4770-a74e-be6f149e09ec'
+      },
+      {
+        title: 'FastAPI REST Mastery',
+        image: 'https://images.credly.com/images/0da575c8-001b-475f-b9f7-157f6e942ae0/7ed24965-1223-49fd-86b1-8d8cb6bab5a0.png',
+        link: 'https://www.credly.com/badges/9af29f22-c8bf-468e-85c1-238b1a616e2b'
+      },
+       {
+        title: 'Reactive Spring',
+        image: 'https://images.credly.com/size/680x680/images/88706d14-6dea-403f-a927-a95d043cfae8/1206a736-3eb4-429a-943d-2e491c64c0be.png',
+        link: 'https://www.credly.com/badges/be50a73d-94a0-4bd0-b0c8-412a529688ed'
+      },  {
+        title: 'NodeJS - The Complete Guide',
+        image: 'https://udemy-certificate.s3.amazonaws.com/image/UC-ab5835fa-3591-4ef7-83e8-73688e5bb928.jpg?v=1642507259000',
+        link: 'https://www.udemy.com/certificate/UC-ab5835fa-3591-4ef7-83e8-73688e5bb928/'
+      },
+      {
+        title: 'Spring & Spring Boot Fund.',
+        image: 'https://images.credly.com/size/680x680/images/d0644db7-b33a-4338-9b0c-e397feb666e1/0dd025bd-a8d0-4b46-a6ff-01b752881dbb.png',
+        link: 'https://www.credly.com/badges/a846d16f-6b85-4446-9d02-e40507cd6737'
+      },
+      {
+        title: 'IBM Introduction to Machine Learning - Specialization',
+        image: 'https://images.credly.com/size/680x680/images/0d184873-3dd0-49fc-bb84-8734f9061a07/IBM_Intro_to_Machine_Learning_-_Coursera_Specialization.png',
+        link: 'https://www.credly.com/badges/18366399-4003-414d-a647-3b5e4ccd3f23'
+      }, {
+        title: 'Unsupervised Machine Learning',
+        image: 'https://images.credly.com/size/680x680/images/3c8bc106-3635-45d0-ab5a-736adb87595e/image.png',
+        link: 'https://www.credly.com/badges/05cfb12c-8251-46ac-9c0f-bedf7428b20c'
+      },
+     {
+        title: 'Supervised Machine Learning: Classification',
+        image: 'https://images.credly.com/size/680x680/images/19878499-c3d3-4e67-8b97-8ec273187ccd/image.png',
+        link: 'https://www.credly.com/badges/2e6ed830-46c4-419a-a2f6-1b5a64095a63'
+      },
+      {
+        title: 'Supervised Machine Learning: Regression',
+        image: 'https://images.credly.com/size/680x680/images/5ce4d440-596a-4598-a106-358e64c05e5e/image.png',
+        link: 'https://www.credly.com/badges/c5af26e2-864f-4bd1-bb6a-332b0d62b2d5'
+      }, {
+        title: 'Databases and SQL for Data Science',
+        image: 'https://images.credly.com/size/680x680/images/f2573aac-d21c-483d-acda-afaa366b4f51/image.png',
+        link: 'https://www.credly.com/badges/8d43351f-9e1a-406b-9e9f-f37530b4aff9'
+      },
+      {
+        title: 'Machine Learning Foundations',
+        image: 'https://images.credly.com/size/680x680/images/a636f6a1-bacf-4819-9239-5d9907e85708/f5d7b910-6d3b-40f6-a879-1d3a945a2045.png',
+        link: 'https://www.credly.com/badges/5ce779de-10e9-47c4-bfc5-3b0f6b7b9cc3'
+      }
     ];
-
-    const locationDetails = [
-      { label: "Country", value: "Canada" },
-      { label: "City", value: " Toronto" },
-      { label: "Province", value: "Ontario" }
-    ];
-
-    function changeDOMElementForMobile(){
-        document.getElementById("forkifyWeb").style.display = 'none';
-        document.getElementById("dabShopWeb").style.display = 'none';
-        document.getElementById("ppeProtectWeb").style.display = 'none';
-        document.getElementById("equoWeb").style.display = 'none';
-        document.getElementById("kovaWeb").style.display = 'none';
-
-
-        document.getElementById("lbmMobile").style.position = 'absolute';
-        document.getElementById("lbmMobile").style.top = '0px';
-        document.getElementById("lbmMobile").style.left = '0px';
-        document.getElementById("lbmMobile").transition = '0.55s ease-in-out';
-        document.getElementById("lbmMobile").style.display = 'block';
-
-        document.getElementById("mapFinderMobile").style.position = 'absolute';
-        document.getElementById("mapFinderMobile").style.top = '0px';
-        document.getElementById("mapFinderMobile").style.left = '520px';
-        document.getElementById("mapFinderMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("mapFinderMobile").style.display = 'block';
-
-        document.getElementById("covidMobile").style.position = 'absolute';
-        document.getElementById("covidMobile").style.top = '356.828px';
-        document.getElementById("covidMobile").style.left = '0px';
-        document.getElementById("covidMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("covidMobile").style.display = 'block';
-
-        document.getElementById("shopsMobile").style.position = 'absolute';
-        document.getElementById("shopsMobile").style.top = '356.828px';
-        document.getElementById("shopsMobile").style.left = '520px';
-        document.getElementById("shopsMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("shopsMobile").style.display = 'block';
-
-        document.getElementById("mealsMobile").style.position = 'absolute';
-        document.getElementById("mealsMobile").style.top = '713px';
-        document.getElementById("mealsMobile").style.left = '0px';
-        document.getElementById("mealsMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("mealsMobile").style.display = 'block';
-
-    };  
-
-    function changeDOMElementForWeb(){
-        document.getElementById("lbmMobile").style.display = 'none';
-        document.getElementById("mapFinderMobile").style.display = 'none';
-        document.getElementById("covidMobile").style.display = 'none';
-        document.getElementById("shopsMobile").style.display = 'none';
-        document.getElementById("mealsMobile").style.display = 'none';
-
-
-        document.getElementById("forkifyWeb").style.position = 'absolute';
-        document.getElementById("forkifyWeb").style.top = '0px';
-        document.getElementById("forkifyWeb").style.left = '0px';
-        document.getElementById("forkifyWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("forkifyWeb").style.display = 'block';
-
-        document.getElementById("dabShopWeb").style.position = 'absolute';
-        document.getElementById("dabShopWeb").style.top = '0px';
-        document.getElementById("dabShopWeb").style.left = '520px';
-        document.getElementById("dabShopWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("dabShopWeb").style.display = 'block';
-
-        document.getElementById("ppeProtectWeb").style.position = 'absolute';
-        document.getElementById("ppeProtectWeb").style.top = '356.828px';
-        document.getElementById("ppeProtectWeb").style.left = '0px';
-        document.getElementById("ppeProtectWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("ppeProtectWeb").style.display = 'block';
-
-        document.getElementById("equoWeb").style.position = 'absolute';
-        document.getElementById("equoWeb").style.top = '356.828px';
-        document.getElementById("equoWeb").style.left = '520px';
-        document.getElementById("equoWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("equoWeb").style.display = 'block';
-
-        document.getElementById("kovaWeb").style.position = 'absolute';
-        document.getElementById("kovaWeb").style.top = '713px';
-        document.getElementById("kovaWeb").style.left = '0px';
-        document.getElementById("kovaWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("kovaWeb").style.display = 'block';
-
-    };  
-
-    function changeDOMElementForAll(){
-    
-        document.getElementById("lbmMobile").style.position = 'absolute';
-        document.getElementById("lbmMobile").style.top = '0px';
-        document.getElementById("lbmMobile").style.left = '0px';
-        document.getElementById("lbmMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("lbmMobile").style.display = 'block';
-
-
-        document.getElementById("forkifyWeb").style.position = 'absolute';
-        document.getElementById("forkifyWeb").style.top = '0px';
-        document.getElementById("forkifyWeb").style.left = '520px';
-        document.getElementById("forkifyWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("forkifyWeb").style.display = 'block';
-
-        document.getElementById("mapFinderMobile").style.position = 'absolute';
-        document.getElementById("mapFinderMobile").style.top = '356.828px';
-        document.getElementById("mapFinderMobile").style.left = '0px';
-        document.getElementById("mapFinderMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("mapFinderMobile").style.display = 'block';
-
-        document.getElementById("dabShopWeb").style.position = 'absolute';
-        document.getElementById("dabShopWeb").style.top = '356.828px';
-        document.getElementById("dabShopWeb").style.left = '520px';
-        document.getElementById("dabShopWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("dabShopWeb").style.display = 'block';
-
-        document.getElementById("covidMobile").style.position = 'absolute';
-        document.getElementById("covidMobile").style.top = '713.656px';
-        document.getElementById("covidMobile").style.left = '0px';
-        document.getElementById("covidMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("covidMobile").style.display = 'block';
-
-        document.getElementById("ppeProtectWeb").style.position = 'absolute';
-        document.getElementById("ppeProtectWeb").style.top = '713.656px';
-        document.getElementById("ppeProtectWeb").style.left = '520px';
-        document.getElementById("ppeProtectWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("ppeProtectWeb").style.display = 'block';
-
-        document.getElementById("shopsMobile").style.position = 'absolute';
-        document.getElementById("shopsMobile").style.top = '1070.48px';
-        document.getElementById("shopsMobile").style.left = '0px';
-        document.getElementById("shopsMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("shopsMobile").style.display = 'block';
-
-        document.getElementById("equoWeb").style.position = 'absolute';
-        document.getElementById("equoWeb").style.top = '1070.48px';
-        document.getElementById("equoWeb").style.left = '520px';
-        document.getElementById("equoWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("equoWeb").style.display = 'block';
-
-        document.getElementById("mealsMobile").style.position = 'absolute';
-        document.getElementById("mealsMobile").style.top = '1427.308px';
-        document.getElementById("mealsMobile").style.left = '0px';
-        document.getElementById("mealsMobile").style.transition = '0.55s ease-in-out';
-        document.getElementById("mealsMobile").style.display = 'block';
-
-        document.getElementById("kovaWeb").style.position = 'absolute';
-        document.getElementById("kovaWeb").style.top = '1427.308px';
-        document.getElementById("kovaWeb").style.left = '520px';
-        document.getElementById("kovaWeb").style.transition = '0.55s ease-in-out';
-        document.getElementById("kovaWeb").style.display = 'block';
-
-    };  
-
-
 
     return(
         <>
@@ -454,10 +359,6 @@ function ContactPage(){
 
 
 
-
-
-
-
                         {/*This is the Central Main section from here on*/}
                         {/*--*/}
                         {/*00*/}
@@ -476,96 +377,31 @@ function ContactPage(){
                             <div className="transition-fade" id="swup">
                                 <div id="scrollbar" tabIndex="-1" className="art-scroll-frame" style={{outline: 'none'}}>
                                     
-                                    <div className="scroll-content" style={{transform: 'translate3d(0px, 0px, 0px'}}>
+                                    <div className="scroll-content" style={{transform: 'translate3d(0px, 0px, 0px)'}}>
 
                                         {/*Container fluid section -- 1*/}
-                                        <div className="container-fluid">
+                                        <div className="container-fluid-projects">
         
                                             <div className="row p-60-0 p-lg-30-0 p-md-15-0">
 
                                                 <div className="col-lg-12">
-                                                    
-                                                    <div className="art-section-title">
-
-                                                        <div className="art-title-frame">
-                                                            
-                                                            <h4>Contact information</h4>
-
-                                                        </div>
-                                                   
+                                                  
+                                                    <div className="art-filter mb-30" style={{padding: '20px'}}>
+                                                         
+                                                         <a id={'linkAll'} href="#" data-filter="*" className="art-link art-current">My Credentials</a>
+                                                          
                                                     </div>
-
-                                                </div>    
-
-                                                <div className="col-lg-6 mb-4 mb-md-0">
-                                                         
-                                                   <DetailsCard details={contactDetails} />
-                                                         
-                                                </div>
-                                                     
-                                                     
-                                                <div className="col-lg-6 mt-3 mt-md-0">
-                                                    <DetailsCard details={locationDetails} />
-                                                         
-                                                </div>
-
-
-                                                <div className="col-lg-12 mt-4">
-
-                                                     
-                                                    <div className="art-section-title">
-                                                     
-                                                        <div className="art-title-frame">
-                                                            
-                                                            <h4>Get In Touch</h4>
-                                                        </div>
-                                                     
-                                                    </div>
-                                                     
-
-                                                     
-                                                    <div className="art-a art-card">
-                                                     
-                                                        <form id="form" className="art-contact-form"   action="https://formspree.io/f/mwpqaojj" method="POST">
-                                                            
-                                                            <div className="art-form-field">
-                                                            
-                                                                <input id="name" name="name" className="art-input" type="text" placeholder="Name" required></input>
-                                                                
-                                                                <label for="name"><i className="fas fa-user"></i></label>
-
-                                                            </div>
-                                                            
-                                                            
-                                                            <div className="art-form-field">
-                                                            
-                                                                <input id="email" name="email" className="art-input" type="email" placeholder="Email" required></input>
-                                                                
-                                                                <label for="email"><i className="fas fa-at"></i></label>
-
-                                                            </div>
-                                                            
-                                                            
-                                                            <div className="art-form-field">
-                                                            
-                                                                <textarea id="message" name="message" className="art-input" placeholder="Message" required></textarea>
-                                                                
-                                                                <label for="message"><i className="far fa-envelope"></i></label>
-
-                                                            </div>
-                                                            
-                                                            
-                                                            <div className="art-submit-frame">
-
-                                                                <button className="art-btn art-btn-md art-submit" type="submit"><span>Send message</span></button>
-                                                                
-                                                            </div>
-                                                        </form>                                                    
-
-                                                    </div>                  
-
-                                                </div>
                                                     
+                                                </div>
+
+                                                {/*Container fluid section -- 4*/}
+                                                <div className="container-fluid mt-5">
+        
+                                                    <div className="row px-3">
+                                                        <CredlyBadges badges={credlyBadges} />
+                                                    </div>
+        
+                                                </div>
 
                                             </div>
 
@@ -614,28 +450,27 @@ function ContactPage(){
                                 </div>
 
                                 <div className="art-current-page">
-                                    <a href="/contact-page">Contact</a>
-                                    <a href="/history-page">History</a>
-                                    <a href="/certifications-page">Certifications</a>
+                                    <a href="/projects-page">Portfolio</a>
                                     <a href="/portfolio-page">Home</a>
-                                    <a href="/projects-page">Portfolio</a>                                  
-                                    
+                                    <a href="/certifictions-page">Certifications</a>
+                                    <a href="/history-page">History</a>
+                                    <a href="/contact-page">Contact</a>
                                 </div>
 
                                 <div className="art-scroll-frame">
 
-                                    <nav id="swupMenu">
+                                    <nav id="swupMenu">            
                                         <ul className="main-menu">
-                                            <li id="home-nav" className="menu-item"><a href="/portfolio">Home</a></li>
+                                            <li className="menu-item"><a href="/portfolio">Home</a></li>
                                             
-                                            <li id="portfolio-nav" className="menu-item"><a href="/projects" onClick="handleClick">Portfolio</a></li>
+                                            <li className="menu-item"><a href="/projects">Portfolio</a></li>
 
                                             <li className="menu-item"><a href="/certifications">Certifications</a></li>
                                                                                         
-                                            <li id="history-nav" className="menu-item"><a href="/history">History</a></li>
+                                            <li className="menu-item"><a href="/history">History</a></li>
                                             
-                                            <li id="contact-nav" className="menu-item"><a href="/contact-me">Contact</a></li>
-                                        </ul>                        
+                                            <li className="menu-item"><a href="/contact-me">Contact</a></li>
+                                        </ul>                                         
                                     </nav> 
 
                                     <ul className="art-language-change">
@@ -664,4 +499,4 @@ function ContactPage(){
 }
 
 
-export default ContactPage;
+export default ProjectsPage;

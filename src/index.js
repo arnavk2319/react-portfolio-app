@@ -31,9 +31,11 @@ import ProjectsPage from "views/examples/ProjectsPage.js";
 import HistoryPage from "views/examples/HistoryPage.js";
 import ContactPage from "views/examples/ContactPage.js";
 import CertificationsPage from "views/examples/CertificationsPage.js";
+import PageTracker from "PageTracker.js";
 
 ReactDOM.render(
   <BrowserRouter>
+    <PageTracker />
     <Switch>
       <Switch>
         <Route path="/index" render={(props) => <Index {...props} />} />

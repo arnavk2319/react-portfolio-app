@@ -1,8 +1,13 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 import DetailsCard from './DetailsCard';
 
 function ContactPage(){
+    useEffect(() => {
+        document.title = "Contact Us";
+    }, []);
+
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
     const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
 

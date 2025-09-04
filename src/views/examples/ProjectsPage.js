@@ -1,7 +1,12 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 
 function ProjectsPage(){
+    useEffect(() => {
+        document.title = "Projects";
+    }, []);
+
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
     const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
     const [artLinkAllCurrent, setArtLinkAllCurrent] = React.useState(true);

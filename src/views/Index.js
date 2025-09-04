@@ -1,10 +1,15 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 import { ContactGrid } from "views/examples/ContactGrid";
 import { RotatingText } from "views/examples/RotatingText";
 import { BadgeCarousel } from 'views/examples/BadgeCarousel';
 
 function Index(){
+    useEffect(() => {
+        document.title = "Home | My Website";
+    }, []);
+
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
     const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
 

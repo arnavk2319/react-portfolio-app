@@ -23,7 +23,7 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', process.env.REACT_APP_GA_MEASUREMENT_ID, { send_page_view: false });
+      gtag('config', '%REACT_APP_GA_MEASUREMENT_ID%', { send_page_view: false });
       // set send_page_view: false to manually track pageviews via analytics.js
     </script>
     <meta charset="utf-8" />

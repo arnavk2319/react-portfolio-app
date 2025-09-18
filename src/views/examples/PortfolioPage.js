@@ -17,16 +17,16 @@ function PortfolioPage(){
     const credlyBadges = [
         {
         title: 'Vue.js Essentials',
-        image: 'https://images.credly.com/images/f03ae314-65bc-44f3-8fcd-3dda6fd9ddd4/c783df0b-00ad-4d44-b30a-7f8dab695565.png',
+        image: 'https://images.credly.com/size/160x160/images/9199f7b6-8e00-468e-9cef-d98843f0e7c3/c783df0b-00ad-4d44-b30a-7f8dab695565.png',
         link: 'https://www.credly.com/badges/962c8074-f478-4be3-992a-7fab0c4e6f2a'
       }, {
         title: 'Angular 18+',
-        image: 'https://images.credly.com/size/680x680/images/89bde5df-b0e3-40dc-825e-f350f25ce7d2/9264989c-a675-4991-914a-d4d61a7b782f.png',
+        image: 'https://images.credly.com/size/160x160/images/46090e66-fbc7-494e-915f-f02221472695/9264989c-a675-4991-914a-d4d61a7b782f.png',
         link: 'https://www.credly.com/badges/e7edf591-2e45-4c73-919a-17f9848b8b95'
       },
         {
         title: 'TypeScript Essentials',
-        image: 'https://images.credly.com/size/680x680/images/91982e17-e239-4e95-888a-7e1f473b1ca2/59e735e3-1556-4e93-82da-e8dda5f0a57f.png',
+        image: 'https://images.credly.com/size/680x680/images/dcc0d6ff-9761-48c3-9e3d-97914830b57d/59e735e3-1556-4e93-82da-e8dda5f0a57f.png',
         link: 'https://www.credly.com/badges/12fb6411-f471-4770-a74e-be6f149e09ec'
       },
       {
@@ -36,7 +36,7 @@ function PortfolioPage(){
       },
        {
         title: 'Reactive Spring',
-        image: 'https://images.credly.com/size/680x680/images/88706d14-6dea-403f-a927-a95d043cfae8/1206a736-3eb4-429a-943d-2e491c64c0be.png',
+        image: 'https://images.credly.com/size/160x160/images/4555f0ce-68d8-4304-a2c4-959ed37a1dfb/1206a736-3eb4-429a-943d-2e491c64c0be.png',
         link: 'https://www.credly.com/badges/be50a73d-94a0-4bd0-b0c8-412a529688ed'
       },  {
         title: 'NodeJS - The Complete Guide',
@@ -73,7 +73,7 @@ function PortfolioPage(){
       },
       {
         title: 'Machine Learning Foundations',
-        image: 'https://images.credly.com/size/680x680/images/a636f6a1-bacf-4819-9239-5d9907e85708/f5d7b910-6d3b-40f6-a879-1d3a945a2045.png',
+        image: 'https://images.credly.com/size/160x160/images/5aad91ef-d5df-4180-8560-c7810f05b37e/f5d7b910-6d3b-40f6-a879-1d3a945a2045.png',
         link: 'https://www.credly.com/badges/5ce779de-10e9-47c4-bfc5-3b0f6b7b9cc3'
       }
     ];

@@ -22,7 +22,23 @@ function ProjectsPage(){
         if(window.innerWidth < 1280){
             document.getElementById("loanDefPred").style.top = '0px';
             document.getElementById("loanDefPred").style.left = '0px';
-            document.getElementById("loanDefPred").style.display = 'block';                     
+            document.getElementById("loanDefPred").style.display = 'block';
+
+            document.getElementById("supervised-learning-comparison").style.top = '356.828px';
+            document.getElementById("supervised-learning-comparison").style.left = '0px';
+            document.getElementById("supervised-learning-comparison").style.display = 'block'; 
+
+            document.getElementById("unsupervised-learning-comparison").style.top = '713.656px';
+            document.getElementById("unsupervised-learning-comparison").style.left = '0px';
+            document.getElementById("unsupervised-learning-comparison").style.display = 'block';
+
+            document.getElementById("insurance-prediction-comparison").style.top = '1070.48px';
+            document.getElementById("insurance-prediction-comparison").style.left = '0px';
+            document.getElementById("insurance-prediction-comparison").style.display = 'block';  
+
+            document.getElementById("cali-housing-comparison").style.top = '1427.312px';
+            document.getElementById("cali-housing-comparison").style.left = '0px';
+            document.getElementById("cali-housing-comparison").style.display = 'block';  
         }
 
         else{
@@ -31,6 +47,30 @@ function ProjectsPage(){
             document.getElementById("loanDefPred").style.left = '0px';
             document.getElementById("loanDefPred").transition = '0.55s ease-in-out';
             document.getElementById("loanDefPred").style.display = 'block';
+
+            document.getElementById("supervised-learning-comparison").style.position = 'absolute';
+            document.getElementById("supervised-learning-comparison").style.top = '0px';
+            document.getElementById("supervised-learning-comparison").style.left = '520px';
+            document.getElementById("supervised-learning-comparison").style.transition = '0.55s ease-in-out';
+            document.getElementById("supervised-learning-comparison").style.display = 'block';
+
+            document.getElementById("unsupervised-learning-comparison").style.position = 'absolute';
+            document.getElementById("unsupervised-learning-comparison").style.top = '356.828px';
+            document.getElementById("unsupervised-learning-comparison").style.left = '0px';
+            document.getElementById("unsupervised-learning-comparison").style.transition = '0.55s ease-in-out';
+            document.getElementById("unsupervised-learning-comparison").style.display = 'block';
+
+            document.getElementById("insurance-prediction-comparison").style.position = 'absolute';
+            document.getElementById("insurance-prediction-comparison").style.top = '356.828px';
+            document.getElementById("insurance-prediction-comparison").style.left = '520px';
+            document.getElementById("insurance-prediction-comparison").style.transition = '0.55s ease-in-out';
+            document.getElementById("insurance-prediction-comparison").style.display = 'block';
+
+            document.getElementById("cali-housing-comparison").style.position = 'absolute';
+            document.getElementById("cali-housing-comparison").style.top = '713px';
+            document.getElementById("cali-housing-comparison").style.left = '0px';
+            document.getElementById("cali-housing-comparison").style.transition = '0.55s ease-in-out';
+            document.getElementById("cali-housing-comparison").style.display = 'block';
         }
     };
 
@@ -52,6 +92,10 @@ function ProjectsPage(){
 
     function hideMLItems() {
         document.getElementById("loanDefPred").style.display = 'none';
+        document.getElementById("supervised-learning-comparison").style.display = 'none';
+        document.getElementById("unsupervised-learning-comparison").style.display = 'none';
+        document.getElementById("insurance-prediction-comparison").style.display = 'none';
+        document.getElementById("cali-housing-comparison").style.display = 'none';
     }
 
     function changeDOMElementForMobile(){
@@ -662,7 +706,7 @@ function ProjectsPage(){
                                                          <a id="linkMobile" href="#" data-filter=".logos" className={artLinkMobileCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
                                                         setArtLinkAllCurrent(false); setArtLinkMobileCurrent(true); setArtLinkMLCurrent(false);  changeDOMElementForMobile();}}>Mobile</a>
 
-                                                        <a id="linkWeb" href="#" data-filter=".webTemplates" className={artLinkMLCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
+                                                        <a id="linkML" href="#" data-filter=".webTemplates" className={artLinkMLCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
                                                         setArtLinkAllCurrent(false); setArtLinkMobileCurrent(false); setArtLinkMLCurrent(true); changeDOMElementForML();}}>ML & Data Science</a>
                                                           
                                                     </div>
@@ -864,7 +908,7 @@ function ProjectsPage(){
 
 
 
-                                                    <div id="kovaWeb" className={`art-grid-item ${artLinkWebCurrent ? "kova-item-web" : "kova-item-all"}`} style={{position: 'absolute', top: '1427.308px', left: '520px'}}>
+                                                    <div id="kovaWeb" className={`art-grid-item ${artLinkWebCurrent ? "kova-item-web" : "kova-item-all"}`} style={{position: 'absolute', top: '1070.48px', left: '520px'}}>
                                                          
                                                          <a data-fancybox="gallery" href="https://kovasocialbeauty.com/" className="art-a art-portfolio-item-frame art-horizontal">
                                                               
@@ -903,7 +947,86 @@ function ProjectsPage(){
                                                          </div>
                                                           
                                                     </div>
+
+                                                    <div id="supervised-learning-comparison" className={`art-grid-item ${artLinkWebCurrent ? "sup-learn-ml" : "sup-learn-all"}`} style={{position: 'absolute', top: '1070.48px', left: '520px'}}>
+
+                                                        <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/supervised-learning-algorithms-comparison" className="art-a art-portfolio-item-frame art-horizontal">
+
+                                                            <img src={require('assets/img/super-learn.png')} alt="item"></img>
+
+                                                            <span className="art-item-hover"><i className="fas fa-expand"></i></span>
+                                                        </a>
+
+                                                        <div className="art-item-description">
+
+                                                            <h5 className="mb-15">Supervised learning algorithms - Comparison</h5>
+                                                            <div className="mb-15">A comparison of supervised learning algorithms; K-Nearest neightbours(KNN), Support Vector Machines(SVM), Decision Trees,  etc</div>
+
+                                                            <a href="https://www.kaggle.com/code/arnavkaushal/supervised-learning-algorithms-comparison" className="art-link art-color-link art-w-chevron">Read more</a>
+                                                        </div>
+
+                                                    </div>
+
+                                                <div id="unsupervised-learning-comparison" className={`art-grid-item ${artLinkWebCurrent ? "unsup-learn-ml" : "unsup-learn-all"}`} style={{position: 'absolute', top: '1427.308px', left: '520px'}}>
+
+                                                    <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/unsupervised-learning-comparison" className="art-a art-portfolio-item-frame art-horizontal">
+                                                        
+                                                        <img src={require('assets/img/unsuper-learn.png')} alt="item"></img>
+                                                        
+                                                        <span className="art-item-hover"><i className="fas fa-expand"></i></span>
+                                                    </a>
+                                                
+                                                    
+                                                    <div className="art-item-description">
+                                                        
+                                                        <h5 className="mb-15">Unsupervised learning algorithms - Comparison</h5>
+                                                        <div className="mb-15">A comparison of unsupervised learning algorithms; K-Means, Gaussian Mixture Models(GMM), Mean Shift Clustering, DSBScan etc</div>
+                                                        
+                                                        <a href="https://www.kaggle.com/code/arnavkaushal/unsupervised-learning-comparison" className="art-link art-color-link art-w-chevron">Read more</a>
+                                                    </div>
+                                                        
                                                 </div>
+
+                                                <div id="insurance-prediction-comparison" className={`art-grid-item ${artLinkWebCurrent ? "insurance-pred-ml" : "insurance-pred -all"}`} style={{position: 'absolute', top: '1070.48px', left: '520px'}}>
+
+                                                    <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/insurance-claim-prediction-logisticr-and-randfor" className="art-a art-portfolio-item-frame art-horizontal">
+                                                        
+                                                        <img src={require('assets/img/insurance-pred-img.png')} alt="item"></img>
+                                                        
+                                                        <span className="art-item-hover"><i className="fas fa-expand"></i></span>
+                                                    </a>
+                                                
+                                                    
+                                                    <div className="art-item-description">
+                                                        
+                                                        <h5 className="mb-15">Insurance Claim Precition - LogisticR and RandomFor</h5>
+                                                        <div className="mb-15">A data model that is trained on binary classification using Random Forests and Logistic Regression to predict an insurance claim</div>
+                                                        
+                                                        <a href="https://www.kaggle.com/code/arnavkaushal/insurance-claim-prediction-logisticr-and-randfor" className="art-link art-color-link art-w-chevron">Read more</a>
+                                                    </div>
+                                                        
+                                                </div>
+
+                                                <div id="cali-housing-comparison" className={`art-grid-item ${artLinkWebCurrent ? "insurance-pred-ml" : "insurance-pred -all"}`} style={{position: 'absolute', top: '1427.308px', left: '520px'}}>
+
+                                                    <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/california-housing-eda-linear-ridge-lasso" className="art-a art-portfolio-item-frame art-horizontal">
+                                                        
+                                                        <img src={require('assets/img/cali-housing-img.png')} alt="item"></img>
+                                                        
+                                                        <span className="art-item-hover"><i className="fas fa-expand"></i></span>
+                                                    </a>
+                                                
+                                                    
+                                                    <div className="art-item-description">
+                                                        
+                                                        <h5 className="mb-15">California Housing Dataset - EDA, Linear, Ridge, Lasso Regression</h5>
+                                                        <div className="mb-15">A data model that is trained on different kinds of regression like linear, polynomial, ridge, lasso etc and compare each model performance</div>
+                                                        
+                                                        <a href="https://www.kaggle.com/code/arnavkaushal/california-housing-eda-linear-ridge-lasso" className="art-link art-color-link art-w-chevron">Read more</a>
+                                                    </div>
+                                                        
+                                                </div>
+                                            </div>
 
                                             </div>
 

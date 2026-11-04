@@ -5,7 +5,7 @@ import DetailsCard from './DetailsCard';
 
 function ContactPage(){
     useEffect(() => {
-        document.title = "Contact Us";
+        document.title = "Contact | Arnav Kaushal";
     }, []);
 
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
@@ -51,13 +51,12 @@ function ContactPage(){
                                     </div>
 
                                     <h5 className="art-name mb-10">
-                                        <a href="assets/img/default-avatar.png">Arnav Kaushal</a>
+                                        <a href="/portfolio">Arnav Kaushal</a>
                                     </h5>
 
                                     <div className="art-sm-text">
-                                        Full Stack Software Engineer
+                                        Full Stack Software Engineer, DS/ML Engineer
                                         <br></br>
-                                        MERN / MEAN / VJSS
                                     </div>
                                 </div>
                                 
@@ -230,7 +229,7 @@ function ContactPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog6" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -249,7 +248,7 @@ function ContactPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog7" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -294,7 +293,6 @@ function ContactPage(){
                 
                                     <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                         
-                                    <a href="#." target="_blank"><i className="fa fa-globe"></i></a>
                                         
                                     <a href="https://github.com/arnavk2319?tab=repositories" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                                         
@@ -322,7 +320,7 @@ function ContactPage(){
 
                             <div className="art-curtain"></div>
 
-                            <div className="art-top-bg" style={{backgroundImage: 'url(https://elanta.app/nazar/arter-demo/img/bg.jpg)'}}>
+                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
            
                                 <div className="art-top-bg-overlay"></div>
           
@@ -387,7 +385,7 @@ function ContactPage(){
                                                             
                                                                 <input id="name" name="name" className="art-input" type="text" placeholder="Name" required></input>
                                                                 
-                                                                <label for="name"><i className="fas fa-user"></i></label>
+                                                                <label htmlFor="name"><i className="fas fa-user"></i></label>
 
                                                             </div>
                                                             
@@ -396,7 +394,7 @@ function ContactPage(){
                                                             
                                                                 <input id="email" name="email" className="art-input" type="email" placeholder="Email" required></input>
                                                                 
-                                                                <label for="email"><i className="fas fa-at"></i></label>
+                                                                <label htmlFor="email"><i className="fas fa-at"></i></label>
 
                                                             </div>
                                                             
@@ -405,7 +403,7 @@ function ContactPage(){
                                                             
                                                                 <textarea id="message" name="message" className="art-input" placeholder="Message" required></textarea>
                                                                 
-                                                                <label for="message"><i className="far fa-envelope"></i></label>
+                                                                <label htmlFor="message"><i className="far fa-envelope"></i></label>
 
                                                             </div>
                                                             
@@ -469,12 +467,7 @@ function ContactPage(){
                                 </div>
 
                                 <div className="art-current-page">
-                                    <a href="/contact-page">Contact</a>
-                                    <a href="/history-page">History</a>
-                                    <a href="/certifications-page">Certifications</a>
-                                    <a href="/portfolio-page">Home</a>
-                                    <a href="/projects-page">Portfolio</a>                                  
-                                    
+                                    <a href="/contact-me">Contact</a>
                                 </div>
 
                                 <div className="art-scroll-frame">
@@ -483,7 +476,7 @@ function ContactPage(){
                                         <ul className="main-menu">
                                             <li id="home-nav" className="menu-item"><a href="/portfolio">Home</a></li>
                                             
-                                            <li id="portfolio-nav" className="menu-item"><a href="/projects" onClick="handleClick">Portfolio</a></li>
+                                            <li id="portfolio-nav" className="menu-item"><a href="/projects">Portfolio</a></li>
 
                                             <li className="menu-item"><a href="/certifications">Certifications</a></li>
                                                                                         

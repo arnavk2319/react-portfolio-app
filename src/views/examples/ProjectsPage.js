@@ -4,7 +4,7 @@ import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 
 function ProjectsPage(){
     useEffect(() => {
-        document.title = "Projects";
+        document.title = "Portfolio | Arnav Kaushal";
     }, []);
 
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
@@ -406,13 +406,12 @@ function ProjectsPage(){
                                     </div>
 
                                     <h5 className="art-name mb-10">
-                                        <a href="assets/img/default-avatar.png">Arnav Kaushal</a>
+                                        <a href="/portfolio">Arnav Kaushal</a>
                                     </h5>
 
                                     <div className="art-sm-text">
-                                        Full Stack Software Engineer
+                                        Full Stack Software Engineer, DS/ML Engineer
                                         <br></br>
-                                        MERN / MEAN / VJSS
                                     </div>
                                 </div>
                                 
@@ -585,7 +584,7 @@ function ProjectsPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog6" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -604,7 +603,7 @@ function ProjectsPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog7" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -649,7 +648,6 @@ function ProjectsPage(){
                 
                                     <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                         
-                                    <a href="#." target="_blank"><i className="fa fa-globe"></i></a>
                                         
                                     <a href="https://github.com/arnavk2319?tab=repositories" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                                         
@@ -677,7 +675,7 @@ function ProjectsPage(){
 
                             <div className="art-curtain"></div>
 
-                            <div className="art-top-bg" style={{backgroundImage: 'url(https://elanta.app/nazar/arter-demo/img/bg.jpg)'}}>
+                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
            
                                 <div className="art-top-bg-overlay"></div>
           
@@ -697,16 +695,16 @@ function ProjectsPage(){
                                                   
                                                     <div className="art-filter mb-30" style={{padding: '20px'}}>
                                                          
-                                                         <a id={'linkAll'} href="#" data-filter="*" className={artLinkAllCurrent ? "art-link art-current" : "art-link"}  onClick={() => {setArtLinkWebCurrent(false);
+                                                         <a id={'linkAll'} href="#." data-filter="*" className={artLinkAllCurrent ? "art-link art-current" : "art-link"}  onClick={() => {setArtLinkWebCurrent(false);
                                                         setArtLinkAllCurrent(true); setArtLinkMobileCurrent(false); setArtLinkMLCurrent(false); changeDOMElementForAll();}}>All Categories</a>
                                                          
-                                                         <a id="linkWeb" href="#" data-filter=".webTemplates" className={artLinkWebCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(true);
+                                                         <a id="linkWeb" href="#." data-filter=".webTemplates" className={artLinkWebCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(true);
                                                         setArtLinkAllCurrent(false); setArtLinkMobileCurrent(false); setArtLinkMLCurrent(false);  changeDOMElementForWeb();}}>Web</a>
                                                           
-                                                         <a id="linkMobile" href="#" data-filter=".logos" className={artLinkMobileCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
+                                                         <a id="linkMobile" href="#." data-filter=".logos" className={artLinkMobileCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
                                                         setArtLinkAllCurrent(false); setArtLinkMobileCurrent(true); setArtLinkMLCurrent(false);  changeDOMElementForMobile();}}>Mobile</a>
 
-                                                        <a id="linkML" href="#" data-filter=".webTemplates" className={artLinkMLCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
+                                                        <a id="linkML" href="#." data-filter=".webTemplates" className={artLinkMLCurrent ? "art-link art-current" : "art-link"} onClick={() => {setArtLinkWebCurrent(false);
                                                         setArtLinkAllCurrent(false); setArtLinkMobileCurrent(false); setArtLinkMLCurrent(true); changeDOMElementForML();}}>ML & Data Science</a>
                                                           
                                                     </div>
@@ -1075,11 +1073,7 @@ function ProjectsPage(){
                                 </div>
 
                                 <div className="art-current-page">
-                                    <a href="/projects-page">Portfolio</a>
-                                    <a href="/portfolio-page">Home</a>
-                                    <a href="/certifications-page">Certifications</a>
-                                    <a href="/history-page">History</a>
-                                    <a href="/contact-page">Contact</a>
+                                    <a href="/projects">Portfolio</a>
                                 </div>
 
                                 <div className="art-scroll-frame">

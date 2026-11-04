@@ -4,7 +4,7 @@ import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 
 function HistoryPage(){
     useEffect(() => {
-        document.title = "History";
+        document.title = "History | Arnav Kaushal";
     }, []);
 
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
@@ -38,13 +38,12 @@ function HistoryPage(){
                                     </div>
 
                                     <h5 className="art-name mb-10">
-                                        <a href="assets/img/default-avatar.png">Arnav Kaushal</a>
+                                        <a href="/portfolio">Arnav Kaushal</a>
                                     </h5>
 
                                     <div className="art-sm-text">
-                                        Full Stack Software Engineer
+                                        Full Stack Software Engineer, DS/ML Engineer
                                         <br></br>
-                                        MERN / MEAN / VJSS
                                     </div>
                                 </div>
                                 
@@ -217,7 +216,7 @@ function HistoryPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog6" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -236,7 +235,7 @@ function HistoryPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog7" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -281,7 +280,6 @@ function HistoryPage(){
                 
                                     <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                         
-                                    <a href="#." target="_blank"><i className="fa fa-globe"></i></a>
                                         
                                     <a href="https://github.com/arnavk2319?tab=repositories" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                                         
@@ -309,7 +307,7 @@ function HistoryPage(){
 
                             <div className="art-curtain"></div>
 
-                            <div className="art-top-bg" style={{backgroundImage: 'url(https://elanta.app/nazar/arter-demo/img/bg.jpg)'}}>
+                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
            
                                 <div className="art-top-bg-overlay"></div>
           
@@ -357,7 +355,7 @@ function HistoryPage(){
 
                                                                 <p style={{color: '#ffffff', fontSize: '12px'}}>Ottawa, Canada</p>
 
-                                                                <p>Dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                                                                <p>Master of Engineering in Systems and Computer Engineering (SYSC). CGPA: 3.90/4.00.</p>
                                                             </div>
                                                         </div>
 
@@ -380,7 +378,7 @@ function HistoryPage(){
 
                                                                 <p style={{color: '#ffffff', fontSize: '12px'}}>Chennai, India</p>
 
-                                                                <p>Dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut.</p>
+                                                                <p>Bachelor of Technology in Computer Science and Engineering (CSE). CGPA: 8.45/10.00.</p>
                                                             </div>
                                                         </div>
 
@@ -422,12 +420,12 @@ function HistoryPage(){
 
                                                                 <p style={{color: '#ffffff', fontSize: '12px'}}>Toronto, Canada</p>
 
-                                                                <p>Developed and maintained responsive, enterprise-grade web applicaPons using Angular 18+, TypeScript, HTML5, SCSS, and Vue 2/Nuxt, Python enhancing user interacLon and reducing page load Pme by ~35%. </p>
+                                                                <p>Developed and maintained responsive, enterprise-grade web applications using Angular 18+, TypeScript, HTML5, SCSS, and Vue 2/Nuxt, Python enhancing user interaction and reducing page load time by ~35%. </p>
 
-                                                                <p>Engineered 5+ criLcal business modules (e.g., Payroll, Loans and Withdrawals, Statements and Transactions, Client Reporting, Tenant
-                                                                Management) within a mulP-tenant SaaS fintech pla[orm, contribuLng to its adopLon by major clients and over $100M+ in processed transacLons.</p>
+                                                                <p>Engineered 5+ critical business modules (e.g., Payroll, Loans and Withdrawals, Statements and Transactions, Client Reporting, Tenant
+                                                                Management) within a multi-tenant SaaS fintech platform, contributing to its adoption by major clients and over $100M+ in processed transactions.</p>
 
-                                                                <p>Implemented and consumed RESTful APIs using Spring MVC, Spring Boot (ReacPve), Java, Postman, CURL, and handled complex SQL operaPons to opLmize data flow and backend performance</p>
+                                                                <p>Implemented and consumed RESTful APIs using Spring MVC, Spring Boot (Reactive), Java, Postman, CURL, and handled complex SQL operations to optimize data flow and backend performance</p>
                                                             </div>
 
                                                         </div>
@@ -584,11 +582,7 @@ function HistoryPage(){
                                 </div>
 
                                 <div className="art-current-page">
-                                    <a href="/history-page">History</a>
-                                    <a href="/portfolio-page">Home</a>
-                                    <a href="/certifications-page">Certifications</a>
-                                    <a href="/projects-page">Portfolio</a>                                  
-                                    <a href="/contact-page">Contact</a>
+                                    <a href="/history">History</a>
                                 </div>
 
                                 <div className="art-scroll-frame">

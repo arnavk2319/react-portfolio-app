@@ -25,7 +25,6 @@ import "assets/scss/now-ui-kit.scss?v=1.4.0";
 import "assets/demo/demo.css?v=1.4.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.4.0";
 // pages for this kit
-import Index from "views/Index.js";
 import PortfolioPage from "views/examples/PortfolioPage.js"
 import ProjectsPage from "views/examples/ProjectsPage.js";
 import HistoryPage from "views/examples/HistoryPage.js";
@@ -38,7 +37,7 @@ ReactDOM.render(
     <PageTracker />
     <Switch>
       <Switch>
-        <Route path="/index" render={(props) => <Index {...props} />} />
+        <Redirect from="/index" to="/portfolio" />
         <Route
           path="/portfolio"
           render={(props) => <PortfolioPage {...props} />}
@@ -59,8 +58,7 @@ ReactDOM.render(
           path="/contact-me"
           render={(props) => <ContactPage {...props} />}
         />
-        <Redirect to="/index" />
-        <Redirect from="/" to="/index" />
+        <Redirect to="/portfolio" />
       </Switch>
     </Switch>
   </BrowserRouter>,

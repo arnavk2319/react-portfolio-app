@@ -8,7 +8,7 @@ import { BadgeCarousel } from 'views/examples/BadgeCarousel';
 
 function PortfolioPage(){
     useEffect(() => {
-        document.title = "My Portfolio";
+        document.title = "Home | Arnav Kaushal";
     }, []);
 
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
@@ -106,7 +106,7 @@ function PortfolioPage(){
                                     </div>
 
                                     <h5 className="art-name mb-10">
-                                        <a href="assets/img/default-avatar.png">Arnav Kaushal</a>
+                                        <a href="/portfolio">Arnav Kaushal</a>
                                     </h5>
 
                                     <div className="art-sm-text">
@@ -219,7 +219,7 @@ function PortfolioPage(){
                                         <div className="art-hard-skills-item">
                                             <div className="art-skill-heading">
                                                 
-                                                <h6>Machine Learning, Data Science/Engg</h6>
+                                                <h6>Machine Learning, Data Science</h6>
                                             </div>
                                             
                                             <div className="art-line-progress">
@@ -285,7 +285,7 @@ function PortfolioPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog6" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -304,7 +304,7 @@ function PortfolioPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog7" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -349,7 +349,6 @@ function PortfolioPage(){
                 
                                     <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                         
-                                    <a href="#." target="_blank"><i className="fa fa-globe"></i></a>
                                         
                                     <a href="https://github.com/arnavk2319?tab=repositories" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                                         
@@ -377,7 +376,7 @@ function PortfolioPage(){
 
                             <div className="art-curtain"></div>
 
-                            <div className="art-top-bg" style={{backgroundImage: 'url(https://elanta.app/nazar/arter-demo/img/bg.jpg)'}}>
+                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
            
                                 <div className="art-top-bg-overlay"></div>
           
@@ -395,7 +394,7 @@ function PortfolioPage(){
 
                                                 <div  className="col-lg-12">
                                                   
-                                                    <div  className="art-a art-banner" style={{backgroundImage: 'url(https://elanta.app/nazar/arter-demo/img/bg.jpg)'}}>
+                                                    <div  className="art-a art-banner" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
                                                     
                                                         <div  className="art-banner-back"></div>
                                                         
@@ -722,11 +721,7 @@ function PortfolioPage(){
                                 </div>
 
                                 <div className="art-current-page">
-                                    <a href="/portfolio-page">Home</a>
-                                    <a href="/projects-page">Portfolio</a>
-                                    <a href="/certifications-page">Certifications</a>
-                                    <a href="/history-page">History</a>
-                                    <a href="/contact-page">Contact</a>
+                                    <a href="/portfolio">Home</a>
                                 </div>
 
                                 <div className="art-scroll-frame-menu-sidebar">

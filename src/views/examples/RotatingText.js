@@ -1,14 +1,14 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 
-export const RotatingText = () => {
-  const texts = [
-    "high quality responsive web interfaces.",
-    "machine learning and data models.",
-    "databases and API interfaces.",
-    "automation tools."
-  ];
+const texts = [
+  "high quality responsive web interfaces.",
+  "machine learning and data models.",
+  "databases and API interfaces.",
+  "automation tools."
+];
 
+export const RotatingText = () => {
   const [index, setIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);

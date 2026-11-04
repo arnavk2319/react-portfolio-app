@@ -242,6 +242,11 @@ info bar
         & .art-skill-heading {
           display: flex;
           justify-content: space-between;
+
+          /* keep long skill names clear of the percentage label */
+          & h6 {
+            padding-right: 44px;
+          }
         }
   
         & .art-line-progress {

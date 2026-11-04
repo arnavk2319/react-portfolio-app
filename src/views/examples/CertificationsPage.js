@@ -5,7 +5,7 @@ import CredlyBadges from './CredlyBadges';
 
 function ProjectsPage(){
     useEffect(() => {
-        document.title = "Certifications";
+        document.title = "Certifications | Arnav Kaushal";
     }, []);
 
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
@@ -103,13 +103,12 @@ function ProjectsPage(){
                                     </div>
 
                                     <h5 className="art-name mb-10">
-                                        <a href="assets/img/default-avatar.png">Arnav Kaushal</a>
+                                        <a href="/portfolio">Arnav Kaushal</a>
                                     </h5>
 
                                     <div className="art-sm-text">
-                                        Full Stack Software Engineer
+                                        Full Stack Software Engineer, DS/ML Engineer
                                         <br></br>
-                                        MERN / MEAN / VJSS
                                     </div>
                                 </div>
                                 
@@ -282,7 +281,7 @@ function ProjectsPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog6" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -301,7 +300,7 @@ function ProjectsPage(){
                                             
                                             <div className="art-line-progress">
                                                 
-                                            <div id="lineprog5" style={{position: 'relative'}}>
+                                            <div id="lineprog7" style={{position: 'relative'}}>
                                                     <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
                                                     </svg>
                                                     
@@ -346,7 +345,6 @@ function ProjectsPage(){
                 
                                     <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
                                         
-                                    <a href="#." target="_blank"><i className="fa fa-globe"></i></a>
                                         
                                     <a href="https://github.com/arnavk2319?tab=repositories" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
                                         
@@ -370,7 +368,7 @@ function ProjectsPage(){
 
                             <div className="art-curtain"></div>
 
-                            <div className="art-top-bg" style={{backgroundImage: 'url(https://elanta.app/nazar/arter-demo/img/bg.jpg)'}}>
+                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
            
                                 <div className="art-top-bg-overlay"></div>
           
@@ -390,7 +388,7 @@ function ProjectsPage(){
                                                   
                                                     <div className="art-filter mb-30" style={{padding: '20px'}}>
                                                          
-                                                         <a id={'linkAll'} href="#" data-filter="*" className="art-link art-current">My Credentials</a>
+                                                         <a id={'linkAll'} href="#." data-filter="*" className="art-link art-current">My Credentials</a>
                                                           
                                                     </div>
                                                     
@@ -452,11 +450,7 @@ function ProjectsPage(){
                                 </div>
 
                                 <div className="art-current-page">
-                                    <a href="/projects-page">Portfolio</a>
-                                    <a href="/portfolio-page">Home</a>
-                                    <a href="/certifictions-page">Certifications</a>
-                                    <a href="/history-page">History</a>
-                                    <a href="/contact-page">Contact</a>
+                                    <a href="/certifications">Certifications</a>
                                 </div>
 
                                 <div className="art-scroll-frame">

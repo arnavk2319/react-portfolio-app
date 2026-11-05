@@ -1,0 +1,137 @@
+import React from "react";
+import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
+
+const ACCENT = "#b3003b";
+
+const PROFILE = [
+    { label: "Residence:", value: "Canada" },
+    { label: "City:", value: "Toronto" },
+    { label: "Age:", value: "29" },
+];
+
+const LANGUAGES = ["English", "Hindi"];
+
+// `bar` is the drawn width (%), `label` is the text shown next to it.
+// NOTE: the last entry has always drawn an 80% bar with a "90 %" label.
+const SKILLS = [
+    { name: "Python, FastAPI, pytest", bar: 90, label: "90 %" },
+    { name: "TypeScript, Javascript (ES6)", bar: 80, label: "80 %" },
+    { name: "Machine Learning, Data Science", bar: 75, label: "75 %" },
+    { name: "Data Structures and Algorithms", bar: 70, label: "70 %" },
+    { name: "Java, Spring Boot, Spring MVC", bar: 90, label: "90 %" },
+    { name: "Vue 2+, Angular 20+, React.js, Node.js", bar: 80, label: "80 %" },
+    { name: "SQL, NoSQL, ORM, ODM", bar: 80, label: "90 %" },
+];
+
+const KNOWLEDGE = [
+    "Bootstrap, Materialize, Sass, Less",
+    "Jest, Jasmine Testing",
+    "Gulp, Webpack, Grunt",
+    "Git, GitLab CI/CD",
+    "Data Engineering, Analysis & Modeling",
+    "Machine Learning, MLOps & AI Engineering",
+];
+
+const SOCIAL = [
+    { href: "https://www.linkedin.com/in/arnav-k-7359b3170/", icon: "fab fa-linkedin-in" },
+    { href: "https://github.com/arnavk2319?tab=repositories", icon: "fab fa-github" },
+    { href: "mailto:arnav.kaushal800@gmail.com", icon: "fa fa-envelope" },
+];
+
+const CIRCLE_PATH = "M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93";
+
+export const Sidebar = ({ isActive, onToggle }) => (
+    <div className={isActive ? "art-info-bar art-active" : "art-info-bar"}>
+        <div className="art-info-bar-frame">
+            <div className="art-info-bar-header">
+                <a className="art-info-bar-btn" onClick={onToggle} href="#.">
+                    <i className="fa fa-ellipsis-v"></i>
+                </a>
+            </div>
+
+            <div className="art-header">
+                <div className="art-avatar">
+                    <div data-fancybox="avatar" style={{ backgroundImage: "url(" + require("assets/img/default-avatar.png") + ")" }} href="#." className="art-avatar-curtain">
+                        <img style={{ backgroundImage: "url(" + require("assets/img/default-avatar.png") + ")" }} alt="" />
+                    </div>
+                </div>
+
+                <h5 className="art-name mb-10">
+                    <a href="/portfolio">Arnav Kaushal</a>
+                </h5>
+
+                <div className="art-sm-text">
+                    Full Stack Software Engineer, DS/ML Engineer
+                    <br></br>
+                </div>
+            </div>
+
+            <div id="scrollbar2" className="art-scroll-frame-profile-sidebar" tabIndex="-1" style={{ outline: "none", display: "block", position: "relative" }}>
+                <div className="art-table p-60-0">
+                    <ul>
+                        {PROFILE.map(({ label, value }) => (
+                            <li key={label}>
+                                <h6>{label}</h6><span>{value}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div className="art-ls-divider"></div>
+
+                <div className="art-lang-skills p-30-0">
+                    {LANGUAGES.map((language, i) => (
+                        <div className="art-lang-skills-item" key={language}>
+                            <div id={"circleprog" + (i + 1)} className="art-cirkle-progress">
+                                <svg viewBox="0 0 100 100" style={{ display: "block", width: "100%" }}>
+                                    <path d={CIRCLE_PATH} stroke="#eee" strokeWidth="7" fillOpacity="0"></path>
+                                    <path d={CIRCLE_PATH} stroke="#555" strokeWidth="7" fillOpacity="0"></path>
+                                </svg>
+                                <div className="progressbar-text" style={{ position: "relative", left: "50%", top: "-32px", padding: "0px", margin: "0px", color: "#ffffff" }}>100</div>
+                            </div>
+                            <h6 style={{ marginTop: "-20px" }}>{language}</h6>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="art-ls-divider2"></div>
+
+                <div className="art-hard-skills p-30-15">
+                    {SKILLS.map(({ name, bar, label }, i) => (
+                        <div className="art-hard-skills-item" key={name}>
+                            <div className="art-skill-heading">
+                                <h6>{name}</h6>
+                            </div>
+                            <div className="art-line-progress">
+                                <div id={"lineprog" + (i + 1)} style={{ position: "relative" }}>
+                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{ width: bar + "%", height: "100%", backgroundColor: ACCENT }}></svg>
+                                    <div className="progressbar-text" style={{ position: "absolute", left: "50%", top: "50%", padding: "0px", margin: "0px", transform: "translate(-50%, -50%)", color: "rgba(85, 85, 85)" }}>{label}</div>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                <div className="art-ls-divider3"></div>
+
+                <ul className="art-knowledge-list p-15-0">
+                    {KNOWLEDGE.map(item => (
+                        <li key={item}>{item}</li>
+                    ))}
+                </ul>
+
+                <div className="art-ls-divider4"></div>
+
+                <div className="art-links-frame p-15-15">
+                    <a href={Resume} target="_blank" rel="noopener noreferrer" className="art-link" download>Download cv <i className="fas fa-download"></i></a>
+                </div>
+            </div>
+
+            <div className="art-ls-social">
+                {SOCIAL.map(({ href, icon }) => (
+                    <a key={href} href={href} target="_blank" rel="noopener noreferrer"><i className={icon}></i></a>
+                ))}
+            </div>
+        </div>
+    </div>
+);

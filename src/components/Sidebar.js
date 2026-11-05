@@ -3,10 +3,20 @@ import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 
 const ACCENT = "var(--accent)";
 
+// Born May 31, 1996. The age is worked out from today's date so it never goes stale.
+const BIRTH = { year: 1996, month: 4, day: 31 }; // month is 0-based (4 = May)
+
+const getAge = (now = new Date()) => {
+    let age = now.getFullYear() - BIRTH.year;
+    const hadBirthday =
+        now.getMonth() > BIRTH.month || (now.getMonth() === BIRTH.month && now.getDate() >= BIRTH.day);
+    return hadBirthday ? age : age - 1;
+};
+
 const PROFILE = [
     { label: "Residence:", value: "Canada" },
     { label: "City:", value: "Toronto" },
-    { label: "Age:", value: "29" },
+    { label: "Age:", value: String(getAge()) },
 ];
 
 const LANGUAGES = ["English", "Hindi"];

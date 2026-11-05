@@ -14,6 +14,31 @@ export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
     const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
     const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
 
+    // Only one side panel is open at a time; opening one closes the other.
+    const toggleInfoBar = () => {
+        setArtActiveMenuBar(false);
+        setArtActiveInfoBar(!artActiveInfoBar);
+    };
+    const toggleMenuBar = () => {
+        setArtActiveInfoBar(false);
+        setArtActiveMenuBar(!artActiveMenuBar);
+    };
+    const closeAll = () => {
+        setArtActiveInfoBar(false);
+        setArtActiveMenuBar(false);
+    };
+
+    // Tapping outside an open panel (the dimmed page) or pressing Escape closes it.
+    React.useEffect(() => {
+        const onKey = (e) => e.key === "Escape" && closeAll();
+        document.addEventListener("keydown", onKey);
+        return () => document.removeEventListener("keydown", onKey);
+    }, []);
+
+    const contentClass = ["art-content", artActiveMenuBar && "art-active", artActiveInfoBar && "art-dim"]
+        .filter(Boolean)
+        .join(" ");
+
     return (
         <>
             <div className="art-app">
@@ -21,10 +46,10 @@ export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
 
                 <div className="art-app-wrapper">
                     <div className="art-app-container">
-                        <Sidebar isActive={artActiveInfoBar} onToggle={() => setArtActiveInfoBar(!artActiveInfoBar)} />
+                        <Sidebar isActive={artActiveInfoBar} onToggle={toggleInfoBar} />
 
-                        <div className={artActiveMenuBar ? "art-content art-active" : "art-content"}>
-                            <div className="art-curtain"></div>
+                        <div className={contentClass}>
+                            <div className="art-curtain" onClick={closeAll}></div>
 
                             <div className="art-top-bg" style={{ backgroundImage: "url(" + require("assets/img/bg11.webp") + ")" }}>
                                 <div className="art-top-bg-overlay"></div>
@@ -47,7 +72,7 @@ export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
 
                         <MenuBar
                             isActive={artActiveMenuBar}
-                            onToggle={() => setArtActiveMenuBar(!artActiveMenuBar)}
+                            onToggle={toggleMenuBar}
                             currentHref={currentHref}
                             currentLabel={currentLabel}
                         />

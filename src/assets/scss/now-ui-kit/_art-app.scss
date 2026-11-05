@@ -433,6 +433,7 @@ app marcup
       & .art-app-wrapper {
         border-radius: 0;
         height: 100vh;
+        height: 100dvh;
   
         & .art-app-container {
           width: 100%;
@@ -471,11 +472,17 @@ app marcup
             position: relative;
             width: 100vw;
             height: 100vh;
+            height: 100dvh;
             padding-right: 0;
             padding-top: 70px;
   
+            /* the 70px mobile top bar sits above the scroller; dvh keeps the bottom reachable
+               when the mobile browser's address bar is showing (100vh is taller than the visible area) */
             .art-scroll-frame {
-              // height: auto;
+              height: calc(100vh - 70px);
+              height: calc(100dvh - 70px);
+              -webkit-overflow-scrolling: touch;
+              overscroll-behavior-y: contain;
             }
   
             &.art-active {
@@ -484,6 +491,14 @@ app marcup
               & .art-curtain {
                 pointer-events: all;
                 opacity: 1;
+              }
+            }
+
+            /* profile sidebar open: dim the page and let a tap on it close the sidebar */
+            &.art-dim {
+              & .art-curtain {
+                pointer-events: all;
+                opacity: 0.7;
               }
             }
           }

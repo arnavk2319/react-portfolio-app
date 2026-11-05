@@ -70,7 +70,7 @@ h6 {
 }
 
 .container-fluid-projects {
-  overflow-y: scroll;
+  /* must not be its own scroller: a scroller inside .art-scroll-frame traps touch scrolling on phones */
   overflow-x: hidden;
   position: relative;
 }

@@ -35,6 +35,14 @@ export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
         return () => document.removeEventListener("keydown", onKey);
     }, []);
 
+    const scrollToTop = (e) => {
+        e.preventDefault();
+        const frame = document.getElementById("scrollbar");
+        if (!frame) return;
+        const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        frame.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    };
+
     const contentClass = ["art-content", artActiveMenuBar && "art-active", artActiveInfoBar && "art-dim"]
         .filter(Boolean)
         .join(" ");
@@ -63,6 +71,9 @@ export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
                                         <div className="container-fluid">
                                             <footer>
                                                 <div>© 2025 Arnav Kaushal</div>
+                                                <a href="#." className="art-to-top" onClick={scrollToTop} aria-label="Scroll to top">
+                                                    <i className="fas fa-chevron-up"></i> Back to top
+                                                </a>
                                             </footer>
                                         </div>
                                     </div>

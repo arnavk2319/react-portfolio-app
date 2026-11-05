@@ -71,6 +71,17 @@ export const Sidebar = ({ isActive, onToggle }) => {
         if (!el) return;
         setMoreBelow(el.scrollTop + el.clientHeight < el.scrollHeight - 24);
     }, []);
+    // The scrollbar darkens while the sidebar is being scrolled, then relaxes again.
+    const scrollTimer = React.useRef(null);
+    const handleScroll = () => {
+        updateMore();
+        const el = scrollerRef.current;
+        if (!el) return;
+        el.classList.add("art-scrolling");
+        clearTimeout(scrollTimer.current);
+        scrollTimer.current = setTimeout(() => el.classList.remove("art-scrolling"), 700);
+    };
+    React.useEffect(() => () => clearTimeout(scrollTimer.current), []);
     React.useEffect(() => {
         updateMore();
         window.addEventListener("resize", updateMore);
@@ -103,7 +114,7 @@ export const Sidebar = ({ isActive, onToggle }) => {
                 </div>
             </div>
 
-            <div id="scrollbar2" ref={scrollerRef} onScroll={updateMore} className="art-scroll-frame-profile-sidebar" tabIndex="-1" style={{ outline: "none", display: "block", position: "relative" }}>
+            <div id="scrollbar2" ref={scrollerRef} onScroll={handleScroll} className="art-scroll-frame-profile-sidebar" tabIndex="-1" style={{ outline: "none", display: "block", position: "relative" }}>
                 <div className="art-table p-60-0">
                     <ul>
                         {PROFILE.map(({ label, value }) => (

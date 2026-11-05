@@ -106,7 +106,7 @@ export function BadgeCarousel({
                 position: "relative",
                 borderRadius: 8,
                 overflow: "hidden",
-                background: "#eee",
+                background: "var(--bg-placeholder)",
               }}
             >
               <img

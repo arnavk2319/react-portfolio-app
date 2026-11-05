@@ -41,7 +41,7 @@ function HistoryPage(){
                                                 </div>
                                             </div>
 
-                                            <p style={{color: '#ffffff', fontSize: '12px'}}>Ottawa, Canada</p>
+                                            <p style={{color: 'var(--ink)', fontSize: '12px'}}>Ottawa, Canada</p>
 
                                             <p>Master of Engineering in Systems and Computer Engineering (SYSC). CGPA: 3.90/4.00.</p>
                                         </div>
@@ -62,7 +62,7 @@ function HistoryPage(){
                                                 </div>
                                             </div>
 
-                                            <p style={{color: '#ffffff', fontSize: '12px'}}>Chennai, India</p>
+                                            <p style={{color: 'var(--ink)', fontSize: '12px'}}>Chennai, India</p>
 
                                             <p>Bachelor of Technology in Computer Science and Engineering (CSE). CGPA: 8.45/10.00.</p>
                                         </div>
@@ -102,7 +102,7 @@ function HistoryPage(){
                                                 </div>
                                             </div>
 
-                                            <p style={{color: '#ffffff', fontSize: '12px'}}>Toronto, Canada</p>
+                                            <p style={{color: 'var(--ink)', fontSize: '12px'}}>Toronto, Canada</p>
 
                                             <p>Developed and maintained responsive, enterprise-grade web applications using Angular 18+, TypeScript, HTML5, SCSS, and Vue 2/Nuxt, Python enhancing user interaction and reducing page load time by ~35%. </p>
 
@@ -130,7 +130,7 @@ function HistoryPage(){
                                                 </div>
                                             </div>
 
-                                            <p style={{color: '#ffffff', fontSize: '12px'}}>Toronto, Canada</p>
+                                            <p style={{color: 'var(--ink)', fontSize: '12px'}}>Toronto, Canada</p>
 
                                             <p>Responsible for analysis, creation, implementation, maintenance and updating websites, mobile applications,
                                                 landing pages using native technologies like Android, Native Web (JavaScript, jQuery, AJAX, HTML, CSS) and hybrid
@@ -155,7 +155,7 @@ function HistoryPage(){
                                                 </div>
                                             </div>
 
-                                            <p style={{color: '#ffffff', fontSize: '12px'}}>Toronto, Canada</p>
+                                            <p style={{color: 'var(--ink)', fontSize: '12px'}}>Toronto, Canada</p>
 
                                             <p>Contribute to group meetings and provide status update on development tasks. Coordinating with the project management team.
                                                 Doing usability testing and fixing bugs in existing websites, mobile applications. Exploring the documentation of new platforms, tools, SDKs for integration with mobile and web applications.</p>
@@ -179,7 +179,7 @@ function HistoryPage(){
                                                 </div>
                                             </div>
 
-                                            <p style={{color: '#ffffff', fontSize: '12px'}}>New Delhi, India</p>
+                                            <p style={{color: 'var(--ink)', fontSize: '12px'}}>New Delhi, India</p>
 
                                             <p>Created a native Android Application, GraphView custom view and Camera API.
                                             Performed debug and performance analysis of code and systems.
@@ -204,7 +204,7 @@ function HistoryPage(){
                                                 </div>
                                             </div>
 
-                                            <p style={{color: '#ffffff', fontSize: '12px'}}>Chennai, India</p>
+                                            <p style={{color: 'var(--ink)', fontSize: '12px'}}>Chennai, India</p>
 
                                             <p>Implementing SQL queries on SQL Server Management Studio for data manipulation and optimization.
                                                 Using the results of the queries to visualize the data using Tableau and integrating data visualization techniques to render live data.</p>

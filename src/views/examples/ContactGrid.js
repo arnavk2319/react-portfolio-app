@@ -19,7 +19,7 @@ export const ContactGrid = () => {
         marginBottom: "30px",
         width: "100%",           // full width container
         maxWidth: "500px",       // max width so it doesn’t stretch too much
-        backgroundColor: "#31313f",
+        backgroundColor: "var(--bg-grid)",
         borderRadius: "12px",
         boxSizing: "border-box",
       }}
@@ -36,11 +36,11 @@ export const ContactGrid = () => {
             gap: "8px",
             padding: "16px",
             borderRadius: "12px",
-            backgroundColor: "#24242F",
-            color: "white",
+            backgroundColor: "var(--bg-tile)",
+            color: "var(--ink)",
             textDecoration: "none",
             cursor: "pointer",
-            boxShadow: "0 2px 6px rgba(0,0,0,0.3)",
+            boxShadow: "0 2px 6px var(--shadow-30)",
             transition: "background-color 0.3s ease",
             fontSize: "14px",
             fontWeight: "500",
@@ -48,8 +48,8 @@ export const ContactGrid = () => {
             width: "100%",
             boxSizing: "border-box",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#4a4a6a")}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#3a3a52")}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "var(--bg-tile-hover)")}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "var(--bg-tile-rest)")}
         >
           {icon}
           <span>{label}</span>

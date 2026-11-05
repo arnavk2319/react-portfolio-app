@@ -27,22 +27,22 @@ export const CredlyBadges = ({ badges }) => {
             marginRight: "3px",
             marginBottom: "5px",
             borderRadius: "12px",
-            boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+            boxShadow: "0 4px 8px var(--shadow-10)",
             backgroundColor: "#fff",
             transition: "transform 0.2s ease, box-shadow 0.2s ease",
             cursor: "pointer",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            background: "#24242F"
+            background: "var(--bg-tile)"
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = "translateY(-5px)";
-            e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
+            e.currentTarget.style.boxShadow = "0 8px 20px var(--shadow-15)";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = "translateY(0)";
-            e.currentTarget.style.boxShadow = "0 4px 8px rgba(0,0,0,0.1)";
+            e.currentTarget.style.boxShadow = "0 4px 8px var(--shadow-10)";
           }}
         >
           <img

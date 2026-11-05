@@ -73,11 +73,11 @@ menu bar
             font-size: 11px;
             letter-spacing: 1px;
             font-weight: 500;
-            color: #8c8c8e;
+            color: var(--muted);
             // transition: $tr-sm;
   
             &:hover {
-              color: #b3003c;
+              color: var(--accent-h2);
               text-shadow: gray;
             }
           }
@@ -113,7 +113,7 @@ menu bar
             overflow: hidden;
             pointer-events: none;
             box-shadow: inset gray;
-            background: #31313f;
+            background: var(--bg-panel-2);
             filter: brightness(95%);
             max-height: 0;
             transition: max-height 0.6s ease-in-out;
@@ -172,7 +172,7 @@ menu bar
   
           &.current-menu-item {
             & a:first-child {
-              color: white;
+              color: var(--ink);
               text-shadow: gray;
             }
   
@@ -200,7 +200,7 @@ menu bar
       left: 0;
       width: 100%;
       box-shadow: blanchedalmond;
-      background: #31313f;
+      background: var(--bg-panel-2);
       padding: 30px 26px;
       margin: 0;
   
@@ -226,7 +226,7 @@ menu bar
         }
   
         &.art-active-lang {
-          background-color: rgba(107, 78, 5, 0.685);
+          background-color: var(--lang-bg);
           box-shadow: gray;
   
           & a {
@@ -300,7 +300,7 @@ menu bar
     .art-current-page {
       width: 200px;
       transform: rotate(90deg);
-      color: #ffffff;
+      color: var(--ink);
       position: absolute;
       overflow: hidden;
       top: 200px;

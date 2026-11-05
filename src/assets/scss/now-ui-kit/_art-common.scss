@@ -11,7 +11,7 @@ $sf: 'Courier Prime', monospace;
 
 /* ----- text defaults ----- */
 body {
-  color: #8c8c8e;
+  color: var(--muted);
   font-size: 12px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -27,7 +27,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  color: #ffffff;
+  color: var(--ink);
   margin-bottom: 0;
   font-family: $pf;
 }
@@ -83,13 +83,13 @@ h6 {
 /* ----- suptitle ----- */
 .art-el-suptitle {
   margin-top: 5px;
-  color: #646466;
+  color: var(--muted-2);
   font-style: italic;
   font-size: 11px;
 }
 /* ----- divider ----- */
 .art-ls-divider {
-  background: #646466;
+  background: var(--divider);
   width: 100%;
   height: 1px;
   opacity: 1.0;
@@ -133,7 +133,7 @@ h6 {
 }
 
 .art-ls-divider2 {
-    background: #646466;
+    background: var(--divider);
     width: 100%;
     height: 1px;
     opacity: 1.0;
@@ -141,7 +141,7 @@ h6 {
   }
 
   .art-ls-divider3 {
-    background: #646466;
+    background: var(--divider);
     width: 100%;
     height: 1px;
     opacity: 1.0;
@@ -149,7 +149,7 @@ h6 {
   }
 
   .art-ls-divider4 {
-    background: #646466;
+    background: var(--divider);
     width: 100%;
     height: 1px;
     opacity: 1.0;
@@ -164,11 +164,11 @@ h6 {
 /* ----- link defaults ----- */
 a {
   text-decoration: none;
-  color: #b3003b;
+  color: var(--accent);
 
   &:hover {
     text-decoration: none;
-    color: white;
+    color: var(--ink);
   }
 
   &:focus {
@@ -177,7 +177,7 @@ a {
 }
 /* ----- table ----- */
 .art-table {
-  color: #8c8c8e;
+  color: var(--muted);
 
   & ul {
     padding: 0;
@@ -253,7 +253,7 @@ blockquote {
       height: 10px;
       border-radius: 50%;
       border: solid 2px purple;
-      background: #24242f;
+      background: var(--bg-panel);
       box-shadow: gray;
     }
   }
@@ -276,7 +276,7 @@ link
   transition: 0.4s ease-in-out;
 
   &:hover {
-    color: rgba(139, 23, 33, 0.933);
+    color: var(--accent-h3);
     // text-shadow: $text-neon;
   }
 
@@ -284,14 +284,14 @@ link
     color: pink;
 
     &:hover {
-      color: white;
+      color: var(--ink);
     //   text-shadow: $text-neon;
       transform: translateX(5px);
     }
   }
 
   &.art-color-link {
-    color: #b3003b;
+    color: var(--accent);
 
     &:hover {
     //   color: $main-color;
@@ -364,8 +364,8 @@ button
 .art-btn {
   text-transform: uppercase;
   box-shadow: gray;
-  color: #ff6b8f;
-  background: #24242f;
+  color: var(--accent-text);
+  background: var(--bg-panel);
   letter-spacing: 1.5px;
   font-weight: 600;
   display: inline-flex;

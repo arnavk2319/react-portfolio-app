@@ -15,9 +15,9 @@ info bar
       width: 100%;
       padding: 30px;
       height: 235px;
-      background: #31313f;
+      background: var(--bg-panel-2);
       text-align: center;
-      box-shadow: 0 1px 4px 0 rgb(100, 100, 100);
+      box-shadow: 0 1px 4px 0 var(--shadow-soft);
   
       & .art-avatar {
         width: 105px;
@@ -191,14 +191,14 @@ info bar
     //   $text-color-1;
   
       & a {
-        color: #fff;
+        color: var(--ink);
         // transition: $tr-md;
       }
   
       &:hover {
   
         & a {
-          color: #bd1a41;
+          color: var(--accent-h1);
         }
       }
     }
@@ -219,7 +219,7 @@ info bar
   
           .progressbar-text {
             font-size: 11px;
-            color: #fff !important;
+            color: var(--ink) !important;
             position: relative;
             left: 1px !important;
             margin-bottom: -200px;
@@ -257,7 +257,7 @@ info bar
             text-align: right;
             top: -6px !important;
             font-size: 11px;
-            color: #fff !important;
+            color: var(--ink) !important;
           }
         }
       }
@@ -269,7 +269,7 @@ info bar
       & li {
         list-style-type: none;
         margin-bottom: 5px;
-        color: #5f5f63;
+        color: var(--muted-3);
   
         &:last-child {
           margin-bottom: 0;
@@ -299,7 +299,7 @@ info bar
       justify-content: space-between;
       padding: 0 35px;
       height: 40px;
-      background: #31313f;
+      background: var(--bg-panel-2);
       position: absolute;
       bottom: 0;
       box-shadow: #3e3e50;
@@ -308,7 +308,7 @@ info bar
       z-index: 999;
   
       & a {
-        color: #8c8c8e;
+        color: var(--muted);
         // transition: $tr-sm;
   
         &:hover {
@@ -324,10 +324,10 @@ info bar
   .art-line-progress {
     & path {
       &:first-child {
-        stroke: #b3003b;;
+        stroke: var(--accent);;
       }
       &:last-child {
-        stroke: #b3003b;;
+        stroke: var(--accent);;
       }
     }
   }
@@ -340,10 +340,10 @@ info bar
   .art-cirkle-progress {
     & path {
       &:first-child {
-        stroke: #b3003b;
+        stroke: var(--accent);
       }
       &:last-child {
-        stroke: #b3003b;
+        stroke: var(--accent);
       }
     }
   }

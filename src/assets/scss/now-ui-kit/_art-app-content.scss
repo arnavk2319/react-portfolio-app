@@ -44,6 +44,118 @@ content
     background: var(--bg-panel);
   }
   
+  /* ----- hero motion (only for visitors who have not asked for reduced motion) ----- */
+  .art-hero-shapes {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+
+    & .art-shape {
+      position: absolute;
+      display: block;
+    }
+
+    & .art-shape-ring {
+      width: 190px;
+      height: 190px;
+      right: 6%;
+      top: -50px;
+      border: 2px solid var(--accent);
+      border-radius: 50%;
+      opacity: 0.35;
+    }
+
+    & .art-shape-blob {
+      width: 240px;
+      height: 240px;
+      right: 20%;
+      bottom: -110px;
+      background: var(--accent);
+      border-radius: 42% 58% 63% 37% / 45% 40% 60% 55%;
+      opacity: 0.16;
+    }
+
+    & .art-shape-diamond {
+      width: 70px;
+      height: 70px;
+      right: 36%;
+      top: 22%;
+      border: 2px solid var(--accent);
+      opacity: 0.3;
+      transform: rotate(45deg);
+    }
+
+    & .art-shape-dots {
+      width: 120px;
+      height: 80px;
+      right: 4%;
+      bottom: 14%;
+      background-image: radial-gradient(var(--accent) 2px, transparent 2.5px);
+      background-size: 20px 20px;
+      opacity: 0.35;
+    }
+  }
+
+  .art-banner .art-banner-overlay .art-banner-title {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes art-hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(22px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes art-hero-drift {
+    from {
+      background-position: 30% 25%;
+    }
+    to {
+      background-position: 70% 75%;
+    }
+  }
+
+  @keyframes art-shape-float {
+    0%, 100% {
+      transform: translate3d(0, 0, 0) rotate(var(--r, 0deg));
+    }
+    50% {
+      transform: translate3d(0, -22px, 0) rotate(calc(var(--r, 0deg) + 14deg));
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .art-app .art-banner {
+      background-size: 112% auto;
+      animation: art-hero-drift 40s ease-in-out infinite alternate;
+    }
+
+    .art-banner .art-banner-title > * {
+      opacity: 0;
+      animation: art-hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+      &:nth-child(1) { animation-delay: 0.1s; }
+      &:nth-child(2) { animation-delay: 0.3s; }
+      &:nth-child(3) { animation-delay: 0.5s; }
+      &:nth-child(4) { animation-delay: 0.7s; }
+    }
+
+    .art-hero-shapes {
+      & .art-shape-ring { animation: art-shape-float 9s ease-in-out infinite; }
+      & .art-shape-blob { animation: art-shape-float 12s ease-in-out infinite -3s; }
+      & .art-shape-diamond { --r: 45deg; animation: art-shape-float 7s ease-in-out infinite -1s; }
+      & .art-shape-dots { animation: art-shape-float 10s ease-in-out infinite -5s; }
+    }
+  }
+
   .art-banner {
     transition: 0.55s ease-in-out;
     background-size: cover;

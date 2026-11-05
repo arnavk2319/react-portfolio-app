@@ -31,6 +31,10 @@ const SKILLS = [
     { name: "Java, Spring Boot, Spring MVC", bar: 90, label: "90 %" },
     { name: "Vue 2+, Angular 20+, React.js, Node.js", bar: 80, label: "80 %" },
     { name: "SQL, NoSQL, ORM, ODM", bar: 80, label: "90 %" },
+    { name: "Agentic AI, Agentic SDLC", bar: 80, label: "80 %" },
+    { name: "RAG, Agentic RAG, Vector Search", bar: 80, label: "80 %" },
+    { name: "Automated AI Pipelines", bar: 75, label: "75 %" },
+    { name: "Evals & Performance Metrics", bar: 75, label: "75 %" },
 ];
 
 const KNOWLEDGE = [
@@ -40,6 +44,7 @@ const KNOWLEDGE = [
     "Git, GitLab CI/CD",
     "Data Engineering, Analysis & Modeling",
     "Machine Learning, MLOps & AI Engineering",
+    "LLM Apps, Agent Frameworks, Prompt Engineering",
 ];
 
 const SOCIAL = [

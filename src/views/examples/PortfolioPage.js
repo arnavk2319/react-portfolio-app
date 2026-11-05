@@ -89,6 +89,13 @@ function PortfolioPage(){
 
                                     <div  className="art-banner-overlay">
 
+                                    <div className="art-hero-shapes" aria-hidden="true">
+                                        <span className="art-shape art-shape-ring"></span>
+                                        <span className="art-shape art-shape-blob"></span>
+                                        <span className="art-shape art-shape-diamond"></span>
+                                        <span className="art-shape art-shape-dots"></span>
+                                    </div>
+
                                         <div  className="art-banner-title">
 
                                             <h1  className="mb-15">From Concept to Deployment</h1>
@@ -283,6 +290,74 @@ function PortfolioPage(){
                                         <h5 className="mb-15">Automation Tools</h5>
 
                                         <div className="mb-15">Developing scripts and workflows to streamline tasks and boost productivity efficiently</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">Agentic AI &amp; SDLC</h5>
+
+                                        <div className="mb-15">Designing agent workflows that plan, code, test and review, bringing AI into every stage of the software lifecycle</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">RAG &amp; Agentic RAG</h5>
+
+                                        <div className="mb-15">Building retrieval-augmented systems, from vector search and chunking to agents that decide when and what to retrieve</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">Automated AI Pipelines</h5>
+
+                                        <div className="mb-15">Orchestrating data, model and deployment pipelines that run reliably and repeat without manual steps</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">Evals &amp; Performance Metrics</h5>
+
+                                        <div className="mb-15">Measuring quality, cost and latency with evaluation suites so AI features can be trusted and improved</div>
 
                                         <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
                                     </div>

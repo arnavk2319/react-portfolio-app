@@ -18,6 +18,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // THEME SWITCH. The site has two themes, defined in src/assets/scss/now-ui-kit/_art-theme.scss:
+      //   "ivory"  Ivory & Oxblood (light)
+      //   "dark"   the original dark theme
+      // To roll the whole site back to the dark theme, change DEFAULT_THEME to "dark".
+      // To preview a theme without changing the default, open any page with ?theme=dark or
+      // ?theme=ivory. The choice is kept for the browser tab; ?theme=reset clears it.
+      // This runs before first paint so the page never flashes the wrong theme.
+      (function () {
+        var DEFAULT_THEME = "ivory";
+        var BAR_COLORS = { ivory: "#f7f1e6", dark: "#1e1e28" };
+        var theme = DEFAULT_THEME;
+        try {
+          var asked = new URLSearchParams(window.location.search).get("theme");
+          if (asked === "reset") sessionStorage.removeItem("theme");
+          else if (BAR_COLORS[asked]) sessionStorage.setItem("theme", asked);
+          var kept = sessionStorage.getItem("theme");
+          if (BAR_COLORS[kept]) theme = kept;
+        } catch (e) {}
+        document.documentElement.setAttribute("data-theme", theme);
+        document.write('<meta name="theme-color" content="' + BAR_COLORS[theme] + '">');
+      })();
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GA_MEASUREMENT_ID%"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -30,7 +53,6 @@
     <link rel="icon" type="image/png" href="%PUBLIC_URL%/favicon.png" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/apple-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#1e1e28" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/

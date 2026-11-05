@@ -371,3 +371,62 @@ info bar
     }
   }
   
+/* ----- sidebar scroll affordance: thin visible scrollbar + "more below" fade ----- */
+.art-app .art-scroll-frame-profile-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+.art-scroll-hint {
+  position: sticky;
+  bottom: 0;
+  height: 70px;
+  margin-top: -70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  padding-bottom: 8px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, var(--bg-panel) 85%);
+  color: var(--accent-text);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+
+  &.art-show {
+    opacity: 1;
+  }
+
+  & i {
+    font-size: 11px;
+  }
+}
+
+@keyframes art-hint-bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .art-scroll-hint.art-show i {
+    animation: art-hint-bob 1.4s ease-in-out infinite;
+  }
+}

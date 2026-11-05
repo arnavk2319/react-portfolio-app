@@ -63,6 +63,20 @@ export const Sidebar = ({ isActive, onToggle }) => {
         return () => clearTimeout(t);
     }, []);
 
+    // Show a "more below" fade + chevron until the visitor has scrolled to the bottom of the sidebar.
+    const [moreBelow, setMoreBelow] = React.useState(true);
+    const scrollerRef = React.useRef(null);
+    const updateMore = React.useCallback(() => {
+        const el = scrollerRef.current;
+        if (!el) return;
+        setMoreBelow(el.scrollTop + el.clientHeight < el.scrollHeight - 24);
+    }, []);
+    React.useEffect(() => {
+        updateMore();
+        window.addEventListener("resize", updateMore);
+        return () => window.removeEventListener("resize", updateMore);
+    }, [updateMore]);
+
     return (
     <div className={isActive ? "art-info-bar art-active" : "art-info-bar"}>
         <div className="art-info-bar-frame">
@@ -89,7 +103,7 @@ export const Sidebar = ({ isActive, onToggle }) => {
                 </div>
             </div>
 
-            <div id="scrollbar2" className="art-scroll-frame-profile-sidebar" tabIndex="-1" style={{ outline: "none", display: "block", position: "relative" }}>
+            <div id="scrollbar2" ref={scrollerRef} onScroll={updateMore} className="art-scroll-frame-profile-sidebar" tabIndex="-1" style={{ outline: "none", display: "block", position: "relative" }}>
                 <div className="art-table p-60-0">
                     <ul>
                         {PROFILE.map(({ label, value }) => (
@@ -147,6 +161,11 @@ export const Sidebar = ({ isActive, onToggle }) => {
 
                 <div className="art-links-frame p-15-15">
                     <a href={Resume} target="_blank" rel="noopener noreferrer" className="art-link" download>Download cv <i className="fas fa-download"></i></a>
+                </div>
+
+                <div className={moreBelow ? "art-scroll-hint art-show" : "art-scroll-hint"} aria-hidden="true">
+                    <span>Scroll</span>
+                    <i className="fas fa-chevron-down"></i>
                 </div>
             </div>
 

@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 const texts = [
   "high quality responsive web interfaces.",
   "machine learning and data models.",
+  "agentic AI systems and RAG pipelines.",
+  "agentic SDLC workflows and automated pipelines.",
+  "evals and performance metrics for AI apps.",
   "databases and API interfaces.",
   "automation tools."
 ];

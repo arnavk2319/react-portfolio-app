@@ -1,18 +1,12 @@
 import React from 'react';
-import { useEffect } from 'react';
-import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
+import { PageLayout } from "components/PageLayout";
 import { ContactGrid } from "views/examples/ContactGrid";
 import { RotatingText } from "views/examples/RotatingText";
 import { BadgeCarousel } from 'views/examples/BadgeCarousel';
 
 
 function PortfolioPage(){
-    useEffect(() => {
-        document.title = "Home | Arnav Kaushal";
-    }, []);
 
-    const [artActiveInfoBar, setArtActiveInfoBar] = React.useState(false);
-    const [artActiveMenuBar, setArtActiveMenuBar] = React.useState(false);
 
     const credlyBadges = [
         {
@@ -79,689 +73,248 @@ function PortfolioPage(){
     ];
 
     return(
-        <>
-            {/* <ExamplesNavbar /> */}
-            <div className="art-app">
+        <PageLayout title="Home | Arnav Kaushal" currentHref="/portfolio" currentLabel="Home">
+                    {/*Container fluid section -- 1*/}
+                    <div  className="container-fluid">
 
-                <div className="art-mobile-top-bar">
+                        <div  className="row p-60-0 p-lg-30-0 p-md-15-0">
 
-                </div>
+                            <div  className="col-lg-12">
 
-                <div className="art-app-wrapper">
-                    <div className="art-app-container">
-                        <div className={artActiveInfoBar ? "art-info-bar art-active" : "art-info-bar"}>
-                            <div className="art-info-bar-frame">
+                                <div  className="art-a art-banner" style={{backgroundImage: "url(" + require("assets/img/bg11.webp") + ")"}}>
 
-                                <div className="art-info-bar-header">
-                                    <a className="art-info-bar-btn" onClick={() => artActiveInfoBar ? setArtActiveInfoBar(false) :  setArtActiveInfoBar(true)} href="#." >
-                                        <i className="fa fa-ellipsis-v"></i>
-                                    </a>
-                                </div>
+                                    <div  className="art-banner-back"></div>
 
-                                <div className="art-header">
-                                    <div className="art-avatar">
-                                        <div data-fancybox="avatar" style={{ backgroundImage: "url(" + require("assets/img/default-avatar.png") + ")",}} href="#." className="art-avatar-curtain">
-                                            <img style={{ backgroundImage: "url(" + require("assets/img/default-avatar.png") + ")",}} alt="" />
+                                    <div  className="art-banner-dec"></div>
+
+                                    <div  className="art-banner-overlay">
+
+                                        <div  className="art-banner-title">
+
+                                            <h1  className="mb-15">From Concept to Deployment</h1>
+                                            <h3  className="mb-5">I Make It Happen!</h3>
+
+                                            <RotatingText />
+                                            <div  className="art-buttons-frame">
+
+                                                <a href="/projects"  className="art-btn art-btn-md"><span>Explore now</span></a>
+                                            </div>
                                         </div>
                                     </div>
-
-                                    <h5 className="art-name mb-10">
-                                        <a href="/portfolio">Arnav Kaushal</a>
-                                    </h5>
-
-                                    <div className="art-sm-text">
-                                        Full Stack Software Engineer, DS/ML Engineer
-                                        <br></br>
-                                    </div>
-                                </div>
-                                
-                                <div id="scrollbar2" className="art-scroll-frame-profile-sidebar"  tabIndex="-1" style={{outline: 'none', display: 'block', position: 'relative'}}>
-                                
-                                    <div className="art-table p-60-0">
-                                        <ul>
-                                            <li>
-                                                <h6>Residence:</h6><span>Canada</span>
-                                            </li>
-                                            
-                                            <li>
-                                                <h6>City:</h6><span>Toronto</span>
-                                            </li>
-                                            
-                                            <li>
-                                                <h6>Age:</h6><span>29</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                               
-                               
-                                    <div className="art-ls-divider"></div>
-
-                                  
-                                    <div className="art-lang-skills p-30-0">                                  
-                                        <div className="art-lang-skills-item">
-                                            <div id="circleprog1" className="art-cirkle-progress">
-                                            <svg viewBox="0 0 100 100" style={{display: 'block', width: '100%'}}>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" strokeWidth="7" fillOpacity="0">
-                                                </path>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" strokeWidth="7" fillOpacity="0">
-                                                </path>
-                                            </svg>
-
-                                            <div className="progressbar-text" style={{position: 'relative', left: '50%', top: '-32px', padding: '0px', margin: '0px', color: '#ffffff'}}>100</div>
-                                            </div>
-                                            
-                                            <h6 style={{marginTop: '-20px'}}>English</h6>
-                                        </div>
-
-                                        <div className="art-lang-skills-item">
-                                            <div id="circleprog2" className="art-cirkle-progress">
-                                            <svg viewBox="0 0 100 100" style={{display: 'block', width: '100%'}}>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#eee" strokeWidth="7" fillOpacity="0">
-                                                </path>
-                                                <path d="M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93" stroke="#555" strokeWidth="7" fillOpacity="0">
-                                                </path>
-                                            </svg>
-
-                                            <div className="progressbar-text" style={{position: 'relative', left: '50%', top: '-32px', padding: '0px', margin: '0px', color: '#ffffff'}}>100</div>
-                                            </div>
-                                            
-                                            <h6 style={{marginTop: '-20px'}}>Hindi</h6>
-                                        </div>
-                                                            
-                                    </div>
-
-                                    <div className="art-ls-divider2"></div>
-
-                                    <div className="art-hard-skills p-30-15">
-
-                    
-                                        <div className="art-hard-skills-item">
-                                            <div className="art-skill-heading">  
-                                                <h6>Python, FastAPI, pytest</h6>
-                                            </div>
-                                            
-                                            <div className="art-line-progress">
-                                                
-                                                <div id="lineprog1" style={{position: 'relative'}}>
-                                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '90%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
-                                                    </svg>
-                                                                            
-                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>90 %
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-                                        
-
-                                        
-                                        <div className="art-hard-skills-item">
-                                            <div className="art-skill-heading">
-                                                
-                                                <h6>TypeScript, Javascript (ES6)</h6>
-                                            </div>
-                                            
-                                            <div className="art-line-progress">
-                                                
-                                            <div id="lineprog2" style={{position: 'relative'}}>
-                                                <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
-                                                </svg>
-                                                    
-                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>80 %
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-                                        
-
-                                        
-                                        <div className="art-hard-skills-item">
-                                            <div className="art-skill-heading">
-                                                
-                                                <h6>Machine Learning, Data Science</h6>
-                                            </div>
-                                            
-                                            <div className="art-line-progress">
-                                                
-                                            <div id="lineprog3" style={{position: 'relative'}}>
-                                            <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '75%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
-                                            </svg>
-                                                    
-                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>75 %
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-                                        
-
-                                        
-                                        <div className="art-hard-skills-item">
-                                            <div className="art-skill-heading">
-                                                
-                                                <h6>Data Structures and Algorithms</h6>
-                                            </div>
-                                            
-                                            <div className="art-line-progress">
-                                                
-                                            <div id="lineprog4" style={{position: 'relative'}}>
-                                            <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '70%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
-                                            </svg>
-                                                    
-                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>70 %
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-                                        
-
-                                        
-                                        <div className="art-hard-skills-item">
-                                            <div className="art-skill-heading">
-                                                
-                                                <h6>Java, Spring Boot, Spring MVC</h6>
-                                            </div>
-                                            
-                                            <div className="art-line-progress">
-                                                
-                                            <div id="lineprog5" style={{position: 'relative'}}>
-                                            <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '90%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
-                                            </svg>
-                                                    
-                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>90 %
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-
-                                        <div className="art-hard-skills-item">
-                                            <div className="art-skill-heading">
-                                                
-                                                <h6>Vue 2+, Angular 20+, React.js, Node.js</h6>
-                                            </div>
-                                            
-                                            <div className="art-line-progress">
-                                                
-                                            <div id="lineprog6" style={{position: 'relative'}}>
-                                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
-                                                    </svg>
-                                                    
-                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>80 %
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-
-                                        <div className="art-hard-skills-item">
-                                            <div className="art-skill-heading">
-                                                
-                                                <h6>SQL, NoSQL, ORM, ODM</h6>
-                                            </div>
-                                            
-                                            <div className="art-line-progress">
-                                                
-                                            <div id="lineprog7" style={{position: 'relative'}}>
-                                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{width: '80%', height: '100%', backgroundColor: '#b3003b'}} >                                                   
-                                                    </svg>
-                                                    
-                                                    <div className="progressbar-text" style={{position: 'absolute', left: '50%', top: '50%', padding: '0px', margin: '0px', transform: 'translate(-50%, -50%)', color: 'rgba(85, 85, 85)'}}>90 %
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        
-                                        </div>
-                                    </div>    
-                                                                        
-                                    
-                                    <div className="art-ls-divider3"></div>
-                                
-                                    <ul className="art-knowledge-list p-15-0">
-
-                                        <li>Bootstrap, Materialize, Sass, Less</li>
-                                        
-                                        <li>Jest, Jasmine Testing</li>
-                                        
-                                        <li>Gulp, Webpack, Grunt</li>
-                                        
-                                        <li>Git, GitLab CI/CD</li>
-
-                                        <li>Data Engineering, Analysis & Modeling</li>
-
-                                        <li>Machine Learning, MLOps & AI Engineering</li>
-                                    </ul>
-
-                                    <div className="art-ls-divider4"></div>
-
-                                    <div className="art-links-frame p-15-15">
-
-                                        <a href={Resume} target="_blank" rel="noopener noreferrer"  className="art-link" download>Download cv <i className="fas fa-download"></i></a>
-
-                                    </div>
-                                
-                                </div>
-
-
-                                <div className="art-ls-social">
-                
-                                    <a href="https://www.linkedin.com/in/arnav-k-7359b3170/" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in"></i></a>
-                                        
-                                        
-                                    <a href="https://github.com/arnavk2319?tab=repositories" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
-                                        
-                                    <a href="mailto:arnav.kaushal800@gmail.com" target="_blank" rel="noopener noreferrer"><i className="fa fa-envelope"></i></a>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-
-
-
-
-
-
-
-                        {/*This is the Central Main section from here on*/}
-                        {/*--*/}
-                        {/*00*/}
-
-                        
-                        <div className={ artActiveMenuBar ? "art-content art-active" : "art-content"}>
-
-                            <div className="art-curtain"></div>
-
-                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.webp") + ")"}}>
-           
-                                <div className="art-top-bg-overlay"></div>
-          
-                            </div>
-
-                            <div className="transition-fade" id="swup">
-                                <div id="scrollbar" tabIndex="-1" className="art-scroll-frame" style={{outline: 'none'}}>
-                                    
-                                    <div className="scroll-content" style={{transform: 'translate3d(0px, 0px, 0px'}}>
-
-                                        {/*Container fluid section -- 1*/}
-                                        <div  className="container-fluid">
-        
-                                            <div  className="row p-60-0 p-lg-30-0 p-md-15-0">
-
-                                                <div  className="col-lg-12">
-                                                  
-                                                    <div  className="art-a art-banner" style={{backgroundImage: "url(" + require("assets/img/bg11.webp") + ")"}}>
-                                                    
-                                                        <div  className="art-banner-back"></div>
-                                                        
-                                                        <div  className="art-banner-dec"></div>
-                                                        
-                                                        <div  className="art-banner-overlay">
-                                                            
-                                                            <div  className="art-banner-title">
-                                                            
-                                                                <h1  className="mb-15">From Concept to Deployment</h1>
-                                                                <h3  className="mb-5">I Make It Happen!</h3>
-                                                            
-                                                                <RotatingText />
-                                                                <div  className="art-buttons-frame">
-                                                                    
-                                                                    <a href="/projects"  className="art-btn art-btn-md"><span>Explore now</span></a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    
-                                                    </div>
-                                                    
-                                                </div>
-
-                                            </div>
-
-                                        </div>
-
-
-
-
-                                        {/*Container fluid section -- 2*/}
-                                        <div className="container-fluid">
-
-                                            <div className="row p-30-0">
-
- 
-                                                <div className="col-md-3 col-6">
-
-                                                
-                                                    <div className="art-counter-frame">
-                                                        
-                                                        <div className="art-counter-box">
-                                                        
-                                                            <span className="art-counter">5</span><span className="art-counter-plus">+</span>
-                                                        
-                                                        </div>
-                                                                                                      
-                                                        <h6>Years Experience</h6>
-                                                    </div>
-                                                
-
-                                                </div>
-                                                
-
-                                                
-                                                <div className="col-md-3 col-6">
-
-                                                
-                                                    <div className="art-counter-frame">
-                                                        
-                                                        <div className="art-counter-box">
-                                                        
-                                                            <span className="art-counter">20</span><span className="art-counter-plus">+</span>
-                                                        
-                                                        </div>
-                                                                                                              
-                                                        <h6>Completed Projects</h6>
-                                                    </div>
-                                                
-
-                                                </div>
-                                                
-
-                                                
-                                                <div className="col-md-3 col-6">
-
-                                                
-                                                    <div className="art-counter-frame">
-                                                        
-                                                        <div className="art-counter-box">
-                                                        
-                                                            <span className="art-counter">30</span><span className="art-counter-plus">+</span>
-                                                        
-                                                        </div>                                                       
-                                                        
-                                                        <h6>Languages, Tools & Frameworks</h6>
-                                                    </div>
-                                                
-
-                                                </div>
-                                                
-
-                                                
-                                                <div className="col-md-3 col-6">
-
-                                                
-                                                    <div className="art-counter-frame">
-                                                        
-                                                        <div className="art-counter-box">
-                                                        
-                                                            <span className="art-counter">50</span><span className="art-counter-plus">+</span>
-                                                        
-                                                        </div>                                                        
-                                                        
-                                                        <h6>Widgets Built</h6>
-                                                    </div>
-                                                
-
-                                                </div>
-                                                
-
-                                            </div>
-
-                                        </div>
-
-
-
-
-                                        {/*Container fluid section -- 3*/}
-                                        <div className="container-fluid">
-
-                                            <div className="row justify-content-center">
-                                                <ContactGrid />
-                                            </div>
-
-                                        </div>
-
-
-
-
-                                        {/*Container fluid section -- 4*/}
-                                        <div className="container-fluid mt-1">
-
-                                            <div className="row">
-
-                                            
-                                                <div className="col-lg-12">
-
-                                                    
-                                                    <div className="art-section-title mt-1">
-                                                    
-                                                        <div className="art-title-frame">
-                                                            
-                                                            <h4>My Services</h4>
-                                                        </div>
-                                                    
-                                                    </div>
-                                                    
-
-                                                </div>
-                                                
-
-                                                
-                                                <div className="col-lg-4 col-md-6">
-
-                                                    
-                                                    <div className="art-a art-service-icon-box">
-                                                    
-                                                        <div className="art-service-ib-content">
-                                                            
-                                                            <h5 className="mb-15">Responsive Web Development</h5>
-                                                            
-                                                            <div className="mb-15">Building flexible, user-friendly websites that adapt seamlessly across all devices and screen sizes</div>
-                                                            
-                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
-                                                        </div>
-                                                    
-                                                    </div>
-                                                    
-
-                                                </div>
-                                                
-
-                                                
-                                                <div className="col-lg-4 col-md-6">
-
-                                                    
-                                                    <div className="art-a art-service-icon-box">
-                                                    
-                                                        <div className="art-service-ib-content">
-                                                            
-                                                            <h5 className="mb-15">ML & Data Science Models</h5>
-                                                            
-                                                            <div className="mb-15">Designing intelligent models to extract insights and automate decisions from complex data</div>
-                                                            
-                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
-                                                        </div>
-                                                    
-                                                    </div>
-                                                    
-
-                                                </div>
-                                                
-
-                                                
-                                                <div className="col-lg-4 col-md-6">
-
-                                                    
-                                                    <div className="art-a art-service-icon-box">
-                                                    
-                                                        <div className="art-service-ib-content">
-                                                            
-                                                            <h5 className="mb-15">APIs & SDKs</h5>
-                                                            
-                                                            <div className="mb-15">Creating robust interfaces and tools to enable seamless integration and expand functionality</div>
-                                                            
-                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
-                                                        </div>
-                                                    
-                                                    </div>
-                                                    
-
-                                                </div>
-                                                
-
-                                                
-                                                <div className="col-lg-4 col-md-6">
-
-                                                    
-                                                    <div className="art-a art-service-icon-box">
-                                                    
-                                                        <div className="art-service-ib-content">
-                                                            
-                                                            <h5 className="mb-15">Cloud Computing & Databases</h5>
-                                                            
-                                                            <div className="mb-15">Leveraging cloud platforms and scalable databases for reliable, high-performance applications</div>
-                                                            
-                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
-                                                        </div>
-                                                    
-                                                    </div>
-                                                    
-
-                                                </div>
-                                                
-
-                                                
-                                                <div className="col-lg-4 col-md-6">
-
-                                                    
-                                                    <div className="art-a art-service-icon-box">
-                                                    
-                                                        <div className="art-service-ib-content">
-                                                            
-                                                            <h5 className="mb-15">Automation Tools</h5>
-                                                            
-                                                            <div className="mb-15">Developing scripts and workflows to streamline tasks and boost productivity efficiently</div>
-                                                            
-                                                            <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
-                                                        </div>
-                                                    
-                                                    </div>
-                                                    
-
-                                                </div>
-                                            
-
-                                            </div>
-
-                                        </div>
-
-
-
-
-                                        <div className="container-fluid mt-5">
-                                            <div className="col-lg-12">
-                                                    
-                                                <div className="art-section-title mb-n4">
-                                                
-                                                    <div className="art-title-frame">
-                                                        
-                                                        <h4>My Credentials</h4>
-                                                    </div>
-                                                
-                                                </div>
-                                                
-
-                                            </div>
-                                            <BadgeCarousel items={credlyBadges} className="mt-3"/>
-
-                                        </div>
-
-
-
-                                        {/*Container fluid section -- 5*/}
-                                        <div className="container-fluid">
-
-                                            <footer>
-                                                <div>© 2025 Arnav Kaushal</div>
-                                            </footer>
-
-                                        </div>
-
-
-                                    </div>
-                                    
-                                </div>   
-                            </div>
-
-                        </div>
-
-
-
-
-
-
-
-                        {/*This is the Right Menu bar section from here on*/}
-                        {/*--*/}
-                        {/*00*/}
-
-                        
-                        <div className={artActiveMenuBar ? "art-menu-bar art-active" : "art-menu-bar"}>
-
-                            <div className="art-menu-bar-frame">
-
-                                <div className="art-menu-bar-header">
-                
-                                    <a className={artActiveMenuBar ? "art-menu-bar-btn art-active" : "art-menu-bar-btn"} href="#." onClick={() => artActiveMenuBar ? setArtActiveMenuBar(false) : setArtActiveMenuBar(true)}>                           
-                                    &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;<i className="fas fa-bars"></i>                                   
-                                    </a>
-                                    
-                                </div>
-
-                                <div className="art-current-page">
-                                    <a href="/portfolio">Home</a>
-                                </div>
-
-                                <div className="art-scroll-frame-menu-sidebar">
-
-                                    <nav id="swupMenu">        
-                                        <ul className="main-menu">
-                                            <li className="menu-item"><a href="/portfolio">Home</a></li>
-                                            
-                                            <li className="menu-item"><a href="/projects">Portfolio</a></li>
-
-                                            <li className="menu-item"><a href="/certifications">Certifications</a></li>
-                                                                                        
-                                            <li className="menu-item"><a href="/history">History</a></li>
-                                            
-                                            <li className="menu-item"><a href="/contact-me">Contact</a></li>
-                                        </ul>                                           
-                                    </nav>  
-
-                                    <ul className="art-language-change">
-                                        <li className="art-active-lang"><a href="#.">EN</a></li>
-                                    </ul>
 
                                 </div>
 
                             </div>
 
                         </div>
-
-
-
-
-
 
                     </div>
 
-                </div>
-            
-            </div>
-        </>
-            
+                    {/*Container fluid section -- 2*/}
+                    <div className="container-fluid">
+
+                        <div className="row p-30-0">
+
+                            <div className="col-md-3 col-6">
+
+                                <div className="art-counter-frame">
+
+                                    <div className="art-counter-box">
+
+                                        <span className="art-counter">5</span><span className="art-counter-plus">+</span>
+
+                                    </div>
+
+                                    <h6>Years Experience</h6>
+                                </div>
+
+                            </div>
+
+                            <div className="col-md-3 col-6">
+
+                                <div className="art-counter-frame">
+
+                                    <div className="art-counter-box">
+
+                                        <span className="art-counter">20</span><span className="art-counter-plus">+</span>
+
+                                    </div>
+
+                                    <h6>Completed Projects</h6>
+                                </div>
+
+                            </div>
+
+                            <div className="col-md-3 col-6">
+
+                                <div className="art-counter-frame">
+
+                                    <div className="art-counter-box">
+
+                                        <span className="art-counter">30</span><span className="art-counter-plus">+</span>
+
+                                    </div>
+
+                                    <h6>Languages, Tools & Frameworks</h6>
+                                </div>
+
+                            </div>
+
+                            <div className="col-md-3 col-6">
+
+                                <div className="art-counter-frame">
+
+                                    <div className="art-counter-box">
+
+                                        <span className="art-counter">50</span><span className="art-counter-plus">+</span>
+
+                                    </div>
+
+                                    <h6>Widgets Built</h6>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    {/*Container fluid section -- 3*/}
+                    <div className="container-fluid">
+
+                        <div className="row justify-content-center">
+                            <ContactGrid />
+                        </div>
+
+                    </div>
+
+                    {/*Container fluid section -- 4*/}
+                    <div className="container-fluid mt-1">
+
+                        <div className="row">
+
+                            <div className="col-lg-12">
+
+                                <div className="art-section-title mt-1">
+
+                                    <div className="art-title-frame">
+
+                                        <h4>My Services</h4>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">Responsive Web Development</h5>
+
+                                        <div className="mb-15">Building flexible, user-friendly websites that adapt seamlessly across all devices and screen sizes</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">ML & Data Science Models</h5>
+
+                                        <div className="mb-15">Designing intelligent models to extract insights and automate decisions from complex data</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">APIs & SDKs</h5>
+
+                                        <div className="mb-15">Creating robust interfaces and tools to enable seamless integration and expand functionality</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">Cloud Computing & Databases</h5>
+
+                                        <div className="mb-15">Leveraging cloud platforms and scalable databases for reliable, high-performance applications</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div className="col-lg-4 col-md-6">
+
+                                <div className="art-a art-service-icon-box">
+
+                                    <div className="art-service-ib-content">
+
+                                        <h5 className="mb-15">Automation Tools</h5>
+
+                                        <div className="mb-15">Developing scripts and workflows to streamline tasks and boost productivity efficiently</div>
+
+                                        <div className="art-buttons-frame"><a href="/projects" className="art-link art-color-link art-w-chevron">Order now</a></div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div className="container-fluid mt-5">
+                        <div className="col-lg-12">
+
+                            <div className="art-section-title mb-n4">
+
+                                <div className="art-title-frame">
+
+                                    <h4>My Credentials</h4>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <BadgeCarousel items={credlyBadges} className="mt-3"/>
+
+                    </div>
+
+                    {/*Container fluid section -- 5*/}
+
+        </PageLayout>
     );
 }
 

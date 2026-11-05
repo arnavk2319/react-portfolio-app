@@ -4,7 +4,7 @@ export const DetailsCard = ({ details }) => {
   return (
     <div
       style={{
-        backgroundColor: "#2a2a38",
+        backgroundColor: "var(--bg-details)",
         padding: "20px",
         borderRadius: "8px",
         maxWidth: "500px",
@@ -23,7 +23,7 @@ export const DetailsCard = ({ details }) => {
             style={{
               flex: "0 0 100px",
               fontWeight: "600",
-              color: "white",
+              color: "var(--ink)",
             }}
           >
             {label}:
@@ -32,7 +32,7 @@ export const DetailsCard = ({ details }) => {
             href={link}
             style={{
               flex: "1",
-              color: "#b0b0b0",
+              color: "var(--muted-4)",
               textDecoration: "none",
               wordBreak: "break-word"
             }}

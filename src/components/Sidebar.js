@@ -1,7 +1,7 @@
 import React from "react";
 import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 
-const ACCENT = "#b3003b";
+const ACCENT = "var(--accent)";
 
 const PROFILE = [
     { label: "Residence:", value: "Canada" },
@@ -87,7 +87,7 @@ export const Sidebar = ({ isActive, onToggle }) => (
                                     <path d={CIRCLE_PATH} stroke="#eee" strokeWidth="7" fillOpacity="0"></path>
                                     <path d={CIRCLE_PATH} stroke="#555" strokeWidth="7" fillOpacity="0"></path>
                                 </svg>
-                                <div className="progressbar-text" style={{ position: "relative", left: "50%", top: "-32px", padding: "0px", margin: "0px", color: "#ffffff" }}>100</div>
+                                <div className="progressbar-text" style={{ position: "relative", left: "50%", top: "-32px", padding: "0px", margin: "0px", color: "var(--ink)" }}>100</div>
                             </div>
                             <h6 style={{ marginTop: "-20px" }}>{language}</h6>
                         </div>

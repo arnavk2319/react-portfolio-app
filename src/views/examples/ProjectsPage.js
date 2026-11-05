@@ -675,7 +675,7 @@ function ProjectsPage(){
 
                             <div className="art-curtain"></div>
 
-                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
+                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.webp") + ")"}}>
            
                                 <div className="art-top-bg-overlay"></div>
           
@@ -717,7 +717,7 @@ function ProjectsPage(){
                                                          
                                                         <a data-fancybox="gallery" href="https://play.google.com/store/apps/details?id=com.single.arnavkaushal.book_client_app" className="art-a art-portfolio-item-frame art-horizontal">
                                                              
-                                                            <img src={require('assets/img/lbm-all.png')} alt="item"></img>
+                                                            <img src={require('assets/img/lbm-all.webp')} alt="item" loading="lazy"></img>
                                                              
                                                             <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                         </a>
@@ -738,7 +738,7 @@ function ProjectsPage(){
                                                          
                                                         <a data-fancybox="gallery" href="https://arnavk2319.github.io/Forkify-Recipe-App/" className="art-a art-portfolio-item-frame art-horizontal">
                                                              
-                                                            <img src={require('assets/img/forkify-all.png')} alt="item"></img>
+                                                            <img src={require('assets/img/forkify-all.webp')} alt="item" loading="lazy"></img>
                                                              
                                                             <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                         </a>
@@ -759,7 +759,7 @@ function ProjectsPage(){
                                                          
                                                         <a data-fancybox="gallery" href="https://play.google.com/store/apps/details?id=com.arnav.akapplications.mapfinder" className="art-a art-portfolio-item-frame art-horizontal">
                                                              
-                                                            <img src={require('assets/img/mapfinder-all.png')} alt="item"></img>
+                                                            <img src={require('assets/img/mapfinder-all.webp')} alt="item" loading="lazy"></img>
                                                              
                                                             <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                         </a>
@@ -780,7 +780,7 @@ function ProjectsPage(){
                                                          
                                                         <a data-fancybox="gallery" href="https://shop.dialabottle.ca/dial-a-bottle" className="art-a art-portfolio-item-frame art-horizontal">
                                                              
-                                                            <img src={require('assets/img/dab.png')} alt="item"></img>
+                                                            <img src={require('assets/img/dab.webp')} alt="item" loading="lazy"></img>
                                                              
                                                             <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                         </a>
@@ -802,7 +802,7 @@ function ProjectsPage(){
                                                          
                                                         <a data-fancybox="gallery" href="https://github.com/arnavk2319/Flutter-Covid-19-App" className="art-a art-portfolio-item-frame art-horizontal">
                                                              
-                                                            <img src={require('assets/img/coviupdate-all.png')} alt="item"></img>
+                                                            <img src={require('assets/img/coviupdate-all.webp')} alt="item" loading="lazy"></img>
                                                              
                                                             <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                         </a>
@@ -823,7 +823,7 @@ function ProjectsPage(){
                                                          
                                                         <a data-fancybox="gallery" href="https://www.ppeprotect.ca/" className="art-a art-portfolio-item-frame art-horizontal">
                                                              
-                                                            <img src={require('assets/img/ppeprotect.png')} alt="item"></img>
+                                                            <img src={require('assets/img/ppeprotect.webp')} alt="item" loading="lazy"></img>
                                                              
                                                             <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                         </a>
@@ -845,7 +845,7 @@ function ProjectsPage(){
                                                          
                                                          <a data-fancybox="gallery" href="https://github.com/arnavk2319/Shop-App-Flutter" className="art-a art-portfolio-item-frame art-horizontal">
                                                               
-                                                             <img src={require('assets/img/shop.png')} alt="item"></img>
+                                                             <img src={require('assets/img/shop.webp')} alt="item" loading="lazy"></img>
                                                               
                                                              <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                          </a>
@@ -867,7 +867,7 @@ function ProjectsPage(){
                                                          
                                                          <a data-fancybox="gallery" href="https://equoshift.com/" className="art-a art-portfolio-item-frame art-horizontal">
                                                               
-                                                             <img src={require('assets/img/equo-all.png')} alt="item"></img>
+                                                             <img src={require('assets/img/equo-all.webp')} alt="item" loading="lazy"></img>
                                                               
                                                              <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                          </a>
@@ -888,7 +888,7 @@ function ProjectsPage(){
                                                          
                                                          <a data-fancybox="gallery" href="https://github.com/arnavk2319/Meals-Flutter-App" className="art-a art-portfolio-item-frame art-horizontal">
                                                               
-                                                             <img src={require('assets/img/meal-planner.png')} alt="item"></img>
+                                                             <img src={require('assets/img/meal-planner.webp')} alt="item" loading="lazy"></img>
                                                               
                                                              <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                          </a>
@@ -910,7 +910,7 @@ function ProjectsPage(){
                                                          
                                                          <a data-fancybox="gallery" href="https://kovasocialbeauty.com/" className="art-a art-portfolio-item-frame art-horizontal">
                                                               
-                                                             <img src={require('assets/img/kova-all.png')} alt="item"></img>
+                                                             <img src={require('assets/img/kova-all.webp')} alt="item" loading="lazy"></img>
                                                               
                                                              <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                          </a>
@@ -930,7 +930,7 @@ function ProjectsPage(){
                                                          
                                                          <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/loan-default-prediction-logisticr-and-randomf/" className="art-a art-portfolio-item-frame art-horizontal">
                                                               
-                                                             <img src={require('assets/img/loan-default-pred.png')} alt="item"></img>
+                                                             <img src={require('assets/img/loan-default-pred.webp')} alt="item" loading="lazy"></img>
                                                               
                                                              <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                          </a>
@@ -950,7 +950,7 @@ function ProjectsPage(){
 
                                                         <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/supervised-learning-algorithms-comparison" className="art-a art-portfolio-item-frame art-horizontal">
 
-                                                            <img src={require('assets/img/super-learn.png')} alt="item"></img>
+                                                            <img src={require('assets/img/super-learn.webp')} alt="item" loading="lazy"></img>
 
                                                             <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                         </a>
@@ -969,7 +969,7 @@ function ProjectsPage(){
 
                                                     <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/unsupervised-learning-comparison" className="art-a art-portfolio-item-frame art-horizontal">
                                                         
-                                                        <img src={require('assets/img/unsuper-learn.png')} alt="item"></img>
+                                                        <img src={require('assets/img/unsuper-learn.webp')} alt="item" loading="lazy"></img>
                                                         
                                                         <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                     </a>
@@ -989,7 +989,7 @@ function ProjectsPage(){
 
                                                     <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/insurance-claim-prediction-logisticr-and-randfor" className="art-a art-portfolio-item-frame art-horizontal">
                                                         
-                                                        <img src={require('assets/img/insurance-pred-img.png')} alt="item"></img>
+                                                        <img src={require('assets/img/insurance-pred-img.webp')} alt="item" loading="lazy"></img>
                                                         
                                                         <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                     </a>
@@ -1009,7 +1009,7 @@ function ProjectsPage(){
 
                                                     <a data-fancybox="gallery" href="https://www.kaggle.com/code/arnavkaushal/california-housing-eda-linear-ridge-lasso" className="art-a art-portfolio-item-frame art-horizontal">
                                                         
-                                                        <img src={require('assets/img/cali-housing-img.png')} alt="item"></img>
+                                                        <img src={require('assets/img/cali-housing-img.webp')} alt="item" loading="lazy"></img>
                                                         
                                                         <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                                                     </a>

@@ -320,7 +320,7 @@ function ContactPage(){
 
                             <div className="art-curtain"></div>
 
-                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
+                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.webp") + ")"}}>
            
                                 <div className="art-top-bg-overlay"></div>
           

@@ -376,7 +376,7 @@ function PortfolioPage(){
 
                             <div className="art-curtain"></div>
 
-                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
+                            <div className="art-top-bg" style={{backgroundImage: "url(" + require("assets/img/bg11.webp") + ")"}}>
            
                                 <div className="art-top-bg-overlay"></div>
           
@@ -394,7 +394,7 @@ function PortfolioPage(){
 
                                                 <div  className="col-lg-12">
                                                   
-                                                    <div  className="art-a art-banner" style={{backgroundImage: "url(" + require("assets/img/bg11.jpg") + ")"}}>
+                                                    <div  className="art-a art-banner" style={{backgroundImage: "url(" + require("assets/img/bg11.webp") + ")"}}>
                                                     
                                                         <div  className="art-banner-back"></div>
                                                         

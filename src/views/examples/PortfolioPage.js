@@ -5,6 +5,28 @@ import { RotatingText } from "views/examples/RotatingText";
 import { BadgeCarousel } from 'views/examples/BadgeCarousel';
 
 
+// Decorative "neural network" for the hero: nodes per layer, fully connected between layers.
+const NET_LAYERS = [[60, 130, 200], [30, 95, 165, 230], [45, 110, 175, 240], [90, 160]];
+const NET_X = [20, 105, 190, 275];
+const HeroNetwork = () => (
+    <svg className="art-hero-net" viewBox="0 0 300 270" aria-hidden="true">
+        {NET_LAYERS.slice(0, -1).map((layer, li) =>
+            layer.map((y1, a) =>
+                NET_LAYERS[li + 1].map((y2, b) => (
+                    <line key={`${li}-${a}-${b}`} className="art-net-edge" x1={NET_X[li]} y1={y1} x2={NET_X[li + 1]} y2={y2} />
+                ))
+            )
+        )}
+        {NET_LAYERS.map((layer, li) =>
+            layer.map((y, n) => (
+                <circle key={`n${li}-${n}`} className="art-net-node" cx={NET_X[li]} cy={y} r="5" style={{ animationDelay: `${(li * 4 + n) * 0.35}s` }} />
+            ))
+        )}
+    </svg>
+);
+
+const HERO_CHIPS = ["RAG", "Agents", "Evals", "LLM", "Embeddings", "</>"];
+
 function PortfolioPage(){
 
 
@@ -93,7 +115,10 @@ function PortfolioPage(){
                                         <span className="art-shape art-shape-ring"></span>
                                         <span className="art-shape art-shape-blob"></span>
                                         <span className="art-shape art-shape-diamond"></span>
-                                        <span className="art-shape art-shape-dots"></span>
+                                        <HeroNetwork />
+                                        {HERO_CHIPS.map((chip, i) => (
+                                            <span key={chip} className={"art-chip art-chip-" + (i + 1)}>{chip}</span>
+                                        ))}
                                     </div>
 
                                         <div  className="art-banner-title">

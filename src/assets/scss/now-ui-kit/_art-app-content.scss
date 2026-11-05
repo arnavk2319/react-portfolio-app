@@ -98,6 +98,70 @@ content
     }
   }
 
+  /* AI-themed decoration: a small neural network and floating tech chips */
+  .art-hero-net {
+    position: absolute;
+    right: 2%;
+    top: 50%;
+    width: 300px;
+    height: 270px;
+    margin-top: -135px;
+    opacity: 0.55;
+
+    & .art-net-edge {
+      stroke: var(--accent);
+      stroke-width: 1;
+      stroke-opacity: 0.28;
+    }
+
+    & .art-net-node {
+      fill: var(--accent);
+      fill-opacity: 0.8;
+    }
+  }
+
+  .art-chip {
+    position: absolute;
+    padding: 4px 11px;
+    border: 1px solid var(--accent);
+    border-radius: 999px;
+    font-family: $sf;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    color: var(--accent-text);
+    background: rgba(var(--rgb-card-a), 0.55);
+    opacity: 0.8;
+    white-space: nowrap;
+  }
+
+  .art-chip-1 { right: 30%; top: 10%; }
+  .art-chip-2 { right: 7%; top: 12%; }
+  .art-chip-3 { right: 2%; top: 50%; }
+  .art-chip-4 { right: 27%; bottom: 8%; }
+  .art-chip-5 { right: 12%; bottom: 10%; }
+  .art-chip-6 { right: 36%; top: 52%; }
+
+  @media (max-width: 920px) {
+    .art-hero-net,
+    .art-chip-5,
+    .art-chip-6 {
+      display: none;
+    }
+
+    .art-chip {
+      opacity: 0.55;
+    }
+  }
+
+  @keyframes art-net-pulse {
+    0%, 100% { fill-opacity: 0.35; }
+    50% { fill-opacity: 1; }
+  }
+
+  @keyframes art-net-flow {
+    to { stroke-dashoffset: -24; }
+  }
+
   .art-banner .art-banner-overlay .art-banner-title {
     position: relative;
     z-index: 1;
@@ -154,6 +218,21 @@ content
       & .art-shape-diamond { --r: 45deg; animation: art-shape-float 7s ease-in-out infinite -1s; }
       & .art-shape-dots { animation: art-shape-float 10s ease-in-out infinite -5s; }
     }
+
+    .art-hero-net {
+      & .art-net-node { animation: art-net-pulse 3.2s ease-in-out infinite; }
+      & .art-net-edge { stroke-dasharray: 4 8; animation: art-net-flow 2.4s linear infinite; }
+    }
+
+    .art-chip {
+      animation: art-shape-float 8s ease-in-out infinite;
+    }
+
+    .art-chip-2 { animation-duration: 10s; animation-delay: -2s; }
+    .art-chip-3 { animation-duration: 9s; animation-delay: -4s; }
+    .art-chip-4 { animation-duration: 11s; animation-delay: -6s; }
+    .art-chip-5 { animation-duration: 7s; animation-delay: -1s; }
+    .art-chip-6 { animation-duration: 12s; animation-delay: -3s; }
   }
 
   .art-banner {

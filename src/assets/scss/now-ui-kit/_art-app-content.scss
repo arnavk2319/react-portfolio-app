@@ -650,6 +650,28 @@ content
       opacity: 1;
     }
   }
+  /* ----- back to top ----- */
+  .art-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent-text);
+    box-shadow: 0 0 0 1px var(--accent-text) inset;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      color: #fff;
+      background: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent) inset;
+      text-decoration: none;
+    }
+  }
   /* ----- footer ----- */
   footer {
     width: 100%;

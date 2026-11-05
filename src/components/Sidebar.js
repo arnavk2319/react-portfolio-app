@@ -103,7 +103,7 @@ export const Sidebar = ({ isActive, onToggle }) => {
                             <div id={"circleprog" + (i + 1)} className="art-cirkle-progress">
                                 <svg viewBox="0 0 100 100" style={{ display: "block", width: "100%" }}>
                                     <path d={CIRCLE_PATH} stroke="#eee" strokeWidth="7" fillOpacity="0"></path>
-                                    <path d={CIRCLE_PATH} stroke="#555" strokeWidth="7" fillOpacity="0"></path>
+                                    <path className="art-circle-fill" d={CIRCLE_PATH} pathLength="100" stroke="#555" strokeWidth="7" fillOpacity="0" style={{ strokeDasharray: 100, strokeDashoffset: filled ? 0 : 100 }}></path>
                                 </svg>
                                 <div className="progressbar-text" style={{ position: "relative", left: "50%", top: "-32px", padding: "0px", margin: "0px", color: "var(--ink)" }}>100</div>
                             </div>

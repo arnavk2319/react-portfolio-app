@@ -330,11 +330,16 @@ info bar
   /* ----- progresbar color ----- */
   
   .art-line-progress svg {
-    transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: width 2.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .art-cirkle-progress .art-circle-fill {
+    transition: stroke-dashoffset 2.5s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .art-line-progress svg {
+    .art-line-progress svg,
+    .art-cirkle-progress .art-circle-fill {
       transition: none;
     }
   }

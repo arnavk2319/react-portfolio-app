@@ -52,6 +52,9 @@ does not define fall back to the dark values.
   --accent-h1: #bd1a41;
   --accent-h2: #b3003c;
   --accent-h3: rgba(139, 23, 33, 0.933);
+  --cv-color: lightgray;
+  --cv-hover: var(--accent-h3);
+  --tile-shadow: none;
   --on-accent: #20202a;
   --code: #7aa2ff;
   --lang-bg: rgba(107, 78, 5, 0.685);
@@ -100,6 +103,9 @@ does not define fall back to the dark values.
   --accent-h1: #6e0720;
   --accent-h2: #6e0720;
   --accent-h3: #6e0720;
+  --cv-color: var(--accent);
+  --cv-hover: #000;
+  --tile-shadow: 0 6px 18px rgba(36, 20, 24, 0.14), 0 1px 3px rgba(36, 20, 24, 0.1);
   --on-accent: #fffcf5;
   --code: #7a0824;
   --lang-bg: #8c0a2a;

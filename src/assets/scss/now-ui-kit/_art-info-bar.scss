@@ -288,6 +288,14 @@ info bar
     }
     /* ----- info bar links ----- */
     & .art-links-frame {
+      & .art-link {
+        color: var(--cv-color);
+
+        &:hover {
+          color: var(--cv-hover);
+        }
+      }
+
       display: flex;
       justify-content: space-between;
       flex-direction: column;
@@ -321,6 +329,16 @@ info bar
   
   /* ----- progresbar color ----- */
   
+  .art-line-progress svg {
+    transition: width 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .art-line-progress svg {
+      transition: none;
+    }
+  }
+
   .art-line-progress {
     & path {
       &:first-child {

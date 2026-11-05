@@ -50,7 +50,15 @@ const SOCIAL = [
 
 const CIRCLE_PATH = "M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93";
 
-export const Sidebar = ({ isActive, onToggle }) => (
+export const Sidebar = ({ isActive, onToggle }) => {
+    // Skill bars start empty and grow to their percentage once the page has painted.
+    const [filled, setFilled] = React.useState(false);
+    React.useEffect(() => {
+        const t = setTimeout(() => setFilled(true), 150);
+        return () => clearTimeout(t);
+    }, []);
+
+    return (
     <div className={isActive ? "art-info-bar art-active" : "art-info-bar"}>
         <div className="art-info-bar-frame">
             <div className="art-info-bar-header">
@@ -114,7 +122,7 @@ export const Sidebar = ({ isActive, onToggle }) => (
                             </div>
                             <div className="art-line-progress">
                                 <div id={"lineprog" + (i + 1)} style={{ position: "relative" }}>
-                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{ width: bar + "%", height: "100%", backgroundColor: ACCENT }}></svg>
+                                    <svg viewBox="0 0 100 1.72" preserveAspectRatio="none" style={{ width: (filled ? bar : 0) + "%", height: "100%", backgroundColor: ACCENT }}></svg>
                                     <div className="progressbar-text" style={{ position: "absolute", left: "50%", top: "50%", padding: "0px", margin: "0px", transform: "translate(-50%, -50%)", color: "rgba(85, 85, 85)" }}>{label}</div>
                                 </div>
                             </div>
@@ -145,3 +153,4 @@ export const Sidebar = ({ isActive, onToggle }) => (
         </div>
     </div>
 );
+};

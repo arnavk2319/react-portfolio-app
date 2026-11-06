@@ -918,6 +918,33 @@ content
     }
   }
 
+  /* ----- certification tiles (the whole tile is a link) ----- */
+  a.art-cert-tile {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: translateY(-3px);
+      color: inherit;
+    }
+
+    & .art-cert-link {
+      margin: 0;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-text);
+
+      & i {
+        font-size: 9px;
+        margin-left: 4px;
+      }
+    }
+  }
+
   /* ----- projects section title ("My Web Projects") ----- */
   .art-projects-title {
     margin: 0 0 10px;

@@ -1,0 +1,194 @@
+{
+  "user": "arnavk2319",
+  "repos": [
+    {
+      "name": "rag-docchat-tool",
+      "description": "Uses RAG to parse, ingest and process uploaded documents so that user can chat with one/multiple files",
+      "url": "https://github.com/arnavk2319/rag-docchat-tool",
+      "homepage": "",
+      "language": "Python",
+      "stars": 0,
+      "topics": [],
+      "pushedAt": "2025-09-28T01:32:48Z"
+    },
+    {
+      "name": "Forkify-Recipe-App",
+      "description": "A Food recipe web app utilizing node modules, webpack and babel employing RESTful web services to render data from the forkify food recipe API",
+      "url": "https://github.com/arnavk2319/Forkify-Recipe-App",
+      "homepage": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "topics": [
+        "axios",
+        "babel",
+        "css",
+        "forkify",
+        "fractal",
+        "html",
+        "javascript",
+        "node-module",
+        "npm",
+        "restful-api",
+        "restful-webservices",
+        "webapp",
+        "webpack",
+        "website"
+      ],
+      "pushedAt": "2022-12-12T19:06:31Z"
+    },
+    {
+      "name": "Guess-A-No-React",
+      "description": "A cross platform game build in react-native for Android and iOS which enables the user to play a guessing the number game against the app.",
+      "url": "https://github.com/arnavk2319/Guess-A-No-React",
+      "homepage": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "topics": [
+        "android-application",
+        "expo",
+        "expo-font",
+        "ios-app",
+        "npm",
+        "react-native"
+      ],
+      "pushedAt": "2022-12-06T22:44:58Z"
+    },
+    {
+      "name": "Flutter-Covid-19-App",
+      "description": "A Covid-19 Flutter app that informs the user on different aspects of the pandemic. Covers information from news, different types of case counts, vaccines under testing and the ones available being promoted by the healthcare authoritites, covid-19 data of different countries based on categorization and all articles/news related to the pandemic at the fingertips of the user. Really helpful for the user as its quick, offers data visualizations for easy inference and utilizes a variety of autorized data sources to present the most available information to the user.",
+      "url": "https://github.com/arnavk2319/Flutter-Covid-19-App",
+      "homepage": "",
+      "language": "Dart",
+      "stars": 0,
+      "topics": [
+        "android",
+        "dart",
+        "firebase-auth",
+        "flutter",
+        "gcp",
+        "postman",
+        "restful-api"
+      ],
+      "pushedAt": "2021-05-24T22:30:13Z"
+    },
+    {
+      "name": "rn-places-app",
+      "description": "An mobile app (Android & iOS) tht allows users to take a picture using the device camera, track their own location and pick a location on the map using the Google Cloud Platform (GCP) Places API.",
+      "url": "https://github.com/arnavk2319/rn-places-app",
+      "homepage": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "topics": [
+        "android",
+        "expo-camera",
+        "gcp-cloud-functions",
+        "ios",
+        "node-module",
+        "npm",
+        "places-api",
+        "react-native"
+      ],
+      "pushedAt": "2020-09-20T23:13:21Z"
+    },
+    {
+      "name": "rn-shop-app",
+      "description": "A mobile ( Android & iOS ) app buils using React Native and Firebase that allows users to login, buy products, add them to cart, create their own product lists, manage their orders, have their own user authentication.",
+      "url": "https://github.com/arnavk2319/rn-shop-app",
+      "homepage": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "topics": [
+        "android",
+        "firebase-auth",
+        "firebase-realtime-database",
+        "ios",
+        "node-module",
+        "npm-module",
+        "react-native"
+      ],
+      "pushedAt": "2020-09-20T22:43:10Z"
+    },
+    {
+      "name": "Recipe-App",
+      "description": "A React-native app that allows the users to manage recipes of various kinds, create their own favorite recipe lists and fine tune the results by setting different meal filters.",
+      "url": "https://github.com/arnavk2319/Recipe-App",
+      "homepage": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "topics": [
+        "android",
+        "expo",
+        "https",
+        "ios",
+        "react-hooks",
+        "react-n",
+        "rest-api"
+      ],
+      "pushedAt": "2020-08-26T04:37:19Z"
+    },
+    {
+      "name": "Meals-Flutter-App",
+      "description": "A meals mobile app made using Google's SDK Flutter and RESTful APIs to render data using CRUD ops",
+      "url": "https://github.com/arnavk2319/Meals-Flutter-App",
+      "homepage": "",
+      "language": "Dart",
+      "stars": 0,
+      "topics": [
+        "android-application",
+        "flutter",
+        "flutter-package",
+        "ios-app",
+        "rest-api",
+        "restful-webservices"
+      ],
+      "pushedAt": "2020-05-16T22:58:17Z"
+    },
+    {
+      "name": "Shop-App-Flutter",
+      "description": "A shop mobile app made using Google's SDK Flutter and RESTful APIs to render data using CRUD ops",
+      "url": "https://github.com/arnavk2319/Shop-App-Flutter",
+      "homepage": "",
+      "language": "Dart",
+      "stars": 0,
+      "topics": [
+        "android",
+        "flutter",
+        "flutter-app",
+        "ios",
+        "rest-api",
+        "restful-webservices"
+      ],
+      "pushedAt": "2020-05-16T21:08:00Z"
+    },
+    {
+      "name": "CD-WebViewer-2.0",
+      "description": "Second Version of the CD-WebViewer - currently under progress,",
+      "url": "https://github.com/arnavk2319/CD-WebViewer-2.0",
+      "homepage": "",
+      "language": "JavaScript",
+      "stars": 0,
+      "topics": [],
+      "pushedAt": "2019-12-17T17:28:19Z"
+    },
+    {
+      "name": "GetAhead-Sample",
+      "description": "added snapshot listeners to both the fragments and the entire activity, data is updated both in onCreate and pull to refresh",
+      "url": "https://github.com/arnavk2319/GetAhead-Sample",
+      "homepage": "",
+      "language": "Java",
+      "stars": 0,
+      "topics": [],
+      "pushedAt": "2019-05-23T17:53:14Z"
+    },
+    {
+      "name": "StaticManage",
+      "description": "Added first four fields and required vector assets",
+      "url": "https://github.com/arnavk2319/StaticManage",
+      "homepage": "",
+      "language": "Java",
+      "stars": 0,
+      "topics": [],
+      "pushedAt": "2019-05-23T14:35:15Z"
+    }
+  ]
+}

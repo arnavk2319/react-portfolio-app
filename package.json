@@ -16,6 +16,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
+    "fetch-repos": "node scripts/fetch-repos.js",
+    "prebuild": "node scripts/fetch-repos.js",
     "build": "react-scripts build && cp public/_redirects build/_redirects",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

@@ -1,0 +1,9 @@
+{
+  "user": "arnavk2319",
+  "maxRepos": 12,
+  "includeForks": false,
+  "includeArchived": false,
+  "requireDescription": true,
+  "exclude": ["react-portfolio-app", "arnavk2319"],
+  "alwaysInclude": []
+}

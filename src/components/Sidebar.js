@@ -97,22 +97,22 @@ export const Sidebar = ({ isActive, onToggle }) => {
                 </a>
             </div>
 
-            <div className="art-header">
+            <a href="/portfolio" className="art-header" aria-label="Arnav Kaushal, home">
                 <div className="art-avatar">
-                    <div data-fancybox="avatar" style={{ backgroundImage: "url(" + require("assets/img/default-avatar.png") + ")" }} href="#." className="art-avatar-curtain">
+                    <div style={{ backgroundImage: "url(" + require("assets/img/default-avatar.png") + ")" }} className="art-avatar-curtain">
                         <img style={{ backgroundImage: "url(" + require("assets/img/default-avatar.png") + ")" }} alt="" />
                     </div>
                 </div>
 
                 <h5 className="art-name mb-10">
-                    <a href="/portfolio">Arnav Kaushal</a>
+                    <span>Arnav Kaushal</span>
                 </h5>
 
                 <div className="art-sm-text">
                     Full Stack Software Engineer, DS/ML Engineer
                     <br></br>
                 </div>
-            </div>
+            </a>
 
             <div id="scrollbar2" ref={scrollerRef} onScroll={handleScroll} className="art-scroll-frame-profile-sidebar" tabIndex="-1" style={{ outline: "none", display: "block", position: "relative" }}>
                 <div className="art-table p-60-0">

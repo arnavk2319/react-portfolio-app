@@ -8,26 +8,26 @@ function CertificationsPage(){
     const credlyBadges = [
         {
         title: 'Vue.js Essentials',
-        image: 'https://images.credly.com/images/f03ae314-65bc-44f3-8fcd-3dda6fd9ddd4/c783df0b-00ad-4d44-b30a-7f8dab695565.png',
+        image: require('assets/img/badges/962c8074.webp'),
         link: 'https://www.credly.com/badges/962c8074-f478-4be3-992a-7fab0c4e6f2a'
       }, {
         title: 'Angular 18+',
-        image: 'https://images.credly.com/size/680x680/images/89bde5df-b0e3-40dc-825e-f350f25ce7d2/9264989c-a675-4991-914a-d4d61a7b782f.png',
+        image: require('assets/img/badges/e7edf591.webp'),
         link: 'https://www.credly.com/badges/e7edf591-2e45-4c73-919a-17f9848b8b95'
       },
         {
         title: 'TypeScript Essentials',
-        image: 'https://images.credly.com/size/680x680/images/91982e17-e239-4e95-888a-7e1f473b1ca2/59e735e3-1556-4e93-82da-e8dda5f0a57f.png',
+        image: require('assets/img/badges/12fb6411.webp'),
         link: 'https://www.credly.com/badges/12fb6411-f471-4770-a74e-be6f149e09ec'
       },
       {
         title: 'FastAPI REST Mastery',
-        image: 'https://images.credly.com/images/0da575c8-001b-475f-b9f7-157f6e942ae0/7ed24965-1223-49fd-86b1-8d8cb6bab5a0.png',
+        image: require('assets/img/badges/9af29f22.webp'),
         link: 'https://www.credly.com/badges/9af29f22-c8bf-468e-85c1-238b1a616e2b'
       },
        {
         title: 'Reactive Spring',
-        image: 'https://images.credly.com/size/680x680/images/88706d14-6dea-403f-a927-a95d043cfae8/1206a736-3eb4-429a-943d-2e491c64c0be.png',
+        image: require('assets/img/badges/be50a73d.webp'),
         link: 'https://www.credly.com/badges/be50a73d-94a0-4bd0-b0c8-412a529688ed'
       },  {
         title: 'NodeJS - The Complete Guide',
@@ -36,35 +36,35 @@ function CertificationsPage(){
       },
       {
         title: 'Spring & Spring Boot Fund.',
-        image: 'https://images.credly.com/size/680x680/images/d0644db7-b33a-4338-9b0c-e397feb666e1/0dd025bd-a8d0-4b46-a6ff-01b752881dbb.png',
+        image: require('assets/img/badges/a846d16f.webp'),
         link: 'https://www.credly.com/badges/a846d16f-6b85-4446-9d02-e40507cd6737'
       },
       {
         title: 'IBM Introduction to Machine Learning - Specialization',
-        image: 'https://images.credly.com/size/680x680/images/0d184873-3dd0-49fc-bb84-8734f9061a07/IBM_Intro_to_Machine_Learning_-_Coursera_Specialization.png',
+        image: require('assets/img/badges/18366399.webp'),
         link: 'https://www.credly.com/badges/18366399-4003-414d-a647-3b5e4ccd3f23'
       }, {
         title: 'Unsupervised Machine Learning',
-        image: 'https://images.credly.com/size/680x680/images/3c8bc106-3635-45d0-ab5a-736adb87595e/image.png',
+        image: require('assets/img/badges/05cfb12c.webp'),
         link: 'https://www.credly.com/badges/05cfb12c-8251-46ac-9c0f-bedf7428b20c'
       },
      {
         title: 'Supervised Machine Learning: Classification',
-        image: 'https://images.credly.com/size/680x680/images/19878499-c3d3-4e67-8b97-8ec273187ccd/image.png',
+        image: require('assets/img/badges/2e6ed830.webp'),
         link: 'https://www.credly.com/badges/2e6ed830-46c4-419a-a2f6-1b5a64095a63'
       },
       {
         title: 'Supervised Machine Learning: Regression',
-        image: 'https://images.credly.com/size/680x680/images/5ce4d440-596a-4598-a106-358e64c05e5e/image.png',
+        image: require('assets/img/badges/c5af26e2.webp'),
         link: 'https://www.credly.com/badges/c5af26e2-864f-4bd1-bb6a-332b0d62b2d5'
       }, {
         title: 'Databases and SQL for Data Science',
-        image: 'https://images.credly.com/size/680x680/images/f2573aac-d21c-483d-acda-afaa366b4f51/image.png',
+        image: require('assets/img/badges/8d43351f.webp'),
         link: 'https://www.credly.com/badges/8d43351f-9e1a-406b-9e9f-f37530b4aff9'
       },
       {
         title: 'Machine Learning Foundations',
-        image: 'https://images.credly.com/size/680x680/images/a636f6a1-bacf-4819-9239-5d9907e85708/f5d7b910-6d3b-40f6-a879-1d3a945a2045.png',
+        image: require('assets/img/badges/5ce779de.webp'),
         link: 'https://www.credly.com/badges/5ce779de-10e9-47c4-bfc5-3b0f6b7b9cc3'
       }
     ];

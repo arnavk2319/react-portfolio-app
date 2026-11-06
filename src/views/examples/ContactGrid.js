@@ -18,7 +18,7 @@ export const ContactGrid = () => {
         gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
         gap: "15px",
         padding: "30px",
-        marginBottom: "30px",
+        margin: "0 auto 30px",
         width: "100%",           // full width container
         maxWidth: "500px",       // max width so it doesn’t stretch too much
         backgroundColor: "var(--bg-grid)",

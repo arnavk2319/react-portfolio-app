@@ -4,6 +4,11 @@
   "includeForks": false,
   "includeArchived": false,
   "requireDescription": true,
-  "exclude": ["react-portfolio-app", "arnavk2319"],
-  "alwaysInclude": []
+  "exclude": [
+    "react-portfolio-app",
+    "arnavk2319"
+  ],
+  "alwaysInclude": [],
+  "requiredPhrase": "portfolio application",
+  "requireScreenshots": true
 }

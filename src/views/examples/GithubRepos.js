@@ -11,9 +11,12 @@ ctx.keys().forEach((key) => {
     overrides[key.replace(/^\.\//, "").replace(/\.[^.]+$/, "").toLowerCase()] = ctx(key);
 });
 
+// Priority: hand-made override > first README screenshot > GitHub's generated social preview.
 const imageFor = (repo) =>
-    overrides[repo.name.toLowerCase()] || `https://opengraph.githubassets.com/1/${data.user}/${repo.name}`;
-const isCustom = (repo) => Boolean(overrides[repo.name.toLowerCase()]);
+    overrides[repo.name.toLowerCase()] ||
+    (repo.screenshots && repo.screenshots[0]) ||
+    `https://opengraph.githubassets.com/1/${data.user}/${repo.name}`;
+const isPreview = (repo) => !overrides[repo.name.toLowerCase()] && !(repo.screenshots && repo.screenshots.length);
 
 const norm = (u) => u.toLowerCase().replace(/\/+$/, "");
 
@@ -36,7 +39,7 @@ export function GithubRepos({ curatedLinks = [] }) {
                         key={r.name}
                         id={"gh-" + r.name}
                         image={imageFor(r)}
-                        wide={!isCustom(r)}
+                        wide={isPreview(r)}
                         title={r.name}
                         description={r.description}
                         href={r.homepage || r.url}

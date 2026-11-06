@@ -39,6 +39,9 @@ function ContactPage(){
         }
     };
 
+    // The button stays disabled while any field is showing an error.
+    const hasErrors = Object.values(errors).some(Boolean);
+
     const fieldProps = (f) => ({
         onBlur: (e) => setError(f, validators[f](e.target.value)),
         onChange: (e) => errors[f] && setError(f, validators[f](e.target.value)),
@@ -142,7 +145,7 @@ function ContactPage(){
 
                                         <div className="art-submit-frame">
 
-                                            <button className="art-btn art-btn-md art-submit" type="submit"><span>Send message</span></button>
+                                            <button className="art-btn art-btn-md art-submit" type="submit" disabled={hasErrors} aria-disabled={hasErrors}><span>Send message</span></button>
 
                                         </div>
                                     </form>

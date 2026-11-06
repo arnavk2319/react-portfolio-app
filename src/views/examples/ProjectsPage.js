@@ -1,5 +1,7 @@
 import React from "react";
 import { PageLayout } from "components/PageLayout";
+import { ProjectTile } from "views/examples/ProjectTile";
+import { GithubRepos } from "views/examples/GithubRepos";
 
 // One entry per project. `category` drives the filter tabs; the order here is the order shown.
 const PROJECTS = [
@@ -26,48 +28,6 @@ const FILTERS = [
     { key: "mobile", label: "Mobile", heading: "My Mobile Projects" },
     { key: "ml", label: "ML & Data Science", heading: "My ML & Data Science Projects" },
 ];
-
-// A project card that fades in the first time it scrolls into view.
-function Tile({ project: p }) {
-    const ref = React.useRef(null);
-    const [seen, setSeen] = React.useState(false);
-
-    React.useEffect(() => {
-        const el = ref.current;
-        if (!el || typeof IntersectionObserver === "undefined") {
-            setSeen(true);
-            return undefined;
-        }
-        const io = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setSeen(true);
-                    io.disconnect();
-                }
-            },
-            { threshold: 0.12 }
-        );
-        io.observe(el);
-        return () => io.disconnect();
-    }, []);
-
-    return (
-        <div id={p.id} className="art-grid-item">
-            <div ref={ref} className={seen ? "art-tile art-in" : "art-tile"}>
-                <a href={p.href} target="_blank" rel="noopener noreferrer" className="art-a art-portfolio-item-frame art-horizontal">
-                    <img src={p.image} alt={p.title} loading="lazy"></img>
-                    <span className="art-item-hover"><i className="fas fa-expand"></i></span>
-                </a>
-
-                <div className="art-item-description">
-                    <h5 className="mb-15">{p.title}</h5>
-                    <div className="mb-15">{p.description}</div>
-                    <a href={p.href} target="_blank" rel="noopener noreferrer" className="art-link art-color-link art-w-chevron">Read more</a>
-                </div>
-            </div>
-        </div>
-    );
-}
 
 function ProjectsPage() {
     const [filter, setFilter] = React.useState("all");
@@ -103,9 +63,11 @@ function ProjectsPage() {
 
                     <div className="art-grid art-grid-2-col art-gallery">
                         {visible.map((p) => (
-                            <Tile project={p} key={p.id} />
+                            <ProjectTile key={p.id} id={p.id} image={p.image} title={p.title} description={p.description} href={p.href} />
                         ))}
                     </div>
+
+                    {filter === "all" && <GithubRepos curatedLinks={PROJECTS.map((p) => p.href)} />}
                 </div>
             </div>
         </PageLayout>

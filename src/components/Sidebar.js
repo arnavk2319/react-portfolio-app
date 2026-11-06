@@ -109,7 +109,7 @@ export const Sidebar = ({ isActive, onToggle }) => {
                 </h5>
 
                 <div className="art-sm-text">
-                    Full Stack Software Engineer, DS/ML Engineer
+                    AI Engineer, Full Stack Software Engineer
                     <br></br>
                 </div>
             </a>

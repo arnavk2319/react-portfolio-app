@@ -14,8 +14,10 @@ export const ContactGrid = () => {
   return (
     <div
       style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
+        // Flex + centred wrapping: with an odd number of tiles the last one sits in the middle of its row.
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
         gap: "15px",
         padding: "30px",
         margin: "0 auto 30px",
@@ -47,7 +49,8 @@ export const ContactGrid = () => {
             fontSize: "14px",
             fontWeight: "500",
             userSelect: "none",
-            width: "100%",
+            flex: "0 1 calc(50% - 8px)",
+            minWidth: "140px",
             boxSizing: "border-box",
           }}
           onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "var(--bg-tile-hover)")}

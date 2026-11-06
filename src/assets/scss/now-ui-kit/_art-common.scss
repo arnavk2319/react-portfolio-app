@@ -496,3 +496,11 @@ space
 .art-form-field textarea.art-input-invalid {
   box-shadow: 0 0 0 1px var(--accent-text) inset;
 }
+
+/* ----- disabled submit button ----- */
+.art-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+}

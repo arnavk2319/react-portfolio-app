@@ -484,3 +484,15 @@ space
     padding-bottom: 0;
   }
 }
+
+/* ----- form validation messages ----- */
+.art-field-error {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--accent-text);
+}
+
+.art-form-field input.art-input-invalid,
+.art-form-field textarea.art-input-invalid {
+  box-shadow: 0 0 0 1px var(--accent-text) inset;
+}

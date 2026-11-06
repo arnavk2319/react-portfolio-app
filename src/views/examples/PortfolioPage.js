@@ -153,7 +153,7 @@ function PortfolioPage(){
 
                                     <div className="art-counter-box">
 
-                                        <span className="art-counter">5</span><span className="art-counter-plus">+</span>
+                                        <span className="art-counter">7</span><span className="art-counter-plus">+</span>
 
                                     </div>
 

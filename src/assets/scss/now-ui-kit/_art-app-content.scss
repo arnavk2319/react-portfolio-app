@@ -900,10 +900,49 @@ content
     & a {
       color: var(--muted);
       margin-bottom: 0;
+      margin-right: 28px;
+      padding: 8px 0;
+      font-size: 14px;
+      letter-spacing: 2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
   
-      &.art-current {
-        color: var(--ink-2);
+      &:hover {
+        color: var(--accent-text);
       }
+
+      &.art-current {
+        color: var(--accent-text);
+        border-bottom-color: var(--accent-text);
+      }
+    }
+  }
+
+  /* ----- projects section title ("My Web Projects") ----- */
+  .art-projects-title {
+    margin: 0 0 10px;
+    padding: 0 20px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--accent-text);
+    animation: art-title-fade 0.6s ease-out both;
+  }
+
+  @keyframes art-title-fade {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .art-projects-title {
+      animation: none;
     }
   }
   /* ----- portfolio items ----- */
@@ -1401,6 +1440,7 @@ content
   
       & a {
         margin: 0 0 10px;
+        align-self: center;
       }
     }
   

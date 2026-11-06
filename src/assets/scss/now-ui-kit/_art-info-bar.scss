@@ -185,6 +185,23 @@ info bar
       }
     }
   /* ----- name ----- */
+    /* the whole profile block is a link back to the home page */
+    a.art-header {
+      display: block;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--muted);
+
+      &:hover .art-name span {
+        color: var(--accent-text);
+      }
+    }
+
+    .art-name span {
+      color: var(--ink);
+      transition: color 0.3s ease-in-out;
+    }
+
     .art-name {
       color: #000;
     //   transition: $tr-md;

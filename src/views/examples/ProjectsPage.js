@@ -1,9 +1,14 @@
 import React from "react";
 import { PageLayout } from "components/PageLayout";
+import pulledProjects from "data/pulledProjects.json";
+
+// Projects pulled from GitHub READMEs by scripts/pull-projects.js (npm run pull:projects).
+const PULLED = pulledProjects.map((p) => ({ ...p, image: require("assets/img/pulled/" + p.image) }));
 
 // One entry per project. `category` is "ai", "ml" or "web" (web + mobile) and drives the filter tabs.
 // Within a category the order here is the order shown; the "All" view follows the FILTERS order below.
 const PROJECTS = [
+    ...PULLED,
     { id: "lbmMobile", category: "web", image: require("assets/img/lbm-all.webp"), title: "Literature, Books and Movies (LBM)", description: "Native Android app that uses theMovieDB API to display movies and books data.", href: "https://play.google.com/store/apps/details?id=com.single.arnavkaushal.book_client_app" },
     { id: "forkifyWeb", category: "web", image: require("assets/img/forkify-all.webp"), title: "Forkify Recipes", description: "A Food recipe web app utilizing node modules, webpack and babel employing RESTful web services to render data from the forkify food recipe API", href: "https://arnavk2319.github.io/Forkify-Recipe-App/" },
     { id: "mapFinderMobile", category: "web", image: require("assets/img/mapfinder-all.webp"), title: "Location Finder", description: "Native Android Map App whcih uses GCP's Directions API, Places API AND Maps SDK", href: "https://play.google.com/store/apps/details?id=com.arnav.akapplications.mapfinder" },

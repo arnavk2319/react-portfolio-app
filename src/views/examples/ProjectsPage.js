@@ -47,6 +47,8 @@ function Tile({ project: p }) {
             setSeen(true);
             return undefined;
         }
+        // Observe against the page's own scroller, starting a little before the tile enters view.
+        // Failsafe: a tile never stays hidden, whatever the observer does (long pages, fast scrolling, jumps).
         const io = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -54,17 +56,21 @@ function Tile({ project: p }) {
                     io.disconnect();
                 }
             },
-            { threshold: 0.12 }
+            { root: document.getElementById("scrollbar"), rootMargin: "0px 0px 200px 0px", threshold: 0 }
         );
         io.observe(el);
-        return () => io.disconnect();
+        const failsafe = setTimeout(() => setSeen(true), 2500);
+        return () => {
+            io.disconnect();
+            clearTimeout(failsafe);
+        };
     }, []);
 
     return (
         <div id={p.id} className="art-grid-item">
             <div ref={ref} className={seen ? "art-tile art-in" : "art-tile"}>
                 <a href={p.href} target="_blank" rel="noopener noreferrer" className="art-a art-portfolio-item-frame art-horizontal">
-                    <img src={p.image} alt={p.title} loading="lazy"></img>
+                    <img src={p.image} alt={p.title} loading="lazy" decoding="async"></img>
                     <span className="art-item-hover"><i className="fas fa-expand"></i></span>
                 </a>
 

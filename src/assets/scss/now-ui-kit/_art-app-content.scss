@@ -1004,6 +1004,11 @@ content
     }
   }
   
+  /* hover animations (tile lift, image zoom, shadow) repaint large images; pause them while the wheel is turning */
+  .art-scroll-frame.art-hover-off .art-tile {
+    pointer-events: none;
+  }
+
   .art-grid {
     transition: 0.55s ease-in-out;
     width: 100%;

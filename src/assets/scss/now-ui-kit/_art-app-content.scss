@@ -271,6 +271,89 @@ content
       }
     }
   }
+  /* ----- rotating professional title (sidebar + hero) ----- */
+  .art-sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  .art-rtitle {
+    display: inline-block;
+    max-width: 100%;
+    color: var(--accent-text);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  /* every title sits in the same cell; the widest sets the box, so nothing jumps */
+  .art-rtitle-stack {
+    display: inline-grid;
+    max-width: 100%;
+  }
+
+  .art-rtitle-item {
+    grid-area: 1 / 1;
+    opacity: 0;
+    transform: translateY(0.45em);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+
+    &.art-on {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      transform: none;
+      transition: opacity 0.2s linear;
+    }
+  }
+
+  /* under the photo: bigger than the old subtitle, as a pill */
+  .art-rtitle-sidebar {
+    display: block;
+    margin: 4px auto 0;
+    padding: 5px 12px;
+    width: fit-content;
+    font-size: 15px;
+    line-height: 1.3;
+    text-align: center;
+    border: 1.5px solid var(--accent-text);
+    border-radius: 999px;
+    background: rgba(var(--rgb-accent), 0.08);
+  }
+
+  /* beside "I Make It Happen!": large, accent coloured, underlined */
+  .art-hero-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    column-gap: 14px;
+    row-gap: 2px;
+  }
+
+  .art-rtitle-hero {
+    font-size: 1.2em;
+    line-height: 1.2;
+
+    /* underline the words themselves, so a title that wraps on a phone does not get a full-width bar */
+    & .art-rtitle-item {
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 6px;
+    }
+  }
+
+  /* phones: the longest titles wrap onto two lines; keep them a little smaller than the heading beside them */
+  @media (max-width: 575px) {
+    .art-rtitle-hero {
+      font-size: 1.05em;
+    }
+  }
+
   /* ----- typing code ----- */
   .art-code {
     font-family: $sf;

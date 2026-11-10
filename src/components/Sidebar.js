@@ -1,3 +1,4 @@
+import { RotatingTitle } from "components/RotatingTitle";
 import React from "react";
 import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
 
@@ -108,10 +109,7 @@ export const Sidebar = ({ isActive, onToggle }) => {
                     <span>Arnav Kaushal</span>
                 </h5>
 
-                <div className="art-sm-text">
-                    Full Stack Software Engineer, DS/ML Engineer
-                    <br></br>
-                </div>
+                <RotatingTitle variant="sidebar" />
             </a>
 
             <div id="scrollbar2" ref={scrollerRef} onScroll={handleScroll} className="art-scroll-frame-profile-sidebar" tabIndex="-1" style={{ outline: "none", display: "block", position: "relative" }}>

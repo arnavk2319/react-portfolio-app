@@ -14,7 +14,7 @@ A redesign changes how things look and are laid out. It does not change what exi
 
 **External links and files (same targets, same `target` and `rel`):**
 - LinkedIn, GitHub, Kaggle, Credly and the mailto link.
-- The résumé PDF download (`Arnav_Kaushal_2025_ML.pdf`).
+- The résumé PDF download (`Arnav_Kaushal_AI_Software_Engineer.pdf`).
 - Every project link: pulled AI & RAG projects (`src/data/pulledProjects.json`) and the curated tiles in `ProjectsPage.js`.
 - Every certification and badge link (self-hosted badge images, Udemy image, Credly links).
 

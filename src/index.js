@@ -30,6 +30,11 @@ import HistoryPage from "views/examples/HistoryPage.js";
 import ContactPage from "views/examples/ContactPage.js";
 import CertificationsPage from "views/examples/CertificationsPage.js";
 import PageTracker from "PageTracker.js";
+import TwilightHome from "views/twilight/TwilightHome.js";
+import { isTwilight } from "theme";
+
+// The Twilight theme has its own pages; the classic pages stay for the other themes and for rollback.
+const Home = isTwilight() ? TwilightHome : PortfolioPage;
 
 ReactDOM.render(
   <BrowserRouter>
@@ -39,7 +44,7 @@ ReactDOM.render(
         <Redirect from="/index" to="/portfolio" />
         <Route
           path="/portfolio"
-          render={(props) => <PortfolioPage {...props} />}
+          render={(props) => <Home {...props} />}
         />
         <Route
           path="/projects"

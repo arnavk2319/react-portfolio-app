@@ -1,0 +1,87 @@
+// Shared section layout, cards and tags, then the home page sections.
+.tw-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 72px 32px 8px;
+}
+
+.tw-section-head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; }
+.tw .tw-label { color: var(--accent-text); }
+.tw .tw-h2 { font-size: 42px; line-height: 1.08; }
+
+.tw .tw-card {
+  background: #fff;
+  border: 2px solid var(--night);
+  border-radius: 14px;
+  box-shadow: var(--tw-hard-shadow);
+}
+
+.tw .tw-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #e8ecfa;
+  color: #3a4680;
+  font: 500 12px var(--font-mono);
+}
+
+// about
+.tw-about-grid { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; }
+.tw-about-side { flex: 1 1 300px; min-width: 0; max-width: 420px; display: flex; flex-direction: column; gap: 24px; }
+.tw-about-main { flex: 2 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 28px; }
+
+.tw-facts {
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  > div { display: flex; justify-content: space-between; gap: 16px; }
+  dt { font: 600 15px var(--font-display); }
+  dd { margin: 0; color: var(--muted); }
+}
+
+.tw-langs { padding: 22px 24px; display: flex; gap: 28px; justify-content: space-around; }
+.tw-lang { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.tw-lang-name { font-weight: 600; }
+
+.tw-ring {
+  position: relative;
+  width: 76px;
+  height: 76px;
+
+  svg { display: block; width: 100%; height: 100%; }
+  span { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font: 700 15px var(--font-display); }
+  .tw-ring-track { fill: none; stroke: #dbe1f5; stroke-width: 7; }
+  .tw-ring-fill { fill: none; stroke: var(--accent); stroke-width: 7; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 0; }
+}
+
+.tw-about-links { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.tw-about-social { display: flex; gap: 10px; }
+.tw-about-social a {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 2px solid var(--night);
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tw-about-social a:hover { background: var(--sun); }
+
+.tw-skills { display: flex; flex-direction: column; gap: 16px; }
+.tw-skill-top { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 8px; font-weight: 500; }
+.tw-skill-top .tw-mono { color: var(--muted); }
+.tw-skill-bar { height: 10px; border-radius: 6px; background: #dbe1f5; overflow: hidden; }
+.tw-skill-bar span { display: block; height: 100%; border-radius: 6px; background: var(--accent); }
+
+.tw-knowledge { display: flex; flex-wrap: wrap; gap: 8px; }
+
+@media (max-width: 767px) {
+  .tw-section { padding: 52px 20px 4px; }
+  .tw .tw-h2 { font-size: 34px; }
+  .tw-about-side { max-width: none; }
+}

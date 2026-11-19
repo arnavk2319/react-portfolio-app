@@ -1,0 +1,16 @@
+{
+  "text": [
+    { "route": "/portfolio", "match": "Scroll", "why": "Sidebar scroll hint. The sidebar is replaced by the top navigation." },
+    { "route": "/portfolio", "match": "Embeddings", "why": "Decorative floating chip in the old hero; the other chips (RAG, Agents, Evals, LLM) appear in the new copy." },
+    { "route": "/portfolio", "match": "</>", "why": "Decorative floating chip in the old hero." },
+    { "route": "/portfolio", "match": "I Make It Happen!", "why": "Folded into the new hero line \"I make it happen as\" plus the rotating title (approved design)." },
+    { "route": "/portfolio", "match": "> I build", "why": "A snapshot of the typing effect; the typing lines are still shown in the new hero." },
+    { "route": "/portfolio", "match": "Explore now", "why": "Old hero button; replaced by \"See what I've built\", which links to the same /projects page." },
+    { "route": "/portfolio", "match": "My Services", "why": "Section heading renamed \"Where I'm useful\"; all nine services are kept." },
+    { "route": "/portfolio", "match": "Order now", "why": "Per-service button label dropped; each service still links to /projects." },
+    { "route": "/portfolio", "match": "My Credentials", "why": "Section heading renamed \"Badges I've earned\"; the same 13 badges and links are kept." }
+  ],
+  "link": [],
+  "image": [],
+  "title": []
+}

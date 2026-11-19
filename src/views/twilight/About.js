@@ -19,7 +19,7 @@ export const About = () => (
                 <dl className="tw-card tw-facts">
                     {PROFILE.map(({ label, value }) => (
                         <div key={label}>
-                            <dt>{label.replace(":", "")}</dt>
+                            <dt>{label}</dt>
                             <dd>{value}</dd>
                         </div>
                     ))}

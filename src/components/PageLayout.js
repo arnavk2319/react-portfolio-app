@@ -1,12 +1,14 @@
 import React from "react";
 import { Sidebar } from "components/Sidebar";
 import { MenuBar } from "components/MenuBar";
+import { TwilightLayout } from "components/TwilightLayout";
+import { isTwilight } from "theme";
 
 /**
  * Shared page shell: profile sidebar, hero background, scroll frame, footer and menu bar.
  * Each page passes only its own content as children.
  */
-export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
+const ClassicLayout = ({ title, currentHref, currentLabel, children }) => {
     React.useEffect(() => {
         document.title = title;
     }, [title]);
@@ -108,3 +110,6 @@ export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
         </>
     );
 };
+
+// Twilight replaces the whole shell; the classic shell stays for the ivory and dark themes (and for rollback).
+export const PageLayout = (props) => (isTwilight() ? <TwilightLayout {...props} /> : <ClassicLayout {...props} />);

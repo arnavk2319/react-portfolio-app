@@ -10,7 +10,8 @@ const buttons = [
   { icon: <FaEnvelope size={20} />, label: "Email", link: "mailto:arnav.kaushal800@gmail.com" },
 ];
 
-export const ContactGrid = () => {
+// trackLocation: where this grid sits, sent with the social_click analytics event.
+export const ContactGrid = ({ trackLocation = "contact_grid" }) => {
   return (
     <div
       style={{
@@ -31,6 +32,9 @@ export const ContactGrid = () => {
       {buttons.map(({ icon, label, link }, index) => (
         <a
           key={index}
+          data-track="social_click"
+          data-track-network={label}
+          data-track-location={trackLocation}
           href={link}
           target="_blank"
           rel="noopener noreferrer"

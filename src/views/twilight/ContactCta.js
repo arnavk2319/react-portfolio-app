@@ -9,11 +9,11 @@ export const ContactCta = () => (
             <div className="tw-cta-text">
                 <h2 id="tw-cta-title" className="tw-disp">Got something in mind?</h2>
                 <p>Tell me what you're building and where it needs to go.</p>
-                <a className="tw-btn tw-btn-sun" href="/contact-me">Send me a message</a>
+                <a className="tw-btn tw-btn-sun" href="/contact-me" data-track="cta_click" data-track-cta="send_me_a_message" data-track-location="home_contact">Send me a message</a>
                 <span className="tw-hand tw-cta-sign" aria-hidden="true">- Arnav</span>
             </div>
             <div className="tw-cta-grid">
-                <ContactGrid />
+                <ContactGrid trackLocation="home_contact" />
             </div>
         </div>
     </section>

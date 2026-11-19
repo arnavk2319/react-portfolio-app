@@ -11,8 +11,8 @@ export const Credentials = () => (
             <h2 id="tw-creds-title" className="tw-disp tw-h2">Badges I've earned</h2>
         </div>
         <div className="tw-card tw-creds-card">
-            <BadgeCarousel items={credlyBadges} />
+            <BadgeCarousel items={credlyBadges} trackLocation="home_credentials" />
         </div>
-        <a className="tw-more-all" href="/certifications">All {credlyBadges.length} certifications →</a>
+        <a className="tw-more-all" href="/certifications" data-track="cta_click" data-track-cta="see_all_certifications" data-track-location="home_credentials">All {credlyBadges.length} certifications →</a>
     </section>
 );

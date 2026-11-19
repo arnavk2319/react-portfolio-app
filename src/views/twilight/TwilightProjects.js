@@ -30,6 +30,8 @@ export default function TwilightProjects() {
                         type="button"
                         className="tw-pill"
                         aria-pressed={filter === key}
+                        data-track="filter_click"
+                        data-track-filter={label}
                         onClick={() => setFilter(key)}
                     >
                         {label}
@@ -47,7 +49,7 @@ export default function TwilightProjects() {
                         <h2 className={filter === "all" ? "tw-disp tw-pgroup-title" : "tw-sr"}>{label}</h2>
                         <div className="tw-pgrid">
                             {items.map((p, i) => (
-                                <ProjectCard key={p.id} project={p} tilt={key === "ai" ? TILTS[i % TILTS.length] : undefined} />
+                                <ProjectCard key={p.id} project={p} tilt={key === "ai" ? TILTS[i % TILTS.length] : undefined} location="projects_page" />
                             ))}
                         </div>
                     </section>

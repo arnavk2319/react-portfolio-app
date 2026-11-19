@@ -70,16 +70,16 @@ export const TwilightLayout = ({ title, currentHref, hero, children }) => {
             <div className="tw-band tw-grain">
                 <span className="tw-band-orb" aria-hidden="true"></span>
                 <header className="tw-header">
-                    <a className="tw-brand" href="/portfolio" aria-label="Arnav Kaushal, home">
+                    <a className="tw-brand" href="/portfolio" aria-label="Arnav Kaushal, home" data-track="logo_click" data-track-location="header">
                         <span className="tw-mark" aria-hidden="true">AK</span>
                         <span className="tw-brand-name">Arnav Kaushal</span>
                     </a>
                     <nav className="tw-nav" aria-label="Main">
                         {NAV.map(({ href, label }) => (
-                            <a key={href} href={href} aria-current={href === currentHref ? "page" : undefined}>{label}</a>
+                            <a key={href} href={href} aria-current={href === currentHref ? "page" : undefined} data-track="nav_click" data-track-location="header" data-track-item={label}>{label}</a>
                         ))}
                     </nav>
-                    <a className="tw-btn tw-btn-ghost tw-resume" href={Resume} target="_blank" rel="noopener noreferrer" download aria-label="Download résumé">
+                    <a className="tw-btn tw-btn-ghost tw-resume" href={Resume} target="_blank" rel="noopener noreferrer" download aria-label="Download résumé" data-track="resume_download" data-track-location="header">
                         <span className="tw-long">Download résumé</span><span className="tw-short">Résumé</span>
                     </a>
                 </header>
@@ -92,7 +92,7 @@ export const TwilightLayout = ({ title, currentHref, hero, children }) => {
 
             <nav className="tw-tabbar" aria-label="Quick navigation">
                 {TABS.map(({ href, label, icon }) => (
-                    <a key={href} href={href} aria-current={href === currentHref ? "page" : undefined}>
+                    <a key={href} href={href} aria-current={href === currentHref ? "page" : undefined} data-track="nav_click" data-track-location="tabbar" data-track-item={label}>
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d={icon} /></svg>
                         {label}
                     </a>
@@ -105,12 +105,12 @@ export const TwilightLayout = ({ title, currentHref, hero, children }) => {
                         <span className="tw-hand tw-signoff">thanks for looking around</span>
                         <nav className="tw-footer-nav" aria-label="Footer">
                             {NAV.map(({ href, label }) => (
-                                <a key={href} href={href}>{label}</a>
+                                <a key={href} href={href} data-track="nav_click" data-track-location="footer" data-track-item={label}>{label}</a>
                             ))}
                         </nav>
                         <div className="tw-footer-social">
                             {SOCIAL.map(({ href, icon }) => (
-                                <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={SOCIAL_LABELS[icon] || href}>
+                                <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={SOCIAL_LABELS[icon] || href} data-track="social_click" data-track-location="footer" data-track-network={SOCIAL_LABELS[icon]}>
                                     <i className={icon} aria-hidden="true"></i>
                                 </a>
                             ))}
@@ -118,7 +118,7 @@ export const TwilightLayout = ({ title, currentHref, hero, children }) => {
                     </div>
                     <div className="tw-footer-bottom">
                         <span>© {new Date().getFullYear()} Arnav Kaushal · Toronto, Canada</span>
-                        <button type="button" className="tw-totop" onClick={toTop}>
+                        <button type="button" className="tw-totop" onClick={toTop} data-track="back_to_top_click">
                             <i className="fas fa-chevron-up" aria-hidden="true"></i> Back to top
                         </button>
                     </div>

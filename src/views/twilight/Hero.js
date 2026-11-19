@@ -33,8 +33,8 @@ export const Hero = () => (
             <p className="tw-hero-lede">I build RAG systems, LLM tooling and enterprise web apps, and I like taking them all the way to production.</p>
             <div className="tw-hero-typing"><RotatingText /></div>
             <div className="tw-hero-cta">
-                <a className="tw-btn tw-btn-sun" href="/projects">See what I've built</a>
-                <a className="tw-btn tw-btn-ghost" href="/contact-me">Say hello</a>
+                <a className="tw-btn tw-btn-sun" href="/projects" data-track="cta_click" data-track-cta="see_what_ive_built" data-track-location="hero">See what I've built</a>
+                <a className="tw-btn tw-btn-ghost" href="/contact-me" data-track="cta_click" data-track-cta="say_hello" data-track-location="hero">Say hello</a>
             </div>
             <ul className="tw-counters">
                 {COUNTERS.map(({ value, label }) => (

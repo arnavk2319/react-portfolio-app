@@ -30,6 +30,7 @@ import HistoryPage from "views/examples/HistoryPage.js";
 import ContactPage from "views/examples/ContactPage.js";
 import CertificationsPage from "views/examples/CertificationsPage.js";
 import PageTracker from "PageTracker.js";
+import EventTracker from "EventTracker.js";
 import TwilightHome from "views/twilight/TwilightHome.js";
 import TwilightProjects from "views/twilight/TwilightProjects.js";
 import TwilightHistory from "views/twilight/TwilightHistory.js";
@@ -47,6 +48,7 @@ const Contact = isTwilight() ? TwilightContact : ContactPage;
 ReactDOM.render(
   <BrowserRouter>
     <PageTracker />
+    <EventTracker />
     <Switch>
       <Switch>
         <Redirect from="/index" to="/portfolio" />

@@ -13,7 +13,7 @@ export const FeaturedWork = () => {
         <section className="tw-featured" aria-labelledby="tw-featured-title">
             <h2 id="tw-featured-title" className="tw-sr">Featured work</h2>
             {featured.map((p, i) => (
-                <ProjectCard key={p.id} project={p} tilt={TILTS[i % TILTS.length]} />
+                <ProjectCard key={p.id} project={p} tilt={TILTS[i % TILTS.length]} location="home_featured" />
             ))}
         </section>
     );

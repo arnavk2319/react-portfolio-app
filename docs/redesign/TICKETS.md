@@ -108,7 +108,7 @@ Timeline restyled in the new look; all five jobs and two degrees with their word
 Accept: text diff shows no lost entries; dates and locations identical.
 
 **T-14 Certifications page** (both, M)
-Grouped cards in the new look. Note: open PR #29 changes the History page and the sidebar title line; rebase on it if it merges first.
+Grouped cards in the new look.
 Accept: every certification and its link present.
 
 **T-15 Contact page** (both, M)
@@ -127,35 +127,34 @@ Accept: empty and invalid email show messages; Send disabled while errors show; 
 
 ## Suggested order
 
-T-01, T-02 and T-03 together unlock everything. Then T-04, T-05, T-06, T-07, then the rest of Phase 2, then Phase 3, then Phase 4. Merge or close PR #29 before T-02 and T-13, since it edits the sidebar and History page. Run T-20 early and re-run on every PR.
+T-01, T-02 and T-03 together unlock everything. Then T-04, T-05, T-06, T-07, then the rest of Phase 2, then Phase 3, then Phase 4. Run T-20 early and re-run on every PR.
 
 ## Delivery
 
-Every ticket was built as a stacked pull request: each PR is based on the one before it, so merging them in order keeps each diff small. PR #29 (title and certifications) comes first because the Experience page uses its data.
+Every ticket was built as a stacked pull request: each PR is based on the one before it, so merging them in order keeps each diff small. PR #29 (a certifications section under Education on the History page) was closed on purpose and is not part of this work: the History page has no certifications section, classic or Twilight.
 
 | order | PR | tickets | what it adds |
 | --- | --- | --- | --- |
-| 1 | #29 | n/a | Certifications on the History page (master merged in, one conflict resolved) |
-| 2 | #33 | tickets, T-01 | This document and the Twilight theme (colors, fonts) |
-| 3 | #34 | T-02, T-05 | Twilight shell: top navigation, footer, back-to-top |
-| 4 | #35 | T-03 | Mobile shell: compact header and bottom tab bar |
-| 5 | #36 | T-04 | About section (all sidebar data) |
-| 6 | #37 | T-06 | Home hero |
-| 7 | #38 | T-07, T-08 | Featured work and more work, shared project data |
-| 8 | #39 | T-09 | What I do (all nine services) |
-| 9 | #40 | T-10 | Credentials carousel, shared badge data |
-| 10 | #41 | T-11 | Contact call-to-action |
-| 11 | #42 | T-12 | Projects page |
-| 12 | #43 | T-13 | Experience (History) page |
-| 13 | #44 | T-14 | Certifications page |
-| 14 | #45 | T-15 | Contact page, shared form validation |
-| 15 | #46 | T-16 | Motion |
-| 16 | #47 | T-18 | Accessibility pass |
-| 17 | #48 | T-19 | Performance (lazy badges) |
-| 18 | #49 | T-20 | `npm run parity` |
-| 19 | this PR | T-21 (and T-17) | **Switches the default theme to Twilight** |
+| 1 | #33 | tickets, T-01 | This document and the Twilight theme (colors, fonts) |
+| 2 | #34 | T-02, T-05 | Twilight shell: top navigation, footer, back-to-top |
+| 3 | #35 | T-03 | Mobile shell: compact header and bottom tab bar |
+| 4 | #36 | T-04 | About section (all sidebar data) |
+| 5 | #37 | T-06 | Home hero |
+| 6 | #38 | T-07, T-08 | Featured work and more work, shared project data |
+| 7 | #39 | T-09 | What I do (all nine services) |
+| 8 | #40 | T-10 | Credentials carousel, shared badge data |
+| 9 | #41 | T-11 | Contact call-to-action |
+| 10 | #42 | T-12 | Projects page |
+| 11 | #43 | T-13 | Experience (History) page |
+| 12 | #44 | T-14 | Certifications page |
+| 13 | #45 | T-15 | Contact page, shared form validation |
+| 14 | #46 | T-16 | Motion |
+| 15 | #47 | T-18 | Accessibility pass |
+| 16 | #48 | T-19 | Performance (lazy badges) |
+| 17 | #49 | T-20 | `npm run parity` |
+| 18 | this PR | T-21 (and T-17) | **Switches the default theme to Twilight** |
 
-Merge 1 to 18 first: they change nothing for visitors, because Twilight is only reachable with `?theme=twilight` until the last PR. Test the whole stack at `?theme=twilight`, then merge this PR to go live.
+Merge 1 to 17 first: they change nothing for visitors, because Twilight is only reachable with `?theme=twilight` until the last PR. Test the whole stack at `?theme=twilight`, then merge this PR to go live.
 
 T-17 (theme behaviour) needed no code: `?theme=ivory|dark|twilight|reset` keeps working, and the rollback is one line (see `public/index.html`). T-22 (sharper photo) is blocked on decision D-2.
 

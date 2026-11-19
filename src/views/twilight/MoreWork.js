@@ -35,6 +35,8 @@ export const MoreWork = () => (
                                     <span className="tw-row-title tw-disp">{p.title}</span>
                                     <span className="tw-row-desc">{p.description}</span>
                                     <span className="tw-tag">{kind(p.href)}</span>
+                                    {/* the arrow is what tells you the row opens something */}
+                                    <span className="tw-row-go" aria-hidden="true">↗</span>
                                 </a>
                             </li>
                         ))}

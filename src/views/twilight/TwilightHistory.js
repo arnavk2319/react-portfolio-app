@@ -21,7 +21,7 @@ const Entry = ({ item, current }) => (
 // same entries, wording and dates as the classic page (src/data/history.js, src/data/certifications.js).
 export default function TwilightHistory() {
     const hero = (
-        <section className="tw-phero">
+        <section className="tw-phero tw-phero-flat">
             <div className="tw-mono tw-hero-kicker">{"// experience"}</div>
             <h1 className="tw-disp tw-ptitle">Where I've worked and studied.</h1>
             <p className="tw-hero-lede">Seven years across fintech platforms, mobile and web apps, and now AI systems.</p>
@@ -30,7 +30,7 @@ export default function TwilightHistory() {
 
     return (
         <TwilightLayout title="History | Arnav Kaushal" currentHref="/history" hero={hero}>
-            <div className="tw-exp">
+            <div className="tw-exp tw-exp-flat">
                 <section className="tw-exp-main" aria-labelledby="tw-work-title">
                     <h2 id="tw-work-title" className="tw-disp tw-pgroup-title">Work History</h2>
                     <div className="tw-entries">

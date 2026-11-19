@@ -10,7 +10,8 @@ export const FeaturedWork = () => {
     const featured = PROJECTS.filter((p) => p.category === "ai");
     if (!featured.length) return null;
     return (
-        <section className="tw-featured" aria-label="Featured work">
+        <section className="tw-featured" aria-labelledby="tw-featured-title">
+            <h2 id="tw-featured-title" className="tw-sr">Featured work</h2>
             {featured.map((p, i) => (
                 <ProjectCard key={p.id} project={p} tilt={TILTS[i % TILTS.length]} />
             ))}

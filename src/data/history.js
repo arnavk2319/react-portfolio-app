@@ -25,13 +25,24 @@ export const EDUCATION = [
 export const WORK = [
     {
         org: "SS&C Technologies",
-        role: "Software Engineer",
+        role: "Software Engineer, Full Stack",
         when: "May 2022 - November 2026",
         place: "Toronto, Canada",
         text: [
-            "Developed and maintained responsive, enterprise-grade web applications using Angular 18+, TypeScript, HTML5, SCSS, and Vue 2/Nuxt, Python enhancing user interaction and reducing page load time by ~35%.",
-            "Engineered 5+ critical business modules (e.g., Payroll, Loans and Withdrawals, Statements and Transactions, Client Reporting, Tenant Management) within a multi-tenant SaaS fintech platform, contributing to its adoption by major clients and over $100M+ in processed transactions.",
-            "Implemented and consumed RESTful APIs using Spring MVC, Spring Boot (Reactive), Java, Postman, CURL, and handled complex SQL operations to optimize data flow and backend performance",
+            "Adopted an agentic SDLC for feature delivery on a multi-tenant fintech platform: built reusable agent skills, hooks and plugins that encode team conventions (Angular patterns, testing, accessibility), cutting 40% of effort across feature scaffolding, test writing and code review through to project delivery.",
+            "Designed context-management workflows (scoped project memory, spec files, subagent task decomposition, loop-based iteration with test gates) so AI agents produce reviewable, convention-compliant changes across a large Angular and Spring codebase.",
+            "Prototyped RAG and agentic RAG over internal product documentation, client reporting data and support knowledge, using an embedding model, a vector store and an agentic retrieval layer; retrieval evaluation reached 90%+ accuracy.",
+            "Integrated LLM capabilities into Client Reporting, Loan Servicing and support workflows: tool calling against existing REST APIs, structured outputs and guardrails for financial data in production, reducing time to resolution for customer issues by 40%.",
+            "Engineered 5+ business modules (Payroll, Loan Origination, Loan Servicing, Client Reporting, Tenant Management) on a multi-tenant SaaS fintech platform processing $100M+ in transactions; reduced page load time ~35% with Angular 18+, TypeScript, SCSS and Vue/Nuxt.",
+            "Built and consumed REST APIs with Spring MVC, Spring Boot (Reactive) and WebFlux and optimized complex SQL; implemented asynchronous data fetching and reactive streams, increasing backend throughput and responsiveness under high load.",
+            "Wrote unit and integration test suites (Jest, Jasmine) reaching 95%+ coverage; used AI agents to generate edge-case tests and reviewed them against acceptance criteria, reducing test-authoring time by 50% and minimizing post-deployment bugs.",
+            "Led refactoring and modularization to reduce technical debt and raise component reusability across modules and tenants; used agent-assisted, test-gated refactors with human review to make large changes safe and incremental.",
+            "Owned the feature lifecycle from development to production: deployment planning, feature toggles, rollback strategy and customer-impact analysis; used agents to draft specs, release notes and rollback checklists from tickets and diffs.",
+            "Contributed to a corporate Angular component library (abstract component rendering), cutting development time 40% and improving component performance and usability 30% across teams.",
+            "Raised accessibility to WCAG 2.1 (Axe, Lighthouse, WAVE) across web and desktop apps and led UI/UX compliance against design mocks; automated accessibility checks with agent-driven audits in the development loop.",
+            "Cut incident turnaround ~50% through real-time log monitoring and triage, applying LLM-assisted log analysis for root-cause triage; integrated dotCMS, reducing marketing's dependency on developers by ~40%.",
+            "Contributed to scalability and resilience planning (load testing, API throttling, optimization of high-traffic paths); reviewed and merged peer code via Git and CI/CD, with agent-assisted pre-review to keep quality high and cut merge conflicts.",
+            "Collaborated with Product Owners, Designers, QA and clients in sprint planning and requirements analysis (95%+ sprint velocity); mentored junior developers through code walkthroughs, pair programming and effective AI-assisted development; earned bonus awards and team recognition.",
         ],
     },
     {

@@ -17,7 +17,7 @@ export const WhatIDo = () => (
                         <ul>
                             {services.map(({ title, description, href }) => (
                                 <li key={title}>
-                                    <a href={href}>
+                                    <a href={href} data-track="service_click" data-track-service={title} data-track-location="home_what_i_do">
                                         <strong>{title}</strong>
                                         <span>{description}</span>
                                     </a>

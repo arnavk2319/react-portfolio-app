@@ -31,7 +31,7 @@ export const MoreWork = () => (
                     <ul className="tw-rows">
                         {PROJECTS.filter((p) => p.category === key).slice(0, SHOWN).map((p) => (
                             <li key={p.id}>
-                                <a href={p.href} target="_blank" rel="noopener noreferrer" className="tw-row">
+                                <a href={p.href} target="_blank" rel="noopener noreferrer" className="tw-row" data-track="project_click" data-track-project-name={p.title} data-track-project-id={p.id} data-track-project-category={label} data-track-location="home_more_work">
                                     <span className="tw-row-title tw-disp">{p.title}</span>
                                     <span className="tw-row-desc">{p.description}</span>
                                     <span className="tw-tag">{kind(p.href)}</span>
@@ -44,6 +44,6 @@ export const MoreWork = () => (
                 </div>
             ))}
         </div>
-        <a className="tw-more-all" href="/projects">See all projects →</a>
+        <a className="tw-more-all" href="/projects" data-track="cta_click" data-track-cta="see_all_projects" data-track-location="home_more_work">See all projects →</a>
     </section>
 );

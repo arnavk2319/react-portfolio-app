@@ -11,6 +11,7 @@ export function BadgeCarousel({
   items = [],
   interval = 2500,
   pauseOnHover = true,
+  trackLocation = "credentials", // where this carousel sits, sent with the badge_click analytics event
 }) {
   const containerRef = useRef(null);
   const trackRef = useRef(null);
@@ -94,6 +95,9 @@ export function BadgeCarousel({
           <a
             key={idx}
             href={it.link || "#"}
+            data-track="badge_click"
+            data-track-badge={it.title}
+            data-track-location={trackLocation}
             target="_blank"
             rel="noopener noreferrer"
             style={{ ...cardStyle, textDecoration: "none", color: "inherit" }}

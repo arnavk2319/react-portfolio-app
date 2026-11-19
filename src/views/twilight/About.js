@@ -41,12 +41,12 @@ export const About = () => (
                 </div>
 
                 <div className="tw-about-links">
-                    <a className="tw-btn tw-btn-sun" href={Resume} target="_blank" rel="noopener noreferrer" download>
+                    <a className="tw-btn tw-btn-sun" href={Resume} target="_blank" rel="noopener noreferrer" download data-track="resume_download" data-track-location="about">
                         Download cv <i className="fas fa-download" aria-hidden="true"></i>
                     </a>
                     <div className="tw-about-social">
                         {SOCIAL.map(({ href, icon }) => (
-                            <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={SOCIAL_LABELS[icon] || href}>
+                            <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={SOCIAL_LABELS[icon] || href} data-track="social_click" data-track-location="about" data-track-network={SOCIAL_LABELS[icon]}>
                                 <i className={icon} aria-hidden="true"></i>
                             </a>
                         ))}

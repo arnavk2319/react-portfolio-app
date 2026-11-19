@@ -4,9 +4,14 @@ const LABELS = { ai: "ai and rag", ml: "ml and data science", web: "web and mobi
 
 // One project as a card: screenshot, title, description and link. Used for the featured work on the
 // home page and for every project on the Projects page, so a project looks the same everywhere.
-export const ProjectCard = ({ project: p, tilt }) => (
+export const ProjectCard = ({ project: p, tilt, location }) => (
     <a
         href={p.href}
+        data-track="project_click"
+        data-track-project-name={p.title}
+        data-track-project-id={p.id}
+        data-track-project-category={LABELS[p.category]}
+        data-track-location={location}
         target="_blank"
         rel="noopener noreferrer"
         className="tw-card tw-fcard"

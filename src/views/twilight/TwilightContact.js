@@ -2,6 +2,7 @@ import React from "react";
 import { TwilightLayout } from "components/TwilightLayout";
 import { useContactForm } from "components/useContactForm";
 import { CONTACT_DETAILS, LOCATION_DETAILS, FORM_ACTION } from "data/contact";
+import { trackEvent } from "analytics";
 
 const Details = ({ title, rows }) => (
     <div className="tw-card tw-details">
@@ -10,7 +11,12 @@ const Details = ({ title, rows }) => (
             {rows.map(({ label, value, link }) => (
                 <div key={label}>
                     <dt>{label}</dt>
-                    <dd>{link ? <a href={link}>{value}</a> : value}</dd>
+                    <dd>
+                        {link ? (
+                            // link_text is set to the label so the address or number itself is never sent to analytics
+                            <a href={link} data-track="contact_click" data-track-contact-label={label} data-track-link-text={label} data-track-location="contact_page">{value}</a>
+                        ) : value}
+                    </dd>
                 </div>
             ))}
         </dl>
@@ -21,6 +27,13 @@ const Details = ({ title, rows }) => (
 // classic page (the validation is the shared useContactForm hook).
 export default function TwilightContact() {
     const { errors, hasErrors, handleSubmit, fieldProps } = useContactForm();
+
+    // form_submit when the message is sent (the form then posts to Formspree), form_error when validation stops it.
+    // No field values are ever sent to analytics.
+    const onSubmit = (e) => {
+        handleSubmit(e);
+        trackEvent(e.defaultPrevented ? "form_error" : "form_submit", { form_name: "contact", page_path: window.location.pathname });
+    };
 
     const field = (name) => ({
         id: name,
@@ -48,7 +61,7 @@ export default function TwilightContact() {
                     <Details title="Location" rows={LOCATION_DETAILS} />
                 </div>
 
-                <form id="form" className="tw-card tw-form" action={FORM_ACTION} method="POST" noValidate onSubmit={handleSubmit}>
+                <form id="form" className="tw-card tw-form" action={FORM_ACTION} method="POST" noValidate onSubmit={onSubmit}>
                     <h2 className="tw-disp">Get In Touch</h2>
 
                     <div className="tw-fieldrow">

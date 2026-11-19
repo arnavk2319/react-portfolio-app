@@ -18,7 +18,7 @@ export default function TwilightProjects() {
         .filter((g) => g.items.length);
 
     const hero = (
-        <section className="tw-phero">
+        <section className="tw-phero tw-phero-flat">
             <div className="tw-mono tw-hero-kicker">{"// work"}</div>
             {/* keyed by the tab so the heading is announced and refreshed on every switch */}
             <h1 className="tw-disp tw-ptitle" key={filter}>{heading}</h1>
@@ -41,10 +41,10 @@ export default function TwilightProjects() {
 
     return (
         <TwilightLayout title="Portfolio | Arnav Kaushal" currentHref="/projects" hero={hero}>
-            <div className="tw-pgroups">
+            <div className="tw-pgroups tw-pgroups-flat">
                 {groups.map(({ key, label, items }) => (
                     <section key={key} className="tw-pgroup" aria-label={label}>
-                        {filter === "all" && <h2 className="tw-disp tw-pgroup-title">{label}</h2>}
+                        <h2 className={filter === "all" ? "tw-disp tw-pgroup-title" : "tw-sr"}>{label}</h2>
                         <div className="tw-pgrid">
                             {items.map((p, i) => (
                                 <ProjectCard key={p.id} project={p} tilt={key === "ai" ? TILTS[i % TILTS.length] : undefined} />

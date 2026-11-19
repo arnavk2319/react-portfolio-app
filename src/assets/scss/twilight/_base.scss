@@ -22,7 +22,20 @@
   a { color: inherit; text-decoration: none; }
   img { max-width: 100%; }
 
-  :focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+  // keyboard focus: cobalt on the light surface, marigold on the navy surfaces (both pass 3:1)
+  :focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; }
+  .tw-band :focus-visible, .tw-footer :focus-visible, .tw-cta :focus-visible { outline-color: var(--sun); }
+}
+
+// visible to screen readers only (heading levels that the design does not draw)
+.tw .tw-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
 }
 
 // the grain that gives the navy surfaces a printed feel

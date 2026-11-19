@@ -13,9 +13,8 @@
 .tw-exp-main { flex: 2 1 560px; min-width: 0; }
 .tw-exp-side { flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 48px; }
 
-// the first heading sits on the navy band
-.tw-exp-main .tw-pgroup-title { color: #fff; }
-.tw-exp-side > section:first-child .tw-pgroup-title { color: #fff; }
+// headings sit on the light surface (no overlap with the band on this page)
+.tw-exp-flat { margin-top: 0; padding-top: 56px; }
 
 .tw-entries { display: flex; flex-direction: column; gap: 22px; }
 
@@ -35,6 +34,7 @@
 
 @media (max-width: 767px) {
   .tw-exp { padding: 0 20px; margin-top: -80px; gap: 32px; }
+  .tw-exp-flat { margin-top: 0; padding-top: 40px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

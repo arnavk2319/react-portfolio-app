@@ -2,11 +2,13 @@
 
 themes
 
-Every themeable color in the site is a CSS variable defined here. Two themes:
+Every themeable color in the site is a CSS variable defined here. Three themes:
 
   dark   the original dark theme. These are the exact values the site shipped
          with, kept as the default so nothing here can break without a theme.
   ivory  Ivory & Oxblood (light).
+  twilight  the redesign (see docs/redesign/TICKETS.md): navy, cobalt and marigold. Not the
+         default yet; preview it with ?theme=twilight.
 
 The active theme is the data-theme attribute on <html>. It is set before first
 paint by the small script in public/index.html, which is also where the default
@@ -125,4 +127,87 @@ does not define fall back to the dark values.
   --bg-tile-rest: #fffcf5;
   --bg-details: #fffcf5;
   --bg-placeholder: #ece2d0;
+}
+
+/* ------------------------------
+Twilight building blocks. Shared by every theme and used by the redesign tickets
+(navy hero band, marigold highlight, display fonts). Defined once here, so no theme
+has to repeat them.
+------------------------------ */
+:root {
+  --night: #101a4a;
+  --cobalt: #2f4bf0;
+  --sky: #8ad0ff;
+  --sun: #ffc93c;
+  --font-display: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-hand: "Caveat", cursive;
+}
+
+/* Twilight: light content surfaces with navy ink and a cobalt accent. The navy hero band and
+   footer arrive with the layout tickets; this block recolors the current layout. */
+:root[data-theme="twilight"] {
+  --bg-deep: #eef1fa;
+  --bg-page: #f5f7fc;
+  --bg-panel: #e8ecfa;
+  --bg-panel-2: #d9e0f6;
+  --bg-input: #e8ecfa;
+  --bg-field-a: #e8ecfa;
+  --bg-field-b: #e8ecfa;
+  --bg-card-a: #ffffff;
+  --bg-card-b: #ffffff;
+  --rgb-page: 245, 247, 252;
+  --rgb-card-a: 255, 255, 255;
+  --rgb-card-b: 255, 255, 255;
+  --ov-1: 0.86;
+  --ov-2: 0.93;
+  --ov-3: 0.99;
+  --ink: #101a4a;
+  --ink-2: #101a4a;
+  --muted: #4a5580;
+  --muted-2: #4a5580;
+  --muted-3: #4a5580;
+  --muted-4: #4a5580;
+  --divider: rgba(16, 26, 74, 0.25);
+  --accent: #2f4bf0;
+  --rgb-accent: 47, 75, 240;
+  --accent-text: #2f4bf0;
+  --accent-h1: #1f37c4;
+  --accent-h2: #1f37c4;
+  --accent-h3: #1f37c4;
+  --ring-track: rgba(47, 75, 240, 0.18);
+  --cv-color: var(--accent);
+  --cv-hover: #101a4a;
+  --tile-shadow: 4px 4px 0 rgba(16, 26, 74, 0.9);
+  --on-accent: #ffffff;
+  --code: #2f4bf0;
+  --lang-bg: #2f4bf0;
+  --shadow: rgba(16, 26, 74, 0.18);
+  --shadow-soft: rgba(16, 26, 74, 0.12);
+  --shadow-30: rgba(16, 26, 74, 0.1);
+  --shadow-15: rgba(16, 26, 74, 0.12);
+  --shadow-10: rgba(16, 26, 74, 0.08);
+  --thumb-filter: brightness(100%);
+  --bg-grid: #e8ecfa;
+  --bg-tile: #ffffff;
+  --bg-tile-hover: #eef1ff;
+  --bg-tile-rest: #ffffff;
+  --bg-details: #ffffff;
+  --bg-placeholder: #e8ecfa;
+}
+
+/* display font on headings, body font everywhere else, only in this theme */
+:root[data-theme="twilight"] h1,
+:root[data-theme="twilight"] h2,
+:root[data-theme="twilight"] h3,
+:root[data-theme="twilight"] h4,
+:root[data-theme="twilight"] h5,
+:root[data-theme="twilight"] h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+:root[data-theme="twilight"] body {
+  font-family: var(--font-body);
 }

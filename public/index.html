@@ -19,16 +19,18 @@
 <html lang="en">
   <head>
     <script>
-      // THEME SWITCH. The site has two themes, defined in src/assets/scss/now-ui-kit/_art-theme.scss:
+      // THEME SWITCH. The site has three themes, defined in src/assets/scss/now-ui-kit/_art-theme.scss:
       //   "ivory"  Ivory & Oxblood (light)
       //   "dark"   the original dark theme
+      //   "twilight"  the redesign (navy, cobalt, marigold); see docs/redesign/TICKETS.md. Its fonts
+      //            load only when this theme is active.
       // To roll the whole site back to the dark theme, change DEFAULT_THEME to "dark".
       // To preview a theme without changing the default, open any page with ?theme=dark or
-      // ?theme=ivory. The choice is kept for the browser tab; ?theme=reset clears it.
+      // ?theme=ivory or ?theme=twilight. The choice is kept for the browser tab; ?theme=reset clears it.
       // This runs before first paint so the page never flashes the wrong theme.
       (function () {
         var DEFAULT_THEME = "ivory";
-        var BAR_COLORS = { ivory: "#f7f1e6", dark: "#1e1e28" };
+        var BAR_COLORS = { ivory: "#f7f1e6", dark: "#1e1e28", twilight: "#f5f7fc" };
         var theme = DEFAULT_THEME;
         try {
           var asked = new URLSearchParams(window.location.search).get("theme");
@@ -39,6 +41,13 @@
         } catch (e) {}
         document.documentElement.setAttribute("data-theme", theme);
         document.write('<meta name="theme-color" content="' + BAR_COLORS[theme] + '">');
+        if (theme === "twilight") {
+          document.write(
+            '<link rel="preconnect" href="https://fonts.googleapis.com">' +
+            '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' +
+            '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Caveat:wght@600&display=swap">'
+          );
+        }
       })();
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=%REACT_APP_GA_MEASUREMENT_ID%"></script>

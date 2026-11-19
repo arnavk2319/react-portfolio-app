@@ -1,0 +1,53 @@
+// Projects page: navy header with the filter pills, then the groups of cards.
+.tw-phero {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 32px 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.tw .tw-ptitle { font-size: 64px; line-height: 1.03; max-width: 16ch; text-wrap: balance; }
+
+.tw-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.tw .tw-pill {
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 12px;
+  border: 2px solid var(--sky);
+  background: transparent;
+  color: #fff;
+  font: 600 15px var(--font-body);
+  cursor: pointer;
+  transition: background 0.15s ease;
+
+  &:hover { background: rgba(138, 208, 255, 0.14); }
+  &[aria-pressed="true"] { background: var(--sun); color: var(--night); border-color: var(--sun); box-shadow: 3px 3px 0 var(--cobalt); }
+}
+
+.tw-pgroups {
+  max-width: 1200px;
+  width: 100%;
+  margin: -88px auto 0;
+  padding: 0 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.tw .tw-pgroup-title { font-size: 34px; margin-bottom: 24px; }
+.tw-pgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 30px; }
+
+// a card already carries a title row of its own, so the group heading sits above the first group's overlap
+.tw-pgroup:first-child .tw-pgroup-title { color: #fff; position: relative; top: -4px; margin-bottom: 16px; }
+
+@media (max-width: 767px) {
+  .tw-phero { padding: 12px 20px 120px; }
+  .tw .tw-ptitle { font-size: 38px; }
+  .tw-pgroups { padding: 0 20px; margin-top: -80px; gap: 48px; }
+  .tw-pgrid { grid-template-columns: 1fr; gap: 22px; }
+}

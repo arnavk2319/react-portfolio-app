@@ -22,6 +22,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 // styles for this kit
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.4.0";
+import "assets/scss/twilight.scss";
 // pages for this kit
 import PortfolioPage from "views/examples/PortfolioPage.js"
 import ProjectsPage from "views/examples/ProjectsPage.js";

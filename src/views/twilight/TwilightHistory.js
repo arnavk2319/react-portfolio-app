@@ -1,7 +1,6 @@
 import React from "react";
 import { TwilightLayout } from "components/TwilightLayout";
 import { EDUCATION, WORK } from "data/history";
-import certifications from "data/certifications";
 
 const Entry = ({ item, current }) => (
     <article className={current ? "tw-card tw-entry tw-entry-current" : "tw-card tw-entry"}>
@@ -17,8 +16,8 @@ const Entry = ({ item, current }) => (
     </article>
 );
 
-// The Twilight Experience (History) page: work history, education and certifications, with the
-// same entries, wording and dates as the classic page (src/data/history.js, src/data/certifications.js).
+// The Twilight Experience (History) page: work history and education, with the same entries,
+// wording and dates as the classic page (src/data/history.js).
 export default function TwilightHistory() {
     const hero = (
         <section className="tw-phero">
@@ -50,22 +49,6 @@ export default function TwilightHistory() {
                         </div>
                     </section>
 
-                    {certifications.length > 0 && (
-                        <section aria-labelledby="tw-cert-title">
-                            <h2 id="tw-cert-title" className="tw-disp tw-pgroup-title">Certifications</h2>
-                            <div className="tw-entries">
-                                {certifications.map(({ title, issuer, link, date }) => (
-                                    <a key={title} href={link} target="_blank" rel="noopener noreferrer" className="tw-card tw-entry tw-cert">
-                                        <h3 className="tw-disp">{title}</h3>
-                                        <div className="tw-entry-role">{issuer}</div>
-                                        {date && <div className="tw-entry-place">{date}</div>}
-                                        <span className="tw-fcard-cta">View credential ↗</span>
-                                    </a>
-                                ))}
-                            </div>
-                            <a className="tw-more-all" href="/certifications">See all certifications →</a>
-                        </section>
-                    )}
                 </div>
             </div>
         </TwilightLayout>

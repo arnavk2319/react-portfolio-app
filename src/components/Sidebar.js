@@ -1,6 +1,6 @@
 import { RotatingTitle } from "components/RotatingTitle";
 import React from "react";
-import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
+import Resume from "assets/img/Arnav_Kaushal_AI_Software_Engineer.pdf";
 import { PROFILE, LANGUAGES, SKILLS, KNOWLEDGE, SOCIAL } from "data/profile";
 
 const ACCENT = "var(--accent)";
@@ -120,7 +120,7 @@ export const Sidebar = ({ isActive, onToggle }) => {
                 <div className="art-ls-divider4"></div>
 
                 <div className="art-links-frame p-15-15">
-                    <a href={Resume} target="_blank" rel="noopener noreferrer" className="art-link" download>Download cv <i className="fas fa-download"></i></a>
+                    <a href={Resume} target="_blank" rel="noopener noreferrer" className="art-link" download="Arnav_Kaushal_AI_Software_Engineer.pdf">Download cv <i className="fas fa-download"></i></a>
                 </div>
 
                 <div className={moreBelow ? "art-scroll-hint art-show" : "art-scroll-hint"} aria-hidden="true">

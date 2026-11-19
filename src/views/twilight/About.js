@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
+import Resume from "assets/img/Arnav_Kaushal_AI_Software_Engineer.pdf";
 import { PROFILE, LANGUAGES, SKILLS, KNOWLEDGE, SOCIAL } from "data/profile";
 
 const CIRCLE_PATH = "M 50,50 m 0,-46.5 a 46.5,46.5 0 1 1 0,93 a 46.5,46.5 0 1 1 0,-93";
@@ -41,7 +41,7 @@ export const About = () => (
                 </div>
 
                 <div className="tw-about-links">
-                    <a className="tw-btn tw-btn-sun" href={Resume} target="_blank" rel="noopener noreferrer" download data-track="resume_download" data-track-location="about">
+                    <a className="tw-btn tw-btn-sun" href={Resume} target="_blank" rel="noopener noreferrer" download="Arnav_Kaushal_AI_Software_Engineer.pdf" data-track="resume_download" data-track-location="about">
                         Download cv <i className="fas fa-download" aria-hidden="true"></i>
                     </a>
                     <div className="tw-about-social">

@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "assets/img/Arnav_Kaushal_2025_ML.pdf";
+import Resume from "assets/img/Arnav_Kaushal_AI_Software_Engineer.pdf";
 import { NAV } from "data/navigation";
 import { SOCIAL } from "data/profile";
 
@@ -79,7 +79,7 @@ export const TwilightLayout = ({ title, currentHref, hero, children }) => {
                             <a key={href} href={href} aria-current={href === currentHref ? "page" : undefined} data-track="nav_click" data-track-location="header" data-track-item={label}>{label}</a>
                         ))}
                     </nav>
-                    <a className="tw-btn tw-btn-ghost tw-resume" href={Resume} target="_blank" rel="noopener noreferrer" download aria-label="Download résumé" data-track="resume_download" data-track-location="header">
+                    <a className="tw-btn tw-btn-ghost tw-resume" href={Resume} target="_blank" rel="noopener noreferrer" download="Arnav_Kaushal_AI_Software_Engineer.pdf" aria-label="Download résumé" data-track="resume_download" data-track-location="header">
                         <span className="tw-long">Download résumé</span><span className="tw-short">Résumé</span>
                     </a>
                 </header>

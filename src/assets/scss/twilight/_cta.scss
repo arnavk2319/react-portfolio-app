@@ -1,0 +1,26 @@
+.tw-cta {
+  background-color: var(--night);
+  color: #fff;
+  border: 2px solid var(--night);
+  border-radius: 20px;
+  box-shadow: var(--tw-hard-shadow);
+  padding: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.tw-cta-text { flex: 1 1 340px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+.tw-cta-text h2 { font-size: 46px; line-height: 1.05; }
+.tw-cta-text p { font-size: 18px; line-height: 1.6; color: #c9d3f5; max-width: 40ch; }
+.tw .tw-cta-sign { font-size: 30px; color: var(--sun); transform: rotate(-2deg); }
+
+// the existing contact grid, kept as is, sitting on the navy card
+.tw-cta-grid { flex: 1 1 340px; display: flex; justify-content: center; > div { margin-bottom: 0 !important; } }
+
+@media (max-width: 767px) {
+  .tw-cta { padding: 32px 20px; }
+  .tw-cta-text h2 { font-size: 36px; }
+}

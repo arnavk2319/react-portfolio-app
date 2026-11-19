@@ -24,6 +24,40 @@ export const TwilightLayout = ({ title, currentHref, hero, children }) => {
         document.title = title;
     }, [title]);
 
+    // Motion: sections, cards and entries fade up the first time they scroll into view.
+    // Everything is visible by default; the hidden starting state is only applied here, with a failsafe,
+    // so content can never stay invisible. Skipped entirely for reduced-motion users.
+    React.useLayoutEffect(() => {
+        const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (reduce || typeof IntersectionObserver === "undefined") return undefined;
+
+        // crossfade between pages (Chrome and Safari; ignored elsewhere)
+        const vt = document.createElement("style");
+        vt.textContent = "@view-transition { navigation: auto; }";
+        document.head.appendChild(vt);
+
+        const els = [...document.querySelectorAll(
+            ".tw-main .tw-section, .tw-main .tw-fcard, .tw-main .tw-badge, .tw-main .tw-entry, .tw-main .tw-details, .tw-main .tw-form"
+        )];
+        els.forEach((el) => el.setAttribute("data-reveal", ""));
+        const io = new IntersectionObserver(
+            (entries) => entries.forEach((en) => {
+                if (en.isIntersecting) {
+                    en.target.classList.add("tw-in");
+                    io.unobserve(en.target);
+                }
+            }),
+            { rootMargin: "0px 0px -6% 0px" }
+        );
+        els.forEach((el) => io.observe(el));
+        const failsafe = setTimeout(() => els.forEach((el) => el.classList.add("tw-in")), 3000);
+        return () => {
+            io.disconnect();
+            clearTimeout(failsafe);
+            vt.remove();
+        };
+    }, []);
+
     const toTop = () => {
         const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
         window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });

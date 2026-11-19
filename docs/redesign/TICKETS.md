@@ -22,7 +22,7 @@ A redesign changes how things look and are laid out. It does not change what exi
 - Profile: residence, city, age (computed from today's date), languages with their proficiency rings.
 - All 11 skills with their labels and percentages, and the 7 "knowledge" lines.
 - Work history, education and certifications (current wording and dates).
-- All 10 service descriptions on the home page, the home counters (years, projects, tools, widgets), and the rotating titles in `src/data/titles.js`.
+- All 9 service descriptions on the home page, the home counters (years, projects, tools, widgets), and the rotating titles in `src/data/titles.js`.
 - The typing-effect lines in the home hero.
 
 **Behaviour:**
@@ -86,8 +86,8 @@ Text rows for ML and Web & Mobile projects with dashed dividers and tags, a "See
 Accept: titles, descriptions and links come from the same data as the Projects page (one source, no copy); rows stack cleanly on mobile.
 
 **T-09 What I do** (both, S)
-Four headline items in the design, plus all ten existing service descriptions kept (grouped under them, not deleted).
-Accept: all ten service texts still on the page.
+Four headline items in the design, plus all nine existing service descriptions kept (grouped under them, not deleted).
+Accept: all nine service texts still on the page.
 
 **T-10 Credentials** (both, M)
 Restyle the badge carousel; keep the self-hosted images and every link; add the "all certifications" link.

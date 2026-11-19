@@ -5,6 +5,7 @@ import { FeaturedWork } from "views/twilight/FeaturedWork";
 import { MoreWork } from "views/twilight/MoreWork";
 import { WhatIDo } from "views/twilight/WhatIDo";
 import { About } from "views/twilight/About";
+import { Credentials } from "views/twilight/Credentials";
 
 // The Twilight home page. Sections are added ticket by ticket, in this order:
 // hero (T-06), featured work (T-07), more work (T-08), what I do (T-09), about (T-04),
@@ -16,6 +17,7 @@ export default function TwilightHome() {
             <MoreWork />
             <WhatIDo />
             <About />
+            <Credentials />
         </TwilightLayout>
     );
 }

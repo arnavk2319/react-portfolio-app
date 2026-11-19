@@ -1,0 +1,18 @@
+[
+  {
+    "id": "learn-anything-faster",
+    "category": "ai",
+    "title": "Learn Anything Faster",
+    "description": "Pick the role you are today and the role you want to become, and get a prerequisite graph of exactly the topics in between. Topics your current role already covers are skipped, and each topic lists what you need first, what it unlocks, and free courses, books and docs to learn it from.",
+    "href": "https://learn-anything-faster.vercel.app",
+    "image": "learn-anything-faster.webp"
+  },
+  {
+    "id": "rag-docchat-tool",
+    "category": "ai",
+    "title": "DocChat RAG",
+    "description": "Chat with your own documents. Upload files and ask questions: answers are grounded in the passages retrieved from your selected documents and cite their sources, and clicking a citation shows the exact passage with the cited text highlighted. Also summarizes, runs sentiment analysis and compares documents, through a bounded LangGraph agent.",
+    "href": "https://rag-docchat-tool.vercel.app",
+    "image": "rag-docchat-tool.webp"
+  }
+]

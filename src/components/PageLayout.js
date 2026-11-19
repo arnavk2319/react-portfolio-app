@@ -43,6 +43,21 @@ export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
         frame.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
     };
 
+    // While the page scrolls: darken the scrollbar (like the sidebar's) and pause tile hover effects.
+    const scrollTimers = React.useRef({ bar: null, hover: null });
+    const onFrameScroll = (e) => {
+        const el = e.currentTarget;
+        el.classList.add("art-scrolling", "art-hover-off");
+        clearTimeout(scrollTimers.current.bar);
+        clearTimeout(scrollTimers.current.hover);
+        scrollTimers.current.bar = setTimeout(() => el.classList.remove("art-scrolling"), 700);
+        scrollTimers.current.hover = setTimeout(() => el.classList.remove("art-hover-off"), 120);
+    };
+    React.useEffect(() => () => {
+        clearTimeout(scrollTimers.current.bar);
+        clearTimeout(scrollTimers.current.hover);
+    }, []);
+
     const contentClass = ["art-content", artActiveMenuBar && "art-active", artActiveInfoBar && "art-dim"]
         .filter(Boolean)
         .join(" ");
@@ -64,7 +79,7 @@ export const PageLayout = ({ title, currentHref, currentLabel, children }) => {
                             </div>
 
                             <div className="transition-fade" id="swup">
-                                <div id="scrollbar" tabIndex="-1" className="art-scroll-frame" style={{ outline: "none" }}>
+                                <div id="scrollbar" tabIndex="-1" className="art-scroll-frame" style={{ outline: "none" }} onScroll={onFrameScroll}>
                                     <div className="scroll-content" style={{ transform: "translate3d(0px, 0px, 0px)" }}>
                                         {children}
 

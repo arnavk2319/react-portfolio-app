@@ -3,6 +3,7 @@ import { PageLayout } from "components/PageLayout";
 import { ContactGrid } from "views/examples/ContactGrid";
 import { RotatingText } from "views/examples/RotatingText";
 import { BadgeCarousel } from 'views/examples/BadgeCarousel';
+import { RotatingTitle } from 'components/RotatingTitle';
 
 
 // Decorative "neural network" for the hero: nodes per layer, fully connected between layers.
@@ -124,7 +125,10 @@ function PortfolioPage(){
                                         <div  className="art-banner-title">
 
                                             <h1  className="mb-15">From Concept to Deployment</h1>
-                                            <h3  className="mb-5">I Make It Happen!</h3>
+                                            <h3  className="mb-5 art-hero-line">
+                                                <span>I Make It Happen!</span>
+                                                <RotatingTitle variant="hero" />
+                                            </h3>
 
                                             <RotatingText />
                                             <div  className="art-buttons-frame">

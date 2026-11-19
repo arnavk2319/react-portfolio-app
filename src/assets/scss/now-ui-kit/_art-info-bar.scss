@@ -388,10 +388,15 @@ info bar
     }
   }
   
-/* ----- sidebar scroll affordance: thin visible scrollbar + "more below" fade ----- */
+/* ----- scrollbar (sidebar and main page) + sidebar "more below" fade: thin visible scrollbar + "more below" fade ----- */
+/* the main page scroller (.art-scroll-frame) uses exactly the same scrollbar as the sidebar */
 .art-app .art-scroll-frame-profile-sidebar {
   /* gap between the content and the scrollbar */
   padding-right: 10px;
+}
+
+.art-app .art-scroll-frame-profile-sidebar,
+.art-app .art-scroll-frame {
   scrollbar-width: thin;
   scrollbar-color: rgba(var(--rgb-accent), 0.28) transparent;
 

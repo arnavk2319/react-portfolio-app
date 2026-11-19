@@ -26,7 +26,7 @@ export const WORK = [
     {
         org: "SS&C Technologies",
         role: "Software Engineer",
-        when: "May 2022 - Present",
+        when: "May 2022 - November 2026",
         place: "Toronto, Canada",
         text: [
             "Developed and maintained responsive, enterprise-grade web applications using Angular 18+, TypeScript, HTML5, SCSS, and Vue 2/Nuxt, Python enhancing user interaction and reducing page load time by ~35%.",

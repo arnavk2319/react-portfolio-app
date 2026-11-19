@@ -1,6 +1,8 @@
 import React from "react";
 import { TwilightLayout } from "components/TwilightLayout";
 import { Hero } from "views/twilight/Hero";
+import { FeaturedWork } from "views/twilight/FeaturedWork";
+import { MoreWork } from "views/twilight/MoreWork";
 import { About } from "views/twilight/About";
 
 // The Twilight home page. Sections are added ticket by ticket, in this order:
@@ -9,6 +11,8 @@ import { About } from "views/twilight/About";
 export default function TwilightHome() {
     return (
         <TwilightLayout title="Home | Arnav Kaushal" currentHref="/portfolio" hero={<Hero />}>
+            <FeaturedWork />
+            <MoreWork />
             <About />
         </TwilightLayout>
     );

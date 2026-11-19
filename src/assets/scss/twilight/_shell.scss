@@ -165,8 +165,4 @@
   &:hover { color: var(--sun); }
 }
 
-@media (max-width: 767px) {
-  .tw-header { padding: 16px 20px; }
-  .tw-nav { order: 3; width: 100%; flex-wrap: nowrap; overflow-x: auto; }
-  .tw-footer-inner { padding: 36px 20px 28px; }
-}
+.tw-short { display: none; }

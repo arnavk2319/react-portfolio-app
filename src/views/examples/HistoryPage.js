@@ -98,7 +98,7 @@ function HistoryPage(){
                                                     <div className="art-el-suptitle mb-15">Software Engineer</div>
                                                 </div>
                                                 <div className="art-right-side">
-                                                    <span className="art-date">May 2022 - Present</span>
+                                                    <span className="art-date">May 2022 - November 2026</span>
                                                 </div>
                                             </div>
 

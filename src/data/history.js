@@ -1,5 +1,4 @@
 // Education and work history, wording and dates unchanged from the classic History page (converted mechanically).
-// Certifications on this page come from data/certifications.js.
 
 export const EDUCATION = [
     {

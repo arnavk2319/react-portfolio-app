@@ -48,6 +48,8 @@ export const CredlyBadges = ({ badges }) => {
           <img
             src={badge.image}
             alt={badge.title}
+            loading="lazy"
+            decoding="async"
             style={{
               width: "100%",
               height: "auto",

@@ -112,6 +112,8 @@ export function BadgeCarousel({
               <img
                 src={it.image}
                 alt={it.title || `item-${idx}`}
+                loading="lazy"
+                decoding="async"
                 onLoad={handleImageLoad}
                 style={{
                   position: "absolute",

@@ -17,6 +17,7 @@
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "pull:projects": "node scripts/pull-projects.js",
+    "parity": "node scripts/parity-check.js",
     "prebuild": "node scripts/pull-projects.js",
     "build": "react-scripts build && cp public/_redirects build/_redirects",
     "test": "react-scripts test",
@@ -46,6 +47,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
+    "playwright-core": "^1.49.1",
     "sharp": "^0.32.6"
   },
   "engines": {

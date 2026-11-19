@@ -8,6 +8,14 @@
     "image": "learn-anything-faster.webp"
   },
   {
+    "id": "llm-gateway-evals",
+    "category": "ai",
+    "title": "LLM Gateway",
+    "description": "An OpenAI-compatible gateway that routes each LLM call to the right model for the task, with tracing, cost tracking and a dashboard.",
+    "href": "https://llm-gateway-evals.vercel.app",
+    "image": "llm-gateway-evals.webp"
+  },
+  {
     "id": "rag-docchat-tool",
     "category": "ai",
     "title": "DocChat RAG",

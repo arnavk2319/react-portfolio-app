@@ -41,4 +41,4 @@ window.__ev = []; window.gtag = (...a) => window.__ev.push(a);
 Or open GA4 DebugView with the GA Debugger extension. The parity script (`npm run parity`) blocks analytics hosts.
 
 ## Not tracked
-Clicks and scrolling in the classic layout (`?theme=ivory` or `?theme=dark`), form field values (never sent).
+Clicks and scrolling in the classic layout (`?theme=ivory` or `?theme=dark`). Form field values are never sent at all.

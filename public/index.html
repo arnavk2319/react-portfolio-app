@@ -24,13 +24,14 @@
       //   "dark"   the original dark theme
       //   "twilight"  the redesign (navy, cobalt, marigold); see docs/redesign/TICKETS.md. Its fonts
       //            load only when this theme is active.
-      // To roll the whole site back to the dark theme, change DEFAULT_THEME to "dark".
+      // To roll the whole site back, change DEFAULT_THEME to "ivory" (the classic layout and colors before the
+      // redesign) or "dark" (the original dark theme). Nothing else needs to change.
       // To preview a theme without changing the default, open any page with ?theme=dark or
       // ?theme=ivory or ?theme=twilight. The choice is kept for the browser tab; ?theme=reset clears it.
       // This runs before first paint so the page never flashes the wrong theme.
       (function () {
-        var DEFAULT_THEME = "ivory";
-        var BAR_COLORS = { ivory: "#f7f1e6", dark: "#1e1e28", twilight: "#f5f7fc" };
+        var DEFAULT_THEME = "twilight";
+        var BAR_COLORS = { ivory: "#f7f1e6", dark: "#1e1e28", twilight: "#101a4a" };
         var theme = DEFAULT_THEME;
         try {
           var asked = new URLSearchParams(window.location.search).get("theme");
